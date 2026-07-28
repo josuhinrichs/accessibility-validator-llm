@@ -73,15 +73,19 @@ def extract_wcag_codes(wcag_string: str) -> Set[str]:
         logger.warning("failed_to_parse_wcag", wcag_string=wcag_string, error=str(e))
         return set()
     
-def calculate_metrics():
-    df = pd.read_csv("./experiment_results/metrics_output.csv")
+def calculate_metrics(
+    results_csv_path: str | Path = "./experiment_results/metrics_output.csv",
+    output_csv_path: str | Path = "./experiment_results/final_metrics.csv",
+):
+    df = pd.read_csv(results_csv_path)
 
     # Agrupamento e soma dos valores brutos
     global_metrics = df.groupby(['model', 'strategy'])[['tp', 'fp', 'fn']].sum().reset_index()
 
-    
-    global_metrics['precision'] = global_metrics['tp'] / (global_metrics['tp'] + global_metrics['fp'])
-    global_metrics['recall'] = global_metrics['tp'] / (global_metrics['tp'] + global_metrics['fn'])
-    global_metrics['f1_score'] = (2 * global_metrics['precision'] * global_metrics['recall']) / (global_metrics['precision'] + global_metrics['recall'])
+    global_metrics['precision'] = global_metrics['tp'] / (global_metrics['tp'] + global_metrics['fp']).replace(0, pd.NA)
+    global_metrics['recall'] = global_metrics['tp'] / (global_metrics['tp'] + global_metrics['fn']).replace(0, pd.NA)
+    global_metrics['f1_score'] = (2 * global_metrics['precision'] * global_metrics['recall']) / (global_metrics['precision'] + global_metrics['recall']).replace(0, pd.NA)
+    global_metrics = global_metrics.fillna(0.0)
 
-    global_metrics.to_csv('./experiment_results/final_metrics.csv')
+    Path(output_csv_path).parent.mkdir(parents=True, exist_ok=True)
+    global_metrics.to_csv(output_csv_path, index=False)

@@ -1,0 +1,36 @@
+{"event": "Iniciando o experimento...\n", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:50:45.384201Z"}
+{"event": "Iniciando o experimento...\n", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:52:20.651806Z"}
+{"model": "google/gemma-4-e4b", "event": "model_run_started", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:52:20.677269Z"}
+{"path": "./Original_full_data_new.csv", "event": "dataset_ingestion_started", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:52:20.677360Z"}
+{"item_id": "700_0", "ground_truth": ["1.4.6"], "image_count": 0, "progress": "1/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:52:20.820901Z"}
+{"item_id": "700_0", "model": "google/gemma-4-e4b", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:52:20.821657Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "google/gemma-4-e4b", "strategy": "zero-shot", "metrics": {"tp": 1, "fp": 4, "fn": 0, "precision": 0.2, "recall": 1.0, "f1_score": 0.3333}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:52:27.184523Z"}
+{"item_id": "700_0", "model": "google/gemma-4-e4b", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:52:27.185509Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "google/gemma-4-e4b", "strategy": "few-shot", "metrics": {"tp": 0, "fp": 4, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:52:34.355117Z"}
+{"item_id": "700_0", "model": "google/gemma-4-e4b", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:52:34.355869Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "google/gemma-4-e4b", "strategy": "chain-of-thought", "metrics": {"tp": 1, "fp": 5, "fn": 0, "precision": 0.1667, "recall": 1.0, "f1_score": 0.2857}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:52:43.571528Z"}
+{"item_id": "700_1", "ground_truth": ["1.3.1"], "image_count": 0, "progress": "2/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:52:43.574141Z"}
+{"item_id": "700_1", "model": "google/gemma-4-e4b", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:52:43.574570Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_1", "model": "google/gemma-4-e4b", "strategy": "zero-shot", "metrics": {"tp": 1, "fp": 2, "fn": 0, "precision": 0.3333, "recall": 1.0, "f1_score": 0.5}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:52:47.056111Z"}
+{"item_id": "700_1", "model": "google/gemma-4-e4b", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:52:47.056809Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_1", "model": "google/gemma-4-e4b", "strategy": "few-shot", "metrics": {"tp": 1, "fp": 1, "fn": 0, "precision": 0.5, "recall": 1.0, "f1_score": 0.6667}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:52:51.373317Z"}
+{"item_id": "700_1", "model": "google/gemma-4-e4b", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:52:51.374135Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_1", "model": "google/gemma-4-e4b", "strategy": "chain-of-thought", "metrics": {"tp": 1, "fp": 2, "fn": 0, "precision": 0.3333, "recall": 1.0, "f1_score": 0.5}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:52:57.492404Z"}
+{"item_id": "700_2", "ground_truth": ["1.3.1"], "image_count": 0, "progress": "3/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:52:57.495451Z"}
+{"item_id": "700_2", "model": "google/gemma-4-e4b", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:52:57.495777Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_2", "model": "google/gemma-4-e4b", "strategy": "zero-shot", "metrics": {"tp": 1, "fp": 4, "fn": 0, "precision": 0.2, "recall": 1.0, "f1_score": 0.3333}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:53:00.293096Z"}
+{"item_id": "700_2", "model": "google/gemma-4-e4b", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:53:00.293917Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_2", "model": "google/gemma-4-e4b", "strategy": "few-shot", "metrics": {"tp": 1, "fp": 1, "fn": 0, "precision": 0.5, "recall": 1.0, "f1_score": 0.6667}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:53:05.136194Z"}
+{"item_id": "700_2", "model": "google/gemma-4-e4b", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:53:05.136801Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_2", "model": "google/gemma-4-e4b", "strategy": "chain-of-thought", "metrics": {"tp": 1, "fp": 1, "fn": 0, "precision": 0.5, "recall": 1.0, "f1_score": 0.6667}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:53:12.948469Z"}
+{"item_id": "700_3", "ground_truth": ["1.3.1"], "image_count": 0, "progress": "4/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:53:12.951573Z"}
+{"item_id": "700_3", "model": "google/gemma-4-e4b", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:53:12.952125Z"}
