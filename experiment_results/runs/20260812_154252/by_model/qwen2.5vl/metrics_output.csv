@@ -1,0 +1,2 @@
+item_id,model,strategy,duration_ms,tp,fp,fn,precision,recall,f1_score,ground_truth,predictions,raw_output,error
+700_0,qwen2.5vl,zero-shot,0,0,0,0,0.0,0.0,0.0,1.4.6,,,

@@ -5,6 +5,9 @@ from pathlib import Path
 from typing import Dict, Set, List
 import time
 
+from llm_clients import LLMClient
+from prompt_builder import PromptRecipe
+
 import pandas as pd
 from openai import OpenAI
 
@@ -84,43 +87,6 @@ def image_path_to_data_url(image_path: str) -> str:
 
     return f"data:{mime_type};base64,{encoded}"
 
-
-class OpenAIInferenceClient:
-    """
-    Pequeno wrapper para manter a interface do pipeline parecida com a do Ollama,
-    mas executando chamadas para a OpenAI.
-    """
-
-    def __init__(self, api_key: str | None = None, base_url: str | None = None):
-        client_kwargs = {}
-
-        resolved_base_url = base_url or "http://10.102.20.26:1234/v1"
-        resolved_api_key = api_key or "lm-studio"
-
-        client_kwargs["api_key"] = resolved_api_key
-        if resolved_base_url:
-            client_kwargs["base_url"] = resolved_base_url
-
-        self.client = OpenAI(**client_kwargs)
-
-    def generate(self, model: str, prompt: str, images: List[str]) -> str:
-        content = [{"type": "text", "text": prompt}]
-
-        for image_path in images:
-            content.append(
-                {
-                    "type": "image_url",
-                    "image_url": {"url": image_path_to_data_url(image_path)},
-                }
-            )
-
-        response = self.client.chat.completions.create(
-            model=model,
-            messages=[{"role": "user", "content": content}],
-        )
-
-        return response.choices[0].message.content or ""
-
 def build_prompt_with_strategy(strategy: str, base_context: str) -> str:
     # (Mantém a mesma implementação fornecida anteriormente)
     base_instruction = "Liste todas as violações de acessibilidade (WCAG) encontradas. Retorne APENAS os códigos das diretrizes (ex: 1.1.1, 1.3.1, 1.4.6)."
@@ -138,7 +104,7 @@ def build_prompt_with_strategy(strategy: str, base_context: str) -> str:
 
 
 def run_evaluation(
-    client: OpenAIInferenceClient,
+    client: LLMClient,
     model: str,
     item_id: str,
     ground_truth: Set[str],
@@ -178,7 +144,7 @@ def run_evaluation(
         }
 
         try:
-            raw_output = client.generate(
+            raw_output = client.run(
                 model=model,
                 prompt=final_prompt,
                 images=images,
@@ -215,7 +181,7 @@ def run_evaluation(
             append_to_csv(results_csv_path, record)
 
 
-def process_dataset(client: OpenAIInferenceClient, model: str, strategies: List[str]):
+def process_dataset(client: LLMClient, model: str, strategies: List[str]):
     """
     Lê o dataset, prepara o payload de inferência e aciona o runner.
     Itera linha a linha para manter footprint de memória baixo.
@@ -307,28 +273,33 @@ def build_comparison_summary(results_root: Path, output_path: Path):
     output_path.parent.mkdir(parents=True, exist_ok=True)
     comparison_df.to_csv(output_path, index=False)
 
+openai_client = LLMClient(
+    api_key="lm-studio",
+    base_url="http://10.102.20.26:1234/v1",
+    models=["qwen2.5vl"],
+)
+
+ollama_client = LLMClient(
+    api_key="ollama",
+    base_url="http://localhost:11434/v1",
+    models=["qwen2.5vl"]
+)
+
 if __name__ == "__main__":
     logger.info("Iniciando o experimento...\n")
     
-    openai_client = OpenAIInferenceClient(
-        api_key="lm-studio",
-        base_url="http://10.102.20.26:1234/v1",
-    )
-    
     MODELS_TO_TEST = [
-        "google/gemma-4-e4b",
-        "google/gemma-4-e2b",
-        "gemma-3-4b-it",
-        "qwen/qwen3.5-9b",
-        "qwen3-4b",
-        "qwen3-1.7b",
+        "qwen2.5vl",
     ]
+
+    #STRATEGIES_TO_TEST = ["zero-shot", "few-shot", "chain-of-thought"]
+
     STRATEGIES_TO_TEST = ["zero-shot", "few-shot", "chain-of-thought"]
 
     for model in MODELS_TO_TEST:
         logger.info("model_run_started", model=model)
         process_dataset(
-            client=openai_client,
+            client=ollama_client,
             model=model,
             strategies=STRATEGIES_TO_TEST,
         )

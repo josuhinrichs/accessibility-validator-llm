@@ -1,0 +1,565 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <title>www.mytheresa.com</title>
+
+  <script>
+    if (typeof (window.anData) === "undefined") window.anData = [];
+  </script>
+
+  <style>
+    /** CSS RESET START **/
+
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+
+    /* HTML5 display-role reset for older browsers */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
+
+    body {
+      line-height: 1;
+    }
+
+    ol,
+    ul {
+      list-style: none;
+    }
+
+    blockquote,
+    q {
+      quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+      content: "";
+      content: none;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    /** CSS RESET FINISHED **/
+
+    /** CUSTOM  CSS  START (GENERAL) **/
+    @font-face {
+      font-family: "Futura Medium";
+      src: url("https://eu-central-1.linodeobjects.com/failover/assets/FuturaMedium.otf");
+    }
+
+    div {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    h1 {
+      font-size: 65px;
+      letter-spacing: 0.8px;
+      font-weight: 400;
+      font-family: "Futura Medium";
+    }
+
+    img {
+      width: 250px;
+    }
+
+    .first {
+      margin-top: 200px;
+    }
+
+    .third>p {
+      font-size: 14px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #refid {
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: rgb(106, 106, 106);
+    }
+
+    .email-form-container {
+      margin-top: 30px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .email-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .email-input {
+      width: 100%;
+      max-width: 300px;
+      padding: 12px 15px;
+      color: #000;
+      border: 1px solid #dfdfdf;
+      font-family: "Futura Medium";
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    .email-input:focus {
+      outline: none;
+      border: 1px solid #dfdfdf;
+    }
+
+    .report-btn {
+      font-family: "Futura";
+      font-size: 12px;
+      letter-spacing: 1.2px;
+      line-height: 17px;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: #000;
+      border: 1px solid #000;
+      padding: 10px 20px;
+      height: 38px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .report-btn:hover {
+      background-color: #666;
+      border-color: #666;
+    }
+
+    .report-btn:disabled {
+      cursor: not-allowed;
+      background-color: #ccc;
+      border-color: #ccc;
+    }
+
+    .form-message {
+      font-size: 14px;
+      font-family: "Futura Medium";
+      margin-top: 10px;
+      min-height: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s;
+    }
+
+    /** CUSTOM  CSS  START (MOBILE) **/
+
+    @media only screen and (max-width: 600px) {
+      h1 {
+        font-size: 25px;
+      }
+
+      div {
+        margin-top: 35px;
+      }
+
+      img {
+        width: 150px;
+      }
+
+      .first {
+        margin-top: 50px;
+      }
+
+      .third>p {
+        margin: 0px 20px;
+      }
+
+      .email-form-container {
+        margin-top: 20px;
+        padding: 15px;
+      }
+
+      .email-form {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .email-input {
+        max-width: 250px;
+        padding: 10px 12px;
+        font-size: 16px;
+      }
+
+      .report-btn {
+        padding: 12px 18px;
+        font-size: 11px;
+        max-width: 250px;
+      }
+    }
+  </style>
+
+  <script type="text/javascript" src="https://www.mytheresa.com/js/ca/anLib-base-tracking.js"></script>
+</head>
+
+<body>
+  <div class="first">
+    <img src="https://eu-central-1.linodeobjects.com/failover/assets/logo.png" alt="logo">
+  </div>
+
+  <div class="second">
+    <h1>SOMETHING WENT WRONG</h1>
+  </div>
+
+  <div class="third">
+    <p>Please try again in a moment. Report the issue by clicking the button below.</p>
+  </div>
+
+  <div class="email-form-container">
+    <form class="email-form" id="emailForm">
+      <input type="email" class="email-input" id="userEmail" placeholder="Enter your email address" required="">
+      <button type="submit" class="report-btn" id="reportBtn">REPORT ISSUE</button>
+    </form>
+    <div class="form-message" id="formMessage"></div>
+  </div>
+
+  <div class="fifth">
+    <p id="refid">Reference: 0.955e6cc1.1754415652.426abfd4</p>
+  </div>
+
+  <script>
+
+    function getTextsFor(lang) {
+      const texts = {
+        'en': {
+          'headline': 'SOMETHING WENT WRONG',
+          'desc': 'Please try again in a moment. Report the issue by clicking the button below.',
+          'homepage': 'GO TO HOMEPAGE',
+          'report': 'REPORT ISSUE',
+          'thankYou': 'Thank you!',
+          'emailPlaceholder': 'Enter your email address'
+        },
+        'de': {
+          'headline': 'ETWAS IST SCHIEFGELAUFEN',
+          'desc': 'Bitte versuchen Sie es in Kürze erneut. Um den Fehler zu melden, klicken Sie bitte auf den untenstehenden Button.',
+          'homepage': 'ZURÜCK ZUR HOMEPAGE',
+          'report': 'FEHLER MELDEN',
+          'thankYou': 'Vielen Dank!',
+          'emailPlaceholder': 'E-Mail-Adresse'
+        },
+        'fr': {
+          'headline': 'UNE ERREUR EST SURVENUE',
+          'desc': 'Veuillez réessayer dans quelques instants. Signalez le problème en cliquant sur le bouton ci-dessous',
+          'homepage': "RETOURNER SUR LA PAGE D'ACCUEIL",
+          'report': 'SIGNALER UN PROBLÈME',
+          'thankYou': 'Merci!',
+          'emailPlaceholder': 'Adresse e-mail'
+        },
+        'it': {
+          'headline': 'SI È VERIFICATO UN ERRORE',
+          'desc': 'Ti invitiamo a riprovare tra qualche minuto. Puoi segnalare il problema cliccando qui sotto',
+          'homepage': 'VAI ALLA HOMEPAGE',
+          'report': 'SEGNALA UN PROBLEMA',
+          'thankYou': 'Grazie!',
+          'emailPlaceholder': 'Indirizzo email'
+        },
+        'es': {
+          'headline': 'ALGO SALIÓ MAL',
+          'desc': 'Por favor, inténtalo de nuevo en unos momentos. Puedes informar del error haciendo clic en el siguiente botón.',
+          'homepage': 'IR A LA PÁGINA PRINCIPAL',
+          'report': 'INFORMAR DE UN ERROR',
+          'thankYou': 'Gracias!',
+          'emailPlaceholder': 'Correo electrónico'
+        },
+        'zh': {
+          'headline': '网页加载出现问题',
+          'desc': '请稍候再试。如需帮助，请点击下方按钮反馈问题。',
+          'homepage': '返回主页',
+          'report': '反馈问题',
+          'thankYou': '感谢',
+          'emailPlaceholder': '电子邮箱'
+        },
+        'ko': {
+          'headline': '예기치 못한 오류가 발생했습니다',
+          'desc': '잠시 후 다시 시도해 주시기를 바랍니다. 도움이 필요하신 경우, 아래 버튼을 클릭해 문제를 신고하실 수 있습니다.',
+          'homepage': '홈페이지로 가기',
+          'report': '문제 신고하기',
+          'thankYou': '감사합니다',
+          'emailPlaceholder': '이메일 주소'
+        },
+        'ar': {
+          'headline': 'لقد حدث خطأ ما',
+          'desc': 'يرجى المحاولة مرة أخرى بعد قليل. أبلغوا عن المشكلة عبر النقر على الزر أدناه.',
+          'homepage': 'الذهاب إلى الصفحة الرئيسية',
+          'report': 'الإبلاغ عن المشكلة',
+          'thankYou': 'شكراً لكم',
+          'emailPlaceholder': 'عنوان البريد الإلكتروني'
+        }
+      };
+      return texts[lang] || texts.en;
+    }
+
+
+    const pathSegments = window.location.pathname.split('/').filter(Boolean);
+    const [store, language, department] = pathSegments;
+
+    function detectLang() {
+      if (language && language.length === 2) {
+        if (['en', 'de', 'fr', 'it', 'es', 'zh', 'ko', 'ar'].includes(language)) return language;
+      }
+      const browserLang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
+      if (['en', 'de', 'fr', 'it', 'es', 'zh', 'ko', 'ar'].includes(browserLang)) return browserLang;
+      return 'en';
+    }
+
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+
+      if(value){
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+      }
+
+      return null;
+    }
+
+    async function hashEmail(email) {
+      const encoder = new TextEncoder();
+      const data = encoder.encode(email.toLowerCase().trim());
+      const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+      return hashHex;
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const emailForm = document.getElementById("emailForm");
+      const userEmailInput = document.getElementById("userEmail");
+      const reportBtn = document.getElementById("reportBtn");
+      const formMessage = document.getElementById("formMessage");
+
+      const lang = detectLang();
+      const texts = getTextsFor(lang);
+
+      const refnumber = document.querySelector("#refid");
+      const refError = refnumber ? refnumber.innerText.split(": ")[1] : "";
+
+      const country = getCookie('mt_geo') || "na";
+      const polymere = getCookie('mt_polymere') || "na";
+
+      anData.push({
+        object: "page",
+        action: "view",
+        device: {
+          type: "desktop"
+        },
+        platform: {
+          environment: "prod",
+          store: 0,
+          storeView: store || "na",
+          version: "na"
+        },
+        user: {
+          polymere: polymere,
+        },
+        page: {
+          country: country,
+          currencyCode: "na",
+          department: department,
+          errorId: "bot_management",
+          errorMsg: "User targeted by bot management on www - bot detections rules",
+          language: lang || "na",
+          languageCountry: lang || "na",
+          name: "branded-custom-deny-failover",
+          sitemap: "branded-custom-deny",
+          type: "error",
+        }
+      });
+
+      anData.push({
+        object: "custom_deny",
+        action: "tracking",
+        denyForm: {
+          type: "load",
+          source: "www - bot detections rules",
+          refError: refError,
+          reason: "bot_management"
+        },
+        url: {
+          host: location.hostname
+        }
+      });
+
+      function showMessage(type) {
+        if (type === "success") {
+          formMessage.textContent = texts.thankYou;
+          setTimeout(() => {
+            formMessage.textContent = "";
+          }, 4000);
+        } else {
+          formMessage.textContent = "";
+        }
+      }
+
+      function redirectToHomepage() {
+
+
+        if (store && language && department) {
+          const homepagePath = `/${store}/${language}/${department}`;
+          window.location.href = `https://www.mytheresa.com${homepagePath}`;
+        }
+      }
+
+      if (emailForm) {
+        emailForm.addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const email = userEmailInput.value.trim();
+
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            return;
+          }
+
+          const hashedEmail = await hashEmail(email);
+
+          const refnumber = document.querySelector("#refid");
+          const refError = refnumber ? refnumber.innerText.split(": ")[1] : "";
+
+          anData.push({
+            object: "custom_deny",
+            action: "tracking",
+            denyForm: {
+              type: "submit",
+              source: "www - bot detections rules",
+              refError: refError,
+              reason: "bot_management",
+              email: hashedEmail
+            },
+            url: {
+              host: location.hostname
+            }
+          });
+
+          reportBtn.disabled = true;
+          userEmailInput.value = "";
+          showMessage("success");
+
+          setTimeout(() => {
+            redirectToHomepage();
+          }, 1000);
+        });
+      }
+
+      const headline = document.querySelector('.second h1');
+      if (headline) headline.textContent = texts.headline;
+
+      const desc = document.querySelector('.third p');
+      if (desc) desc.textContent = texts.desc;
+
+      if (reportBtn) reportBtn.textContent = texts.report;
+
+      if (userEmailInput) userEmailInput.placeholder = texts.emailPlaceholder;
+    });
+
+  </script>
+
+
+</body></html>

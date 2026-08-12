@@ -34,3 +34,379 @@ HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 200 OK
 {"item_id": "700_2", "model": "google/gemma-4-e4b", "strategy": "chain-of-thought", "metrics": {"tp": 1, "fp": 1, "fn": 0, "precision": 0.5, "recall": 1.0, "f1_score": 0.6667}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:53:12.948469Z"}
 {"item_id": "700_3", "ground_truth": ["1.3.1"], "image_count": 0, "progress": "4/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:53:12.951573Z"}
 {"item_id": "700_3", "model": "google/gemma-4-e4b", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-06-17T19:53:12.952125Z"}
+{"event": "Iniciando o experimento...\n", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:33:05.103198Z"}
+{"model": "qwen2.5vl", "event": "model_run_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:33:05.104047Z"}
+{"path": "./Original_full_data_new.csv", "event": "dataset_ingestion_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:33:05.104139Z"}
+{"item_id": "700_0", "ground_truth": ["1.4.6"], "image_count": 0, "progress": "1/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:33:05.313845Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:33:05.314890Z"}
+Retrying request to /chat/completions in 0.448861 seconds
+Retrying request to /chat/completions in 0.754616 seconds
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "Connection error.", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T00:33:06.927346Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:33:06.929544Z"}
+Retrying request to /chat/completions in 0.427233 seconds
+Retrying request to /chat/completions in 0.896124 seconds
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "error": "Connection error.", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T00:33:08.268688Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:33:08.269946Z"}
+Retrying request to /chat/completions in 0.407243 seconds
+Retrying request to /chat/completions in 0.882825 seconds
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "Connection error.", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T00:33:09.578013Z"}
+{"item_id": "700_1", "ground_truth": ["1.3.1"], "image_count": 0, "progress": "2/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:33:09.581609Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:33:09.582195Z"}
+Retrying request to /chat/completions in 0.412941 seconds
+Retrying request to /chat/completions in 0.988833 seconds
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "Connection error.", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T00:33:11.003842Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:33:11.004210Z"}
+Retrying request to /chat/completions in 0.391317 seconds
+Retrying request to /chat/completions in 0.881811 seconds
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "few-shot", "error": "Connection error.", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T00:33:12.292016Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:33:12.293312Z"}
+Retrying request to /chat/completions in 0.384683 seconds
+Retrying request to /chat/completions in 0.848095 seconds
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "Connection error.", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T00:33:13.541533Z"}
+{"item_id": "700_2", "ground_truth": ["1.3.1"], "image_count": 0, "progress": "3/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:33:13.543392Z"}
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:33:13.543647Z"}
+Retrying request to /chat/completions in 0.429911 seconds
+Retrying request to /chat/completions in 0.926461 seconds
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "Connection error.", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T00:33:14.915557Z"}
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:33:14.916869Z"}
+Retrying request to /chat/completions in 0.424384 seconds
+Retrying request to /chat/completions in 0.797139 seconds
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "few-shot", "error": "Connection error.", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T00:33:16.157563Z"}
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:33:16.158731Z"}
+Retrying request to /chat/completions in 0.396468 seconds
+Retrying request to /chat/completions in 0.853279 seconds
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "Connection error.", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T00:33:17.424583Z"}
+{"item_id": "700_3", "ground_truth": ["1.3.1"], "image_count": 0, "progress": "4/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:33:17.426373Z"}
+{"item_id": "700_3", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:33:17.426662Z"}
+Retrying request to /chat/completions in 0.472745 seconds
+{"event": "Iniciando o experimento...\n", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:36:59.588877Z"}
+{"model": "qwen2.5vl", "event": "model_run_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:36:59.589375Z"}
+{"path": "./Original_full_data_new.csv", "event": "dataset_ingestion_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:36:59.589471Z"}
+{"item_id": "700_0", "ground_truth": ["1.4.6"], "image_count": 0, "progress": "1/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:36:59.801935Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:36:59.803004Z"}
+Retrying request to /chat/completions in 0.386066 seconds
+Retrying request to /chat/completions in 0.892300 seconds
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "Connection error.", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T00:37:01.456627Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:37:01.458211Z"}
+Retrying request to /chat/completions in 0.456520 seconds
+Retrying request to /chat/completions in 0.952232 seconds
+{"event": "Iniciando o experimento...\n", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:38:35.767143Z"}
+{"model": "qwen2.5vl", "event": "model_run_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:38:35.767626Z"}
+{"path": "./Original_full_data_new.csv", "event": "dataset_ingestion_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:38:35.767723Z"}
+{"item_id": "700_0", "ground_truth": ["1.4.6"], "image_count": 0, "progress": "1/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:38:35.975685Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:38:35.976669Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "metrics": {"tp": 0, "fp": 1, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:39:10.297136Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:39:10.298347Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "metrics": {"tp": 1, "fp": 0, "fn": 0, "precision": 1.0, "recall": 1.0, "f1_score": 1.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:39:14.349690Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:39:14.350098Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "metrics": {"tp": 0, "fp": 1, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:39:29.172785Z"}
+{"item_id": "700_1", "ground_truth": ["1.3.1"], "image_count": 0, "progress": "2/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:39:29.212192Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:39:29.213160Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "zero-shot", "metrics": {"tp": 1, "fp": 2, "fn": 0, "precision": 0.3333, "recall": 1.0, "f1_score": 0.5}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:39:45.171626Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:39:45.174448Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "few-shot", "metrics": {"tp": 1, "fp": 0, "fn": 0, "precision": 1.0, "recall": 1.0, "f1_score": 1.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:39:46.874254Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:39:46.875398Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "chain-of-thought", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:40:01.894757Z"}
+{"item_id": "700_2", "ground_truth": ["1.3.1"], "image_count": 0, "progress": "3/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:40:01.923619Z"}
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T00:40:01.924314Z"}
+{"event": "Iniciando o experimento...\n", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T17:35:43.514721Z"}
+{"model": "qwen2.5vl", "event": "model_run_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T17:35:43.515178Z"}
+{"path": "./Original_full_data_new.csv", "event": "dataset_ingestion_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T17:35:43.515262Z"}
+{"event": "Iniciando o experimento...\n", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T17:56:21.847228Z"}
+{"model": "qwen2.5vl", "event": "model_run_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T17:56:21.847689Z"}
+{"path": "./Original_full_data_new.csv", "event": "dataset_ingestion_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T17:56:21.847806Z"}
+{"event": "Iniciando o experimento...\n", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:08:39.829173Z"}
+{"model": "qwen2.5vl", "event": "model_run_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:08:39.829597Z"}
+{"path": "./Original_full_data_new.csv", "event": "dataset_ingestion_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:08:39.829684Z"}
+{"item_id": "700_0", "ground_truth": ["1.4.6"], "image_count": 1, "progress": "1/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:08:44.192596Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:08:44.193372Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:09:10.859227Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:09:10.860503Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:09:20.393102Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:09:20.393989Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:09:29.826302Z"}
+{"item_id": "700_1", "ground_truth": ["1.3.1"], "image_count": 1, "progress": "2/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:09:31.718934Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:09:31.719397Z"}
+{"event": "Iniciando o experimento...\n", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:18:54.083389Z"}
+{"model": "qwen2.5vl", "event": "model_run_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:18:54.083803Z"}
+{"path": "./Original_full_data_new.csv", "event": "dataset_ingestion_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:18:54.083879Z"}
+{"item_id": "700_0", "ground_truth": ["1.4.6"], "image_count": 1, "progress": "1/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:18:56.376930Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:18:56.377490Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:19:20.563286Z"}
+{"event": "Iniciando o experimento...\n", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:27:17.442793Z"}
+{"model": "qwen2.5vl", "event": "model_run_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:27:17.443286Z"}
+{"path": "./Original_full_data_new.csv", "event": "dataset_ingestion_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:27:17.443369Z"}
+{"item_id": "700_0", "ground_truth": ["1.4.6"], "image_count": 1, "progress": "1/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:27:19.719647Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:27:19.720148Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:27:45.074288Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:27:45.088667Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:27:54.255569Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:27:54.257284Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:28:03.333173Z"}
+{"item_id": "700_1", "ground_truth": ["1.3.1"], "image_count": 1, "progress": "2/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:28:05.949037Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:28:05.949509Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "zero-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:28:15.026337Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:28:15.028123Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "few-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:28:24.291059Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:28:24.291639Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "chain-of-thought", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:28:33.471947Z"}
+{"item_id": "700_2", "ground_truth": ["1.3.1"], "image_count": 1, "progress": "3/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:28:35.956321Z"}
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:28:35.956736Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "zero-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:28:45.770259Z"}
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:28:45.772987Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "few-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:28:55.096904Z"}
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:28:55.099854Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "chain-of-thought", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:29:04.635673Z"}
+{"item_id": "700_3", "ground_truth": ["1.3.1"], "image_count": 1, "progress": "4/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:29:07.058538Z"}
+{"item_id": "700_3", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:29:07.059085Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_3", "model": "qwen2.5vl", "strategy": "zero-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:29:16.223277Z"}
+{"item_id": "700_3", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:29:16.225289Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_3", "model": "qwen2.5vl", "strategy": "few-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:29:25.466294Z"}
+{"item_id": "700_3", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:29:25.467892Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_3", "model": "qwen2.5vl", "strategy": "chain-of-thought", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:29:34.630041Z"}
+{"item_id": "701_0", "ground_truth": ["1.4.6"], "image_count": 1, "progress": "5/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:29:37.070006Z"}
+{"item_id": "701_0", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:29:37.070429Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "701_0", "model": "qwen2.5vl", "strategy": "zero-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:29:57.706336Z"}
+{"item_id": "701_0", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:29:57.707086Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "701_0", "model": "qwen2.5vl", "strategy": "few-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:30:09.736611Z"}
+{"item_id": "701_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:30:09.737980Z"}
+{"event": "Iniciando o experimento...\n", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:34:12.375691Z"}
+{"model": "qwen2.5vl", "event": "model_run_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:34:12.376833Z"}
+{"path": "./Original_full_data_new.csv", "event": "dataset_ingestion_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:34:12.377047Z"}
+{"item_id": "700_0", "ground_truth": ["1.4.6"], "image_count": 1, "progress": "1/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:34:15.003625Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:34:15.004205Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:34:26.583945Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:34:26.585070Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:34:35.421764Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:34:35.423471Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:34:44.396135Z"}
+{"item_id": "700_1", "ground_truth": ["1.3.1"], "image_count": 1, "progress": "2/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:34:46.797875Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:34:46.798675Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "zero-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:34:55.921584Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:34:55.922675Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "few-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:35:05.220053Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:35:05.221519Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "chain-of-thought", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:35:15.174948Z"}
+{"item_id": "700_2", "ground_truth": ["1.3.1"], "image_count": 1, "progress": "3/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:35:18.010357Z"}
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:35:18.011173Z"}
+{"event": "Iniciando o experimento...\n", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:19.314529Z"}
+{"model": "qwen2.5vl", "event": "model_run_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:19.314939Z"}
+{"path": "./Original_full_data_new.csv", "event": "dataset_ingestion_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:19.315038Z"}
+{"item_id": "700_0", "ground_truth": ["1.4.6"], "image_count": 1, "progress": "1/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:21.592097Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:21.595787Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:21.595867Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:21.596040Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:21.598499Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:21.598702Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:21.598753Z"}
+{"item_id": "700_1", "ground_truth": ["1.3.1"], "image_count": 1, "progress": "2/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:22.622265Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:22.622674Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:22.622760Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:22.622994Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "few-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:22.623031Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:22.623160Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:22.623203Z"}
+{"item_id": "700_2", "ground_truth": ["1.3.1"], "image_count": 1, "progress": "3/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:23.689343Z"}
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:23.689918Z"}
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:23.690032Z"}
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:23.690426Z"}
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "few-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:23.690470Z"}
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:23.690587Z"}
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:23.690623Z"}
+{"item_id": "700_3", "ground_truth": ["1.3.1"], "image_count": 1, "progress": "4/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:24.784547Z"}
+{"item_id": "700_3", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:24.784967Z"}
+{"item_id": "700_3", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:24.785110Z"}
+{"item_id": "700_3", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:24.785383Z"}
+{"item_id": "700_3", "model": "qwen2.5vl", "strategy": "few-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:24.785423Z"}
+{"item_id": "700_3", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:24.785547Z"}
+{"item_id": "700_3", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:24.785608Z"}
+{"item_id": "701_0", "ground_truth": ["1.4.6"], "image_count": 1, "progress": "5/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:25.854924Z"}
+{"item_id": "701_0", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:25.855839Z"}
+{"item_id": "701_0", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:25.855902Z"}
+{"item_id": "701_0", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:25.856279Z"}
+{"item_id": "701_0", "model": "qwen2.5vl", "strategy": "few-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:25.856370Z"}
+{"item_id": "701_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:25.856547Z"}
+{"item_id": "701_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:25.856583Z"}
+{"item_id": "701_1", "ground_truth": ["1.3.1"], "image_count": 1, "progress": "6/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:26.924992Z"}
+{"item_id": "701_1", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:26.925325Z"}
+{"item_id": "701_1", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:26.925382Z"}
+{"item_id": "701_1", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:26.925592Z"}
+{"item_id": "701_1", "model": "qwen2.5vl", "strategy": "few-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:26.925631Z"}
+{"item_id": "701_1", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:26.925745Z"}
+{"item_id": "701_1", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:26.925777Z"}
+{"item_id": "701_2", "ground_truth": ["1.3.1"], "image_count": 1, "progress": "7/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:27.969405Z"}
+{"item_id": "701_2", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:27.969738Z"}
+{"item_id": "701_2", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:27.969833Z"}
+{"item_id": "701_2", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:27.970105Z"}
+{"item_id": "701_2", "model": "qwen2.5vl", "strategy": "few-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:27.970152Z"}
+{"item_id": "701_2", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:27.970275Z"}
+{"item_id": "701_2", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:27.970312Z"}
+{"item_id": "701_3", "ground_truth": ["1.3.1"], "image_count": 1, "progress": "8/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:29.058911Z"}
+{"item_id": "701_3", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:29.059175Z"}
+{"item_id": "701_3", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:29.059261Z"}
+{"item_id": "701_3", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:29.059487Z"}
+{"item_id": "701_3", "model": "qwen2.5vl", "strategy": "few-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:29.059529Z"}
+{"item_id": "701_3", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:29.059658Z"}
+{"item_id": "701_3", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:29.059698Z"}
+{"item_id": "702_0", "ground_truth": ["1.4.6"], "image_count": 1, "progress": "9/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:30.089357Z"}
+{"item_id": "702_0", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:30.089786Z"}
+{"item_id": "702_0", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:30.089850Z"}
+{"item_id": "702_0", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:30.090067Z"}
+{"item_id": "702_0", "model": "qwen2.5vl", "strategy": "few-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:30.090105Z"}
+{"item_id": "702_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:30.090214Z"}
+{"item_id": "702_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:30.090249Z"}
+{"item_id": "702_1", "ground_truth": ["1.3.1"], "image_count": 1, "progress": "10/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:31.184693Z"}
+{"item_id": "702_1", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:31.184935Z"}
+{"item_id": "702_1", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:31.184996Z"}
+{"item_id": "702_1", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:31.185226Z"}
+{"item_id": "702_1", "model": "qwen2.5vl", "strategy": "few-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:31.185268Z"}
+{"item_id": "702_1", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:31.185382Z"}
+{"item_id": "702_1", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:31.185422Z"}
+{"item_id": "702_2", "ground_truth": ["1.3.1"], "image_count": 1, "progress": "11/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:32.152687Z"}
+{"item_id": "702_2", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:32.153048Z"}
+{"item_id": "702_2", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:32.153147Z"}
+{"item_id": "702_2", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:32.153422Z"}
+{"item_id": "702_2", "model": "qwen2.5vl", "strategy": "few-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:32.153463Z"}
+{"item_id": "702_2", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:32.153584Z"}
+{"item_id": "702_2", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:32.153616Z"}
+{"item_id": "702_3", "ground_truth": ["1.3.1"], "image_count": 1, "progress": "12/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:33.214572Z"}
+{"item_id": "702_3", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:33.214836Z"}
+{"item_id": "702_3", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:33.214903Z"}
+{"item_id": "702_3", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:33.215121Z"}
+{"item_id": "702_3", "model": "qwen2.5vl", "strategy": "few-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:33.215157Z"}
+{"item_id": "702_3", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:33.215281Z"}
+{"item_id": "702_3", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:33.215316Z"}
+{"item_id": "703_0", "ground_truth": ["1.4.6"], "image_count": 1, "progress": "13/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:34.278385Z"}
+{"item_id": "703_0", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:34.278629Z"}
+{"item_id": "703_0", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:34.278681Z"}
+{"item_id": "703_0", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:34.278899Z"}
+{"item_id": "703_0", "model": "qwen2.5vl", "strategy": "few-shot", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:34.278935Z"}
+{"item_id": "703_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:37:34.279050Z"}
+{"item_id": "703_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "type object 'PromptRecipe' has no attribute 'SYSTEM_PROMPT_EVIDENCE_FIRST'", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T18:37:34.279084Z"}
+Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+{"event": "Iniciando o experimento...\n", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:39:36.871409Z"}
+{"model": "qwen2.5vl", "event": "model_run_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:39:36.871779Z"}
+{"path": "./Original_full_data_new.csv", "event": "dataset_ingestion_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:39:36.871863Z"}
+{"item_id": "700_0", "ground_truth": ["1.4.6"], "image_count": 1, "progress": "1/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:39:39.588643Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:39:39.589228Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:39:50.703992Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:39:50.705171Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:39:59.559416Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:39:59.561394Z"}
+{"event": "Iniciando o experimento...\n", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:41:58.652830Z"}
+{"model": "qwen2.5vl", "event": "model_run_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:41:58.653192Z"}
+{"path": "./Original_full_data_new.csv", "event": "dataset_ingestion_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:41:58.653265Z"}
+{"item_id": "700_0", "ground_truth": ["1.4.6"], "image_count": 1, "progress": "1/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:42:01.543476Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:42:01.545054Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:42:10.860732Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:42:10.861749Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:42:19.706034Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:42:19.706946Z"}
+{"event": "Iniciando o experimento...\n", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:42:52.335734Z"}
+{"model": "qwen2.5vl", "event": "model_run_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:42:52.336314Z"}
+{"path": "./Original_full_data_new.csv", "event": "dataset_ingestion_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:42:52.336396Z"}
+{"item_id": "700_0", "ground_truth": ["1.4.6"], "image_count": 1, "progress": "1/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:42:54.566060Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T18:42:54.566867Z"}
+{"event": "Iniciando o experimento...\n", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:19:55.781953Z"}
+{"model": "qwen2.5vl", "event": "model_run_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:19:55.782395Z"}
+{"path": "./Original_full_data_new.csv", "event": "dataset_ingestion_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:19:55.782477Z"}
+{"item_id": "700_0", "ground_truth": ["1.4.6"], "image_count": 0, "progress": "1/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:19:58.020244Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:19:58.021608Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:20:28.397245Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:20:28.401503Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:20:36.193333Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:20:36.212248Z"}
+HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "metrics": {"tp": 0, "fp": 0, "fn": 1, "precision": 0.0, "recall": 0.0, "f1_score": 0.0}, "event": "inference_success", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:20:44.544797Z"}
+{"item_id": "700_1", "ground_truth": ["1.3.1"], "image_count": 0, "progress": "2/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:20:47.486679Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:20:47.498108Z"}
+{"event": "Iniciando o experimento...\n", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:31:04.500641Z"}
+{"model": "qwen2.5vl", "event": "model_run_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:31:04.501089Z"}
+{"path": "./Original_full_data_new.csv", "event": "dataset_ingestion_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:31:04.501184Z"}
+{"item_id": "700_0", "ground_truth": ["1.4.6"], "image_count": 1, "progress": "1/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:31:06.730302Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:31:06.730863Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "Error code: 400 - {'error': {'message': \"No models loaded. Please load a model in the developer page or use the 'lms load' command.\", 'type': 'invalid_request_error', 'param': 'model', 'code': None}}", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T19:31:06.994445Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:31:06.994719Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "few-shot", "error": "Error code: 400 - {'error': {'message': \"No models loaded. Please load a model in the developer page or use the 'lms load' command.\", 'type': 'invalid_request_error', 'param': 'model', 'code': None}}", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T19:31:07.002843Z"}
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:31:07.002983Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"item_id": "700_0", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "Error code: 400 - {'error': {'message': \"No models loaded. Please load a model in the developer page or use the 'lms load' command.\", 'type': 'invalid_request_error', 'param': 'model', 'code': None}}", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T19:31:07.010444Z"}
+{"item_id": "700_1", "ground_truth": ["1.3.1"], "image_count": 1, "progress": "2/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:31:08.017804Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:31:08.018047Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "Error code: 400 - {'error': {'message': \"No models loaded. Please load a model in the developer page or use the 'lms load' command.\", 'type': 'invalid_request_error', 'param': 'model', 'code': None}}", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T19:31:08.028320Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:31:08.028591Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "few-shot", "error": "Error code: 400 - {'error': {'message': \"No models loaded. Please load a model in the developer page or use the 'lms load' command.\", 'type': 'invalid_request_error', 'param': 'model', 'code': None}}", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T19:31:08.034797Z"}
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:31:08.035031Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"item_id": "700_1", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "Error code: 400 - {'error': {'message': \"No models loaded. Please load a model in the developer page or use the 'lms load' command.\", 'type': 'invalid_request_error', 'param': 'model', 'code': None}}", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T19:31:08.042633Z"}
+{"item_id": "700_2", "ground_truth": ["1.3.1"], "image_count": 1, "progress": "3/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:31:09.098803Z"}
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:31:09.098996Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "Error code: 400 - {'error': {'message': \"No models loaded. Please load a model in the developer page or use the 'lms load' command.\", 'type': 'invalid_request_error', 'param': 'model', 'code': None}}", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T19:31:09.115919Z"}
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:31:09.116302Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "few-shot", "error": "Error code: 400 - {'error': {'message': \"No models loaded. Please load a model in the developer page or use the 'lms load' command.\", 'type': 'invalid_request_error', 'param': 'model', 'code': None}}", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T19:31:09.134481Z"}
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:31:09.134774Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"item_id": "700_2", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "Error code: 400 - {'error': {'message': \"No models loaded. Please load a model in the developer page or use the 'lms load' command.\", 'type': 'invalid_request_error', 'param': 'model', 'code': None}}", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T19:31:09.142950Z"}
+{"item_id": "700_3", "ground_truth": ["1.3.1"], "image_count": 1, "progress": "4/3524", "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:31:10.133056Z"}
+{"item_id": "700_3", "model": "qwen2.5vl", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:31:10.133261Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"item_id": "700_3", "model": "qwen2.5vl", "strategy": "zero-shot", "error": "Error code: 400 - {'error': {'message': \"No models loaded. Please load a model in the developer page or use the 'lms load' command.\", 'type': 'invalid_request_error', 'param': 'model', 'code': None}}", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T19:31:10.143242Z"}
+{"item_id": "700_3", "model": "qwen2.5vl", "strategy": "few-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:31:10.143546Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"item_id": "700_3", "model": "qwen2.5vl", "strategy": "few-shot", "error": "Error code: 400 - {'error': {'message': \"No models loaded. Please load a model in the developer page or use the 'lms load' command.\", 'type': 'invalid_request_error', 'param': 'model', 'code': None}}", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T19:31:10.149910Z"}
+{"item_id": "700_3", "model": "qwen2.5vl", "strategy": "chain-of-thought", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-12T19:31:10.150057Z"}
+HTTP Request: POST http://10.102.20.26:1234/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"item_id": "700_3", "model": "qwen2.5vl", "strategy": "chain-of-thought", "error": "Error code: 400 - {'error': {'message': \"No models loaded. Please load a model in the developer page or use the 'lms load' command.\", 'type': 'invalid_request_error', 'param': 'model', 'code': None}}", "event": "inference_failed", "level": "error", "logger": "__main__", "timestamp": "2026-08-12T19:31:10.162494Z"}
+Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed

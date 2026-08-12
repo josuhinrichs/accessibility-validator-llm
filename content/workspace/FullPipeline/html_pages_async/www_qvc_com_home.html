@@ -1,0 +1,33 @@
+<html><head>
+<meta charset="UTF-8">
+<style>
+		.shopdown{font-size:20px;text-align:center;font-family:Arial,Helvetica,sans-serif;}
+</style></head>
+
+<body><div class="shopdown">
+	<img src="https://images.qvc.com/is/image/pic/newMediaDE/web/qvc_brand_logo.png" alt="QVC">
+	<br><br>
+	<font size="-1">Error ID = <span id="ref-id">0.9d8f1402.1754415366.3a454fd3</span></font>
+	<br>
+	<font size="-2">Connecting Address = <span id="client-ip">129.69.187.203</span></font>
+	<br><br>
+	<button onclick="copyToClipboard()"> Copy to Clipboard </button>
+</div>
+
+<meta http-equiv="Refresh" content="15; url='https://www.qvc.com'">
+
+<script>
+function copyToClipboard() {
+  var refId = document.getElementById("ref-id").textContent.trim();
+  var clientIp = document.getElementById("client-ip").textContent.trim();
+
+  var copyText = "Akamai reference ID: " + refId + "\nClient IP: " + clientIp;
+  var tempInput = document.createElement("textarea");
+  tempInput.value = copyText;
+
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+}
+</script></body></html>
