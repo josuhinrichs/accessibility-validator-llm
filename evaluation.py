@@ -7,6 +7,11 @@ from config import logger
 from llm_clients import LLMClient
 from procecss import extract_predicted_wcag
 
+CSV_HEADERS = [
+    "item_id", "model", "strategy", "duration_ms",
+    "tp", "fp", "fn", "precision", "recall", "f1_score",
+    "ground_truth", "predictions", "raw_output", "error"
+]
 RESULTS_ROOT_DIR = Path("./experiment_results")
 RUN_ID = time.strftime("%Y%m%d_%H%M%S")
 RUN_RESULTS_DIR = RESULTS_ROOT_DIR / "runs" / RUN_ID
@@ -52,7 +57,7 @@ def init_csv_file(filepath: Path):
             writer = csv.writer(f)
             writer.writerow(CSV_HEADERS)
 
-def append_to_csv(filepath: Path, record: dict):
+def append_to_csv(filepath: Path, record: dict[str, str | int | float]):
     """
     Adiciona uma única linha ao CSV. Abertura em modo 'a' (append) garante
     resiliência: se o script falhar, os dados processados até o momento estão salvos.

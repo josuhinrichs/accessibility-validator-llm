@@ -1,9 +1,8 @@
 import base64
 from pathlib import Path
-from typing import List
-from openai import OpenAI
 
-from pathlib import Path
+from openai import OpenAI
+from typing_extensions import final
 
 
 def image_path_to_data_url(image_path: str) -> str:
@@ -18,10 +17,10 @@ def image_path_to_data_url(image_path: str) -> str:
 
     return f"data:{mime_type};base64,{encoded}"
 
-
+@final
 class LLMClient:
     def __init__(self,
-                 models: List[str],
+                 models: list[str],
                  api_key: str | None = None,
                  base_url: str | None = None,
                  temperature: float = 0.0,
@@ -42,7 +41,7 @@ class LLMClient:
         client_kwargs["base_url"] = self.base_url or "http://localhost:1234/v1"
         self.client = OpenAI(**client_kwargs)
 
-    def run(self, model: str, prompt: str, images: List[str]) -> str:
+    def run(self, model: str, prompt: str, images: list[str]) -> str:
         content = [{"type": "text", "text": prompt}]
 
         if self.include_images:
@@ -65,3 +64,17 @@ class LLMClient:
         )
 
         return response.choices[0].message.content or "_Empty response"
+
+openai_client = LLMClient(
+    api_key="lm-studio",
+    base_url="http://10.102.20.26:1234/v1",
+    models=["qwen2.5vl"],
+    include_images=True
+)
+
+ollama_client = LLMClient(
+    api_key="ollama",
+    base_url="http://localhost:11434/v1",
+    models=["qwen2.5vl"],
+    include_images=True
+)
