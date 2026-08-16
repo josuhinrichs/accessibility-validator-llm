@@ -18,26 +18,19 @@ SYSTEM_PROMPT_BASELINE = (
 SYSTEM_PROMPT_EVIDENCE_FIRST = (
     "You are a strict web accessibility auditor. Stay grounded in the provided "
     "evidence and return only violations supported by the page artifacts.\n\n"
-    "Do not summarize the page. Do not explain the HTML. Do not offer help. "
-    "Return one valid JSON object only."
+    "Do not guess. Do not invent elements. Return STRICT JSON only."
 )
 
 
 OUTPUT_SCHEMA_HINT = """
 Return a strict JSON object of this exact shape:
 {"violations": [
-  {"wcagCode": "<JUST the WCAG code>", "violationName": "<short violation name>", "category": "semantic|layout",
+  {"wcagCode": "<JUST the WCAG code>", "violationName": "<taxonomy name>", "category": "semantic|layout",
    "html": "<offending element HTML>", "target": "<selector or null>",
    "description": "<why, citing what you observed>",
    "impact": "critical|serious|moderate|minor", "confidence": <0.0-1.0>}
 ]}
-If none, return {"violations": []}.
-"""
-
-
-FINAL_JSON_REMINDER = """
-Now return ONLY the JSON object. No markdown, no prose, no explanation.
-If the evidence is insufficient for a supported violation, return {"violations": []}.
+Report only names in the taxonomy. If none, return {"violations": []}.
 """
 
 
@@ -94,9 +87,10 @@ class PromptRecipe:
         page: RenderedPage,
         evidence_inputs: Iterable[str],
         taxonomy_block: str = "",
-        extra_context: str = "",
     ) -> str:
-        parts: list[str] = []
+        parts: list[str] = [
+            "Audit this page for accessibility violations from this taxonomy:"
+        ]
 
         evidence_inputs = {
             str(item).strip().lower()
@@ -105,14 +99,7 @@ class PromptRecipe:
 
         for section in section_order:
             if section == "taxonomy":
-                if taxonomy_block.strip():
-                    parts.extend([
-                        "Audit this page for accessibility violations from this taxonomy:",
-                        "",
-                        taxonomy_block,
-                    ])
-                else:
-                    parts.append("Audit this page for WCAG accessibility violations.")
+                parts.extend(["", taxonomy_block])
 
             elif section == "schema":
                 parts.extend(["", OUTPUT_SCHEMA_HINT])
@@ -122,18 +109,9 @@ class PromptRecipe:
                     "",
                     "Focus on violations directly supported by the inputs.",
                 ])
-                if extra_context.strip():
-                    parts.extend([
-                        "",
-                        "ADDITIONAL EVIDENCE:",
-                        extra_context.strip(),
-                    ])
-
             elif section == "evidence":
                 parts.extend(
                     evidence_sections(page, evidence_inputs)
                 )
-
-        parts.extend(["", FINAL_JSON_REMINDER])
 
         return "\n".join(parts)

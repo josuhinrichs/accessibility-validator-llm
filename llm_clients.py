@@ -1,6 +1,8 @@
 import base64
+from pathlib import Path
 from typing import List
 from openai import OpenAI
+
 from pathlib import Path
 
 
@@ -40,18 +42,8 @@ class LLMClient:
         client_kwargs["base_url"] = self.base_url or "http://localhost:1234/v1"
         self.client = OpenAI(**client_kwargs)
 
-    def run(
-        self,
-        model: str,
-        prompt: str,
-        images: List[str],
-        system_prompt: str | None = None,
-    ) -> str:
+    def run(self, model: str, prompt: str, images: List[str]) -> str:
         content = [{"type": "text", "text": prompt}]
-        messages = []
-
-        if system_prompt:
-            messages.append({"role": "system", "content": system_prompt})
 
         if self.include_images:
             for image_path in images:
@@ -62,18 +54,14 @@ class LLMClient:
                     }
                 )
 
-        messages.append({"role": "user", "content": content})
-
-        kwargs = {}
-        if self.force_json:
-            kwargs["response_format"] = {"type": "json_object"}
+        # if self.force_json:
+        #     kwargs["response_format"] = {"type": "json_object"}
 
         response = self.client.chat.completions.create(
             model=model,
-            messages=messages,
+            messages=[{"role": "user", "content": content}],
             temperature=self.temperature,
             max_tokens=self.max_tokens,
-            **kwargs,
         )
 
         return response.choices[0].message.content or "_Empty response"
