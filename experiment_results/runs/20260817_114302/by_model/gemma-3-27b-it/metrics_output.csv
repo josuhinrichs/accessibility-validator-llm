@@ -1,0 +1,310 @@
+item_id,model,strategy,duration_ms,tp,fp,fn,precision,recall,f1_score,ground_truth,predictions,raw_output,error,schema_valid,parse_failed,empty_response,prediction_source,mapped_rule_ids
+6002,gemma-3-27b-it,zero-shot,3033,1,0,0,1.0,1.0,1.0,1.3.1,1.3.1,"```json
+{""violations"": [
+  {
+    ""wcagCode"": ""1.3.1"",
+    ""violationName"": ""Info and Relationships - Table Header Association"",
+    ""category"": ""semantic"",
+    ""html"": ""<td headers=\""col1\"">Zimbabwe</td>"",
+    ""target"": null,
+    ""description"": ""The `headers` attribute on the second data cell references 'col1', but it should reference both header cells to correctly associate the data with its corresponding headers."",
+    ""impact"": ""moderate"",
+    ""confidence"": 1.0
+  }
+]}
+```",,True,False,False,json,
+6018,gemma-3-27b-it,zero-shot,950,0,0,0,0.0,0.0,0.0,4.1.2,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 25885>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+6001,gemma-3-27b-it,zero-shot,3595,0,1,1,0.0,0.0,0.0,1.4.1,1.1.1,"```json
+{""violations"": [
+  {
+    ""wcagCode"": ""1.1.1"",
+    ""violationName"": ""Non-text Content"",
+    ""category"": ""semantic"",
+    ""html"": ""<a href=\""https://www.w3.org/WAI\""><img src=\""/WAI/content-assets/wcag-act-rules/test-assets/shared/w3c-logo.png\"" role=\""presentation\""></a>"",
+    ""target"": ""a img"",
+    ""description"": ""The image does not have alternative text, and serves a functional purpose as part of a link.  This violates 1.1.1 because non-text content must have text alternatives that convey the same meaning."",
+    ""impact"": ""critical"",
+    ""confidence"": 1.0
+  }
+]}
+```",,True,False,False,json,
+6009,gemma-3-27b-it,zero-shot,979,0,0,0,0.0,0.0,0.0,1.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 36266>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+6021,gemma-3-27b-it,zero-shot,831,0,0,0,0.0,0.0,0.0,2.4.6|1.3.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 25406>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+6013,gemma-3-27b-it,zero-shot,1011,0,0,0,0.0,0.0,0.0,4.1.2,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 35158>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+6007,gemma-3-27b-it,zero-shot,1064,0,0,0,0.0,0.0,0.0,4.1.2,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 44765>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+6003,gemma-3-27b-it,zero-shot,3480,1,0,0,1.0,1.0,1.0,1.1.1,1.1.1,"```json
+{""violations"": [
+  {
+    ""wcagCode"": ""1.1.1"",
+    ""violationName"": ""Non-text Content"",
+    ""category"": ""semantic"",
+    ""html"": ""<canvas id=\""logo\"" width=\""72\"" height=\""48\"" aria-label=\""HTML 5 logo\""></canvas>"",
+    ""target"": ""#logo"",
+    ""description"": ""The canvas element displays an image but relies solely on the `aria-label` attribute for conveying information. While an `aria-label` is present, it doesn't fulfill the requirement of providing text alternatives that are positioned appropriately and equivalent in meaning to the visual content."",
+    ""impact"": ""moderate"",
+    ""confidence"": 0.9
+  }
+]}
+```",,True,False,False,json,
+6016,gemma-3-27b-it,zero-shot,1249,0,0,0,0.0,0.0,0.0,3.3.2,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 30476>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+6008,gemma-3-27b-it,zero-shot,1089,0,0,0,0.0,0.0,0.0,4.1.2|2.4.4,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 26402>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+6010,gemma-3-27b-it,zero-shot,1330,0,0,0,0.0,0.0,0.0,2.4.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 40256>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+6014,gemma-3-27b-it,zero-shot,991,0,0,0,0.0,0.0,0.0,1.4.2,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 32602>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+6000,gemma-3-27b-it,zero-shot,2130,0,1,1,0.0,0.0,0.0,4.1.2,1.3.1,"```json
+{""violations"": [
+  {""wcagCode"": ""1.3.1"", ""violationName"": ""Information and Relationships"", ""category"": ""semantic"", ""html"": ""<summary></summary>"", ""target"": null, ""description"": ""The summary element is empty, providing no discernible label for the details disclosure."", ""impact"": ""moderate"", ""confidence"": 1.0}
+]}
+```",,True,False,False,json,
+6004,gemma-3-27b-it,zero-shot,5152,0,2,1,0.0,0.0,0.0,4.1.2,2.1.1|2.4.4,"```json
+{""violations"": [
+  {
+    ""wcagCode"": ""2.1.1"",
+    ""violationName"": ""Keyboard Accessible Name"",
+    ""category"": ""semantic"",
+    ""html"": ""<span class=\""link\"" onclick=\""location.href='https://act-rules.github.io/'\"" role=\""lnik\"">ACT rules</span>"",
+    ""target"": "".link"",
+    ""description"": ""The element has a role of 'lnik' which is not a valid ARIA role. It should be 'link'."",
+    ""impact"": ""serious"",
+    ""confidence"": 1.0
+  },
+  {
+    ""wcagCode"": ""2.4.4"",
+    ""violationName"": ""Link Purpose (In Context)"",
+    ""category"": ""semantic"",
+    ""html"": ""<span class=\""link\"" onclick=\""location.href='https://act-rules.github.io/'\"" role=\""lnik\"">ACT rules</span>"",
+    ""target"": "".link"",
+    ""description"": ""The link text 'ACT rules' does not clearly indicate the destination of the link."",
+    ""impact"": ""moderate"",
+    ""confidence"": 0.8
+  }
+]}
+```",,True,False,False,json,
+6019,gemma-3-27b-it,zero-shot,1077,0,0,0,0.0,0.0,0.0,4.1.2,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 26513>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+6005,gemma-3-27b-it,zero-shot,5567,0,2,2,0.0,0.0,0.0,4.1.2|1.3.1,2.1.1|2.4.1,"```json
+{""violations"": [
+  {
+    ""wcagCode"": ""2.1.1"",
+    ""violationName"": ""Keyboard Accessible Focus Indicators Missing"",
+    ""category"": ""semantic"",
+    ""html"": ""<a href=\""/\"" style=\""position:absolute; top:-999em\"">Link</a>"",
+    ""target"": null,
+    ""description"": ""The link is positioned off-screen using CSS (top:-999em) and therefore cannot be reached with a keyboard."",
+    ""impact"": ""critical"",
+    ""confidence"": 1.0
+  },
+  {
+    ""wcagCode"": ""2.4.1"",
+    ""violationName"": ""Bypass Blocks Missing"",
+    ""category"": ""semantic"",
+    ""html"": ""<div aria-hidden=\""true\"">\n\t<a href=\""/\"" style=\""position:absolute; top:-999em\"">Link</a>\n</div>"",
+    ""target"": null,
+    ""description"": ""Content is hidden from sighted users but remains available to screen reader users due to the use of aria-hidden=true on a container with focusable content. This creates a bypass block that isn't properly implemented."",
+    ""impact"": ""serious"",
+    ""confidence"": 0.9
+  }
+]}
+```",,True,False,False,json,
+6020,gemma-3-27b-it,zero-shot,1047,0,0,0,0.0,0.0,0.0,2.5.5,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 25859>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+6012,gemma-3-27b-it,zero-shot,782,0,0,0,0.0,0.0,0.0,1.2.2,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 26276>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+6017,gemma-3-27b-it,zero-shot,1046,0,0,0,0.0,0.0,0.0,4.1.2,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 26001>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+6015,gemma-3-27b-it,zero-shot,901,0,0,0,0.0,0.0,0.0,3.1.2,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 34091>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+6022,gemma-3-27b-it,zero-shot,1029,0,0,0,0.0,0.0,0.0,1.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 25864>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+6006,gemma-3-27b-it,zero-shot,815,0,0,0,0.0,0.0,0.0,2.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 29442>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+3962772074_0,gemma-3-27b-it,zero-shot,1363,0,0,0,0.0,0.0,0.0,1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 40256>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+8352230246_0,gemma-3-27b-it,zero-shot,892,0,0,0,0.0,0.0,0.0,1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 34091>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+3101899065_0,gemma-3-27b-it,zero-shot,1298,0,0,0,0.0,0.0,0.0,1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 44765>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+2344724610_0,gemma-3-27b-it,zero-shot,1044,0,0,0,0.0,0.0,0.0,1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 35158>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+3978893713_0,gemma-3-27b-it,zero-shot,988,0,0,0,0.0,0.0,0.0,1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 32602>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+1266621207_0,gemma-3-27b-it,zero-shot,1033,0,0,0,0.0,0.0,0.0,1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 36266>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+8589605512_0,gemma-3-27b-it,zero-shot,817,0,0,0,0.0,0.0,0.0,1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 29442>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+6570560458_0,gemma-3-27b-it,zero-shot,794,0,0,0,0.0,0.0,0.0,1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 26276>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+706_0,gemma-3-27b-it,zero-shot,689,0,0,0,0.0,0.0,0.0,2.4.6|2.4.4|1.4.6|1.4.3|2.1.1|2.4.9|4.1.2|2.4.3|1.3.1|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 58220>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+708_0,gemma-3-27b-it,zero-shot,687,0,0,0,0.0,0.0,0.0,2.4.6|2.4.4|1.4.6|1.4.3|2.1.1|2.4.9|4.1.2|2.4.3|1.3.1|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 58201>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+709_0,gemma-3-27b-it,zero-shot,678,0,0,0,0.0,0.0,0.0,2.4.6|2.4.4|1.4.6|1.4.3|2.1.1|2.4.9|4.1.2|2.4.3|1.3.1|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 58246>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+716_0,gemma-3-27b-it,zero-shot,694,0,0,0,0.0,0.0,0.0,2.4.6|1.3.1|1.4.6|1.4.3|2.1.1|2.4.9|4.1.2|2.4.3|2.4.4|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 57960>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+710_0,gemma-3-27b-it,zero-shot,683,0,0,0,0.0,0.0,0.0,2.4.6|2.4.4|1.4.6|1.4.3|2.1.1|2.4.9|4.1.2|2.4.3|1.3.1|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 58186>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+711_0,gemma-3-27b-it,zero-shot,688,0,0,0,0.0,0.0,0.0,2.4.6|1.3.1|1.4.6|1.4.3|2.1.1|2.4.9|4.1.2|2.4.3|2.4.4|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 58224>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+707_0,gemma-3-27b-it,zero-shot,682,0,0,0,0.0,0.0,0.0,2.4.6|2.4.4|1.4.6|1.4.3|2.1.1|2.4.9|4.1.2|2.4.3|1.3.1|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 57835>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+713_0,gemma-3-27b-it,zero-shot,689,0,0,0,0.0,0.0,0.0,2.4.6|1.3.1|1.4.6|1.4.3|2.1.1|2.4.9|4.1.2|2.4.3|2.4.4|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 58201>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+714_0,gemma-3-27b-it,zero-shot,675,0,0,0,0.0,0.0,0.0,2.4.6|2.4.4|1.4.6|1.4.3|2.1.1|2.4.9|4.1.2|2.4.3|1.3.1|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 58203>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+715_0,gemma-3-27b-it,zero-shot,680,0,0,0,0.0,0.0,0.0,2.4.6|2.4.4|1.4.6|1.4.3|2.1.1|2.4.9|4.1.2|2.4.3|1.3.1|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 58224>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+712_0,gemma-3-27b-it,zero-shot,684,0,0,0,0.0,0.0,0.0,2.4.6|2.4.4|1.4.6|1.4.3|2.1.1|2.4.9|4.1.2|2.4.3|1.3.1|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 57893>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+3871549955_0,gemma-3-27b-it,zero-shot,1085,0,0,0,0.0,0.0,0.0,4.1.1|1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 26402>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+4643564980_0,gemma-3-27b-it,zero-shot,1069,0,0,0,0.0,0.0,0.0,4.1.1|1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 26513>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+853326546_0,gemma-3-27b-it,zero-shot,1080,0,0,0,0.0,0.0,0.0,4.1.1|1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 25864>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+7965215914_0,gemma-3-27b-it,zero-shot,1040,0,0,0,0.0,0.0,0.0,4.1.1|1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 26001>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+111849147_0,gemma-3-27b-it,zero-shot,1046,0,0,0,0.0,0.0,0.0,4.1.1|1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 25885>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+2182179087_0,gemma-3-27b-it,zero-shot,992,0,0,0,0.0,0.0,0.0,4.1.1|1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 25406>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+37517988_0,gemma-3-27b-it,zero-shot,1264,0,0,0,0.0,0.0,0.0,4.1.1|2.4.3|1.4.6|2.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 30476>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+581517740_0,gemma-3-27b-it,zero-shot,1026,0,0,0,0.0,0.0,0.0,4.1.1|1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 25859>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+128813600_0,gemma-3-27b-it,zero-shot,679,0,0,0,0.0,0.0,0.0,2.4.9|4.1.2|1.3.1|2.4.4|1.1.1|1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 42915>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+1966382623_0,gemma-3-27b-it,zero-shot,688,0,0,0,0.0,0.0,0.0,2.4.6|1.3.1|1.1.1|1.4.6|2.4.1|2.1.1|2.4.9|4.1.1|2.4.3|2.4.4,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 43332>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+515_0,gemma-3-27b-it,zero-shot,760,0,0,0,0.0,0.0,0.0,2.4.4|2.4.9|4.1.2|2.4.3|1.3.1|1.4.6|1.4.3|2.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 45112>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+516_0,gemma-3-27b-it,zero-shot,784,0,0,0,0.0,0.0,0.0,2.4.4|2.4.9|4.1.2|2.4.3|1.3.1|1.4.6|1.4.3|2.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 44742>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+517_0,gemma-3-27b-it,zero-shot,812,0,0,0,0.0,0.0,0.0,2.4.4|2.4.9|4.1.2|2.4.3|1.3.1|1.4.6|1.4.3|2.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 44724>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+5627013288_0,gemma-3-27b-it,zero-shot,9710,0,1,8,0.0,0.0,0.0,2.4.6|1.3.1|1.4.6|1.4.3|2.4.9|4.1.2|2.4.4|4.1.1,1.1.1,"```json
+{""violations"": [
+  {
+    ""wcagCode"": ""1.1.1"",
+    ""violationName"": ""Non-text Content"",
+    ""category"": ""semantic"",
+    ""html"": ""<img width=\""60\"" style=\""width: 60px;\"" src=\""/build/images/Learn-logo.png\"" alt=\""LEARN logo\"" class=\""learn-logo\"">"",
+    ""target"": "".learn-logo"",
+    ""description"": ""Image has alternative text."",
+    ""impact"": ""minor"",
+    ""confidence"": 1.0
+  },
+  {
+    ""wcagCode"": ""1.1.1"",
+    ""violationName"": ""Non-text Content"",
+    ""category"": ""semantic"",
+    ""html"": ""<img src=\""/build/images/k20center-ou-large-white.png\"" alt=\""K20 Logo\"">"",
+    ""target"": null,
+    ""description"": ""Image has alternative text."",
+    ""impact"": ""minor"",
+    ""confidence"": 1.0
+  }
+]}
+```",,True,False,False,json,
+8654682977_0,gemma-3-27b-it,zero-shot,1771,0,0,0,0.0,0.0,0.0,2.4.6|4.1.2|1.3.1|1.1.1|1.4.6|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 42565>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+4770170269_0,gemma-3-27b-it,zero-shot,1195,0,0,0,0.0,0.0,0.0,2.4.6|3.1.1|1.3.1|1.1.1|1.4.6|1.4.3|1.4.4|2.4.9|4.1.2|2.4.4|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 27784>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+548_0,gemma-3-27b-it,zero-shot,1304,0,0,0,0.0,0.0,0.0,3.1.1|4.1.2|1.3.1|1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 25297>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+6666281102_0,gemma-3-27b-it,zero-shot,2358,0,0,0,0.0,0.0,0.0,2.4.6|1.3.1|1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 38511>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+5424827103_0,gemma-3-27b-it,zero-shot,1289,0,0,0,0.0,0.0,0.0,1.3.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 38021>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+1499175565_0,gemma-3-27b-it,zero-shot,4913,1,1,1,0.5,0.5,0.5,1.3.1|3.1.1,1.1.1|1.3.1,"```json
+{""violations"": [
+  {""wcagCode"": ""1.3.1"", ""violationName"": ""Info and Relationships"", ""category"": ""semantic"",
+   ""html"": ""<center><h1>403 Forbidden</h1></center>"", ""target"": null,
+   ""description"": ""The content '403 Forbidden' is presented without any semantic structure to define its purpose or relationship to other content. The use of the <center> tag is deprecated and does not provide semantic meaning."",
+   ""impact"": ""moderate"", ""confidence"": 1.0},
+  {""wcagCode"": ""1.1.1"", ""violationName"": ""Non-text Content"", ""category"": ""semantic"",
+   ""html"": ""<html><head><title>403 Forbidden</title></head><body><center><h1>403 Forbidden</h1></center></body></html>"", ""target"": null,
+   ""description"": ""The page lacks alternative text for non-text content. While the error message is textual, the overall context and purpose of the page are not clearly conveyed without additional information."",
+   ""impact"": ""moderate"", ""confidence"": 0.8}
+]}
+```",,True,False,False,json,
+8649911099_0,gemma-3-27b-it,zero-shot,1403,0,0,0,0.0,0.0,0.0,1.3.1|1.4.6|1.4.3,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 25140>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+8773059234_0,gemma-3-27b-it,zero-shot,1658,0,0,0,0.0,0.0,0.0,2.4.6|4.1.2|1.3.1|1.4.6|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 48793>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+9995023032_0,gemma-3-27b-it,zero-shot,2884,0,0,5,0.0,0.0,0.0,2.4.6|1.3.1|1.1.1|1.4.6|1.4.3,,"```json
+{""violations"": []}
+```",no_wcag_codes_extracted,True,False,False,json_no_codes,
+3231484510_0,gemma-3-27b-it,zero-shot,1781,0,0,0,0.0,0.0,0.0,2.4.6|2.4.4|1.4.4|2.4.9|3.1.1|1.1.1|1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 55668>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+5653019337_0,gemma-3-27b-it,zero-shot,1739,0,0,0,0.0,0.0,0.0,2.4.4|2.4.9|4.1.2|1.3.1|1.4.6|1.4.3|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 45532>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+9817868776_0,gemma-3-27b-it,zero-shot,1239,0,0,0,0.0,0.0,0.0,1.3.1|1.4.6|1.4.3,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 56164>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+521_0,gemma-3-27b-it,zero-shot,1178,0,0,0,0.0,0.0,0.0,2.4.6|4.1.2|1.3.1|1.1.1|1.4.6|1.4.3,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 60791>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+520_0,gemma-3-27b-it,zero-shot,1213,0,0,0,0.0,0.0,0.0,2.4.6|4.1.2|1.3.1|1.1.1|1.4.6|1.4.3,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 61562>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+1746488226_0,gemma-3-27b-it,zero-shot,1321,0,0,0,0.0,0.0,0.0,4.1.2|1.3.1|1.4.6|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 53984>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+33_0,gemma-3-27b-it,zero-shot,1512,0,0,0,0.0,0.0,0.0,4.1.2|2.4.4|1.4.6|2.4.9,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 37006>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+2241802183_0,gemma-3-27b-it,zero-shot,1222,0,0,0,0.0,0.0,0.0,1.4.4|2.4.9|4.1.2|2.4.4|1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 75564>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+193670859_0,gemma-3-27b-it,zero-shot,1360,0,0,0,0.0,0.0,0.0,2.4.6|1.3.1|1.1.1|1.4.6|1.4.3|2.4.9|4.1.2|2.4.4|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 54719>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+5263734580_0,gemma-3-27b-it,zero-shot,1154,0,0,0,0.0,0.0,0.0,2.4.4|2.4.9|4.1.1|1.3.1|1.1.1|1.4.6|1.4.3,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 54934>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+331_0,gemma-3-27b-it,zero-shot,1055,0,0,0,0.0,0.0,0.0,2.4.6|1.3.1|1.4.6|1.4.3,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 48330>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+318_0,gemma-3-27b-it,zero-shot,1691,0,0,0,0.0,0.0,0.0,2.4.6|1.3.1|1.4.6|1.4.3|2.4.9|4.1.2|2.4.4,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 58255>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+8325352647_0,gemma-3-27b-it,zero-shot,4942,1,1,1,0.5,0.5,0.5,1.3.1|3.1.1,1.1.1|1.3.1,"```json
+{""violations"": [
+  {""wcagCode"": ""1.3.1"", ""violationName"": ""Info and Relationships"", ""category"": ""semantic"",
+   ""html"": ""<center><h1>403 Forbidden</h1></center>"", ""target"": null,
+   ""description"": ""The content '403 Forbidden' is presented without any semantic structure to define its purpose or relationship to other content. The use of the <center> tag is deprecated and does not provide semantic meaning."",
+   ""impact"": ""moderate"", ""confidence"": 1.0},
+  {""wcagCode"": ""1.1.1"", ""violationName"": ""Non-text Content"", ""category"": ""semantic"",
+   ""html"": ""<html><head><title>403 Forbidden</title></head><body><center><h1>403 Forbidden</h1></center></body></html>"", ""target"": null,
+   ""description"": ""The page lacks alternative text for non-text content. While the error message is textual, the overall context and purpose of the page are not clearly conveyed without additional information."",
+   ""impact"": ""moderate"", ""confidence"": 0.8}
+]}
+```",,True,False,False,json,
+364_0,gemma-3-27b-it,zero-shot,791,0,0,0,0.0,0.0,0.0,2.4.6|1.3.1|1.1.1|1.4.6|1.4.4|2.4.9|4.1.2|2.4.4|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 45763>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+6901236114_0,gemma-3-27b-it,zero-shot,22028,0,1,1,0.0,0.0,0.0,1.3.1,1.4.3,"```json
+{""violations"": [
+  {
+    ""wcagCode"": ""1.4.3"",
+    ""violationName"": ""Contrast (Minimum)"",
+    ""category"": ""semantic"",
+    ""html"": ""<p>RLJE EU Legal Notice</p>"",
+    ""target"": "".eu-legal-notice p:first-child"",
+    ""description"": ""The contrast ratio between the text color (#ffffff) and the background color (#0b1733) is less than 4.5:1, failing WCAG 1.4.3."",
+    ""impact"": ""moderate"",
+    ""confidence"": 1.0
+  },
+  {
+    ""wcagCode"": ""1.4.3"",
+    ""violationName"": ""Contrast (Minimum)"",
+    ""category"": ""semantic"",
+    ""html"": ""<p>Audiovisual communication service provider: RLJ Entertainment, Inc.</p>"",
+    ""target"": "".eu-legal-notice p:nth-child(2)"",
+    ""description"": ""The contrast ratio between the text color (#ffffff) and the background color (#0b1733) is less than 4.5:1, failing WCAG 1.4.3."",
+    ""impact"": ""moderate"",
+    ""confidence"": 1.0
+  },
+  {
+    ""wcagCode"": ""1.4.3"",
+    ""violationName"": ""Contrast (Minimum)"",
+    ""category"": ""semantic"",
+    ""html"": ""<p>NIF: Federal Tax Identification Number: 45-4950432, Federal Identification Number: E0184722012-5</p>"",
+    ""target"": "".eu-legal-notice p:nth-child(3)"",
+    ""description"": ""The contrast ratio between the text color (#ffffff) and the background color (#0b1733) is less than 4.5:1, failing WCAG 1.4.3."",
+    ""impact"": ""moderate"",
+    ""confidence"": 1.0
+  },
+  {
+    ""wcagCode"": ""1.4.3"",
+    ""violationName"": ""Contrast (Minimum)"",
+    ""category"": ""semantic"",
+    ""html"": ""<p>Address: 6320 Canoga Avenue, 8th Floor, Woodland Hills, California 91367</p>"",
+    ""target"": "".eu-legal-notice p:nth-child(4)"",
+    ""description"": ""The contrast ratio between the text color (#ffffff) and the background color (#0b1733) is less than 4.5:1, failing WCAG 1.4.3."",
+    ""impact"": ""moderate"",
+    ""confidence"": 1.0
+  },
+  {
+    ""wcagCode"": ""1.4.3"",
+    ""violationName"": ""Contrast (Minimum)"",
+    ""category"": ""semantic"",
+    ""html"": ""<p>Registration: Nevada corporation</p>"",
+    ""target"": "".eu-legal-notice p:nth-child(5)"",
+    ""description"": ""The contrast ratio between the text color (#ffffff) and the background color (#0b1733) is less than 4.5:1, failing WCAG 1.4.3."",
+    ""impact"": ""moderate"",
+    ""confidence"": 1.0
+  },
+  {
+    ""wcagCode"": ""1.4.3"",
+    ""violationName"": ""Contrast (Minimum)"",
+    ""category"": ""semantic"",
+    ""html"": ""<p>Email: <a href=\""mailto:support@acorn.tv\"">support@acorn.tv</a></p>"",
+    ""target"": "".eu-legal-notice p:nth-child(6)"",
+    ""description"": ""The contrast ratio between the text color (#ffffff) and the background color (#0b1733) is less than 4.5:1, failing WCAG 1.4.3."",
+    ""impact"": ""moderate"",
+    ""confidence"": 1.0
+  },
+  {
+    ""wcagCode"": ""1.4.3"",
+    ""violationName"": ""Contrast (Minimum)"",
+    ""category"": ""semantic"",
+    ""html"": ""<p>Telephone: +34917141080</p>"",
+    ""target"": "".eu-legal-notice p:nth-child(7)"",
+    ""description"": ""The contrast ratio between the text color (#ffffff) and the background color (#0b1733) is less than 4.5:1, failing WCAG 1.4.3."",
+    ""impact"": ""moderate"",
+    ""confidence"": 1.0
+  },
+  {
+    ""wcagCode"": ""1.4.3"",
+    ""violationName"": ""Contrast (Minimum)"",
+    ""category"": ""semantic"",
+    ""html"": ""<p>Regulatory body: CNMC</p>"",
+    ""target"": "".eu-legal-notice p:nth-child(8)"",
+    ""description"": ""The contrast ratio between the text color (#ffffff) and the background color (#0b1733) is less than 4.5:1, failing WCAG 1.4.3."",
+    ""impact"": ""moderate"",
+    ""confidence"": 1.0
+  }
+]}
+```",,True,False,False,json,
+1344325832_0,gemma-3-27b-it,zero-shot,1312,0,0,0,0.0,0.0,0.0,2.1.1|4.1.2|2.4.3|1.3.1|1.1.1|1.4.6|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 36292>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+1115295724_0,gemma-3-27b-it,zero-shot,1658,0,0,0,0.0,0.0,0.0,2.4.6|2.4.4|2.4.9|4.1.1|1.3.1|1.1.1|1.4.6|1.4.3,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 43544>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+5117799549_0,gemma-3-27b-it,zero-shot,688,0,0,0,0.0,0.0,0.0,2.4.6|1.4.4|4.1.2|1.3.1|1.4.6|1.4.3,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 54509>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+4925950366_0,gemma-3-27b-it,zero-shot,963,0,0,0,0.0,0.0,0.0,1.4.4|1.3.1|3.1.1|1.1.1|1.4.6|1.4.3,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 84458>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+1902084907_0,gemma-3-27b-it,zero-shot,811,0,0,0,0.0,0.0,0.0,2.4.6|1.3.1|1.4.6|1.4.3,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 47238>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+8791766791_0,gemma-3-27b-it,zero-shot,1330,0,0,0,0.0,0.0,0.0,4.1.2|1.3.1|1.4.6|1.4.3,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 58380>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+529912387_0,gemma-3-27b-it,zero-shot,1167,0,0,0,0.0,0.0,0.0,4.1.1|1.3.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 65412>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+301_0,gemma-3-27b-it,zero-shot,882,0,0,0,0.0,0.0,0.0,2.4.6|3.3.2|4.1.2|1.3.1|1.4.6,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 51986>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+848513793_0,gemma-3-27b-it,zero-shot,657,0,0,0,0.0,0.0,0.0,4.1.2|1.3.1|1.1.1|1.4.6|1.4.3|4.1.1,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 51969>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+4970188583_0,gemma-3-27b-it,zero-shot,1113,0,0,0,0.0,0.0,0.0,4.1.1|1.4.6|1.4.3,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 52129>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,
+8170624278_0,gemma-3-27b-it,zero-shot,1313,0,0,0,0.0,0.0,0.0,4.1.2|2.4.4|2.4.9|4.1.1|1.3.1|1.4.6|1.4.3,,,"Error code: 400 - {'error': 'The number of tokens to keep from the initial prompt is greater than the context length (n_keep: 45768>= n_ctx: 22272). Try to load the model with a larger context length, or provide a shorter input.'}",False,False,False,none,

@@ -257,10 +257,10 @@ if __name__ == "__main__":
     )
 
     MODELS_TO_TEST = [
-        "gemma-3-27b-it",
-        "llama-4-scout-17b-16e-instruct",
-        "gemma-3-12b-it",
         "deepseek-r1-distill-llama-70b",
+        "gemma-3-27b-it",
+        "gemma-3-12b-it",
+        "llama-4-scout-17b-16e-instruct",
     ]
 
     #STRATEGIES_TO_TEST = ["zero-shot", "few-shot", "chain-of-thought"]
@@ -274,7 +274,7 @@ if __name__ == "__main__":
             model=model,
             strategies=STRATEGIES_TO_TEST,
             want_screenshot=False,
-            want_ax_tree=True
+            want_ax_tree=False
         )
 
         model_results_csv = MODELS_RESULTS_DIR / sanitize_model_name(model) / "metrics_output.csv"
