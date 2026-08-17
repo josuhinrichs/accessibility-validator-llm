@@ -37,10 +37,16 @@ Limit max input tokens per request (skip oversized prompts):
 MAX_INPUT_TOKENS=12000 python3 experiment_v2.py
 ```
 
+Optional smart HTML truncation (keeps more a11y-relevant DOM snippets):
+
+```bash
+SMART_HTML_TRUNCATION=true python3 experiment_v2.py
+```
+
 You can combine env vars:
 
 ```bash
-LLM_PROVIDER=ollama DATASET_CSV_PATH=content/calibration/calibration_set_50.csv MAX_INPUT_TOKENS=12000 python3 experiment_v2.py
+LLM_PROVIDER=ollama DATASET_CSV_PATH=content/calibration/calibration_set_50.csv MAX_INPUT_TOKENS=12000 SMART_HTML_TRUNCATION=true python3 experiment_v2.py
 ```
 
 ### 3) Generate calibration set (optional)

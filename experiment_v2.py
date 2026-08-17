@@ -273,8 +273,8 @@ if __name__ == "__main__":
             client=selected_client,
             model=model,
             strategies=STRATEGIES_TO_TEST,
-            want_screenshot=True,
-            want_ax_tree=False
+            want_screenshot=False,
+            want_ax_tree=True
         )
 
         model_results_csv = MODELS_RESULTS_DIR / sanitize_model_name(model) / "metrics_output.csv"
