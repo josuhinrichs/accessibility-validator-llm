@@ -1,4 +1,5 @@
 import csv
+import os
 import re
 import time
 from pathlib import Path
@@ -20,6 +21,31 @@ RUN_ID = time.strftime("%Y%m%d_%H%M%S")
 RUN_RESULTS_DIR = RESULTS_ROOT_DIR / "runs" / RUN_ID
 MODELS_RESULTS_DIR = RUN_RESULTS_DIR / "by_model"
 COMPARISON_RESULTS_PATH = RUN_RESULTS_DIR / "model_comparison.csv"
+
+
+def _estimate_tokens(text: str) -> int:
+    if not text:
+        return 0
+    try:
+        import tiktoken  # type: ignore
+
+        encoder = tiktoken.get_encoding("cl100k_base")
+        return len(encoder.encode(text))
+    except Exception:
+        # fallback aproximado
+        return max(1, round(len(text) / 4))
+
+
+def _get_max_input_tokens() -> int | None:
+    raw = (os.getenv("MAX_INPUT_TOKENS", "") or "").strip()
+    if not raw:
+        return None
+    try:
+        value = int(raw)
+        return value if value > 0 else None
+    except ValueError:
+        logger.warning("invalid_max_input_tokens_env", value=raw)
+        return None
 
 def sanitize_model_name(model_name: str) -> str:
     """
@@ -86,11 +112,18 @@ def run_evaluation(
     # Inicializa o CSV garantindo a presença do cabeçalho
     init_csv_file(results_csv_path)
 
+    max_input_tokens = _get_max_input_tokens()
+
     for strategy in strategies:
         final_prompt = text_prompt
         start_time = time.perf_counter()
 
         logger.info("inference_started", item_id=item_id, model=model, strategy=strategy)
+        system_prompt = str(getattr(client, "system_prompt", "") or "")
+        user_tokens = _estimate_tokens(final_prompt)
+        system_tokens = _estimate_tokens(system_prompt)
+        total_input_tokens = user_tokens + system_tokens
+
         logger.info(
             "inference_payload_summary",
             item_id=item_id,
@@ -103,6 +136,10 @@ def run_evaluation(
             has_schema_hint=("Return a strict JSON object" in final_prompt),
             image_count=len(images_paths),
             image_paths=images_paths,
+            estimated_user_tokens=user_tokens,
+            estimated_system_tokens=system_tokens,
+            estimated_total_input_tokens=total_input_tokens,
+            max_input_tokens=max_input_tokens,
         )
 
         # Estrutura base do registro para o CSV
@@ -129,6 +166,23 @@ def run_evaluation(
         }
 
         try:
+            if max_input_tokens is not None and total_input_tokens > max_input_tokens:
+                duration_ms = int((time.perf_counter() - start_time) * 1000)
+                record.update({
+                    "duration_ms": duration_ms,
+                    "error": f"max_input_tokens_exceeded:{total_input_tokens}>{max_input_tokens}",
+                    "prediction_source": "skipped_input_too_large",
+                })
+                logger.warning(
+                    "inference_skipped_input_token_limit",
+                    item_id=item_id,
+                    model=model,
+                    strategy=strategy,
+                    estimated_total_input_tokens=total_input_tokens,
+                    max_input_tokens=max_input_tokens,
+                )
+                continue
+
             raw_output = client.run(
                 model=model,
                 prompt=final_prompt,

@@ -1,0 +1,14 @@
+dataset_csv_path=Original_full_data_new.csv
+html_dir=content/workspace/FullPipeline/html_pages_async
+pages_processed=574
+pages_skipped_missing_html=28
+token_count_method=tiktoken_cl100k_base
+bin_size=1000
+min_total_tokens=194
+p50_total_tokens=36547
+p90_total_tokens=45670
+p95_total_tokens=49643
+max_total_tokens=85515
+per_page_csv=experiment_results/token_analysis/page_token_counts.csv
+hist_csv=experiment_results/token_analysis/token_histogram.csv
+hist_png=experiment_results/token_analysis/token_histogram.png
