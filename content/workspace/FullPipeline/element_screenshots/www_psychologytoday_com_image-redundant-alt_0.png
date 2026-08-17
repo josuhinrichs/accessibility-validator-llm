@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="20px" viewBox="0 0 29 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>flag - US@1x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1.3---Icon-in-Header---Dirweb" transform="translate(-540.000000, -133.000000)" fill-rule="nonzero">
+            <g id="Country-Selector---floating" transform="translate(530.500000, 21.000000)">
+                <g id="flag---US" transform="translate(10.000000, 112.000000)">
+                    <path d="M26,20 L2,20 C0.9,20 0,19.1 0,18 L0,2 C0,0.9 0.9,0 2,0 L26,0 C27.1,0 28,0.9 28,2 L28,18 C28,19.1 27.1,20 26,20 Z" id="Red" fill="#D02F44"></path>
+                    <rect id="white_stripe_1_" fill="#FFFFFF" x="0" y="6.6" width="28" height="2.2"></rect>
+                    <rect id="white_stripe_3_" fill="#FFFFFF" x="0" y="15.5" width="28" height="2.2"></rect>
+                    <rect id="white_stripe_2_" fill="#FFFFFF" x="0" y="11.1" width="28" height="2.2"></rect>
+                    <rect id="white_stripe_4_" fill="#FFFFFF" x="0" y="2.2" width="28" height="2.2"></rect>
+                    <path d="M12,8.8 L0,8.8 L0,1.9 C0,0.9 0.9,0 2,0 L12,0 L12,8.8 Z" id="Blue_box" fill="#46467F"></path>
+                    <circle id="star" fill="#FFFFFF" cx="5.9" cy="2.2" r="1"></circle>
+                    <circle id="star_1_" fill="#FFFFFF" cx="2.9" cy="2.2" r="1"></circle>
+                    <circle id="star_2_" fill="#FFFFFF" cx="9.1" cy="2.2" r="1"></circle>
+                    <circle id="star_5_" fill="#FFFFFF" cx="5.9" cy="6.6" r="1"></circle>
+                    <circle id="star_4_" fill="#FFFFFF" cx="2.9" cy="6.6" r="1"></circle>
+                    <circle id="star_3_" fill="#FFFFFF" cx="9.1" cy="6.6" r="1"></circle>
+                    <circle id="star_7_" fill="#FFFFFF" cx="7.6" cy="4.4" r="1"></circle>
+                    <circle id="star_6_" fill="#FFFFFF" cx="4.3" cy="4.4" r="1"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

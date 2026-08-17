@@ -1,0 +1,120 @@
+from __future__ import annotations
+
+from collections.abc import Iterable
+from dataclasses import dataclass
+import json
+
+from render import RenderedPage
+
+
+SYSTEM_PROMPT_BASELINE = (
+    "You are a web accessibility auditor. You identify ONLY the semantic and "
+    "layout WCAG accessibility violations considering meaning, context, or the "
+    "match between what a sighted user sees and what assistive technology "
+    "exposes."
+)
+
+
+SYSTEM_PROMPT_EVIDENCE_FIRST = (
+    "You are a strict web accessibility auditor. Stay grounded in the provided "
+    "evidence and return only violations supported by the page artifacts.\n\n"
+    "Do not guess. Do not invent elements. Return STRICT JSON only."
+)
+
+
+OUTPUT_SCHEMA_HINT = """
+Return a strict JSON object of this exact shape:
+{"violations": [
+  {"wcagCode": "<JUST the WCAG code>", "violationName": "<taxonomy name>", "category": "semantic|layout",
+   "html": "<offending element HTML>", "target": "<selector or null>",
+   "description": "<why, citing what you observed>",
+   "impact": "critical|serious|moderate|minor", "confidence": <0.0-1.0>}
+]}
+Report only names in the taxonomy. If none, return {"violations": []}.
+"""
+
+
+MAX_AXTREE_CHARS = 120000
+MAX_HTML_CHARS = 120000
+
+section_order = ("taxonomy", "schema", "task", "evidence")
+
+
+def evidence_sections(
+    page: RenderedPage,
+    evidence_inputs: set[str],
+) -> list[str]:
+    parts: list[str] = []
+
+    if "axtree" in evidence_inputs and page.ax_tree is not None:
+        ax_tree_json = json.dumps(page.ax_tree)
+
+        if len(ax_tree_json) > MAX_AXTREE_CHARS:
+            ax_tree_json = ax_tree_json[:MAX_AXTREE_CHARS] + "\n[TRUNCATED]"
+
+        parts.extend([
+            "",
+            "ACCESSIBILITY TREE (JSON):",
+            ax_tree_json,
+        ])
+
+    if "html" in evidence_inputs and page.html:
+        html = page.html
+
+        if len(html) > MAX_HTML_CHARS:
+            html = html[:MAX_HTML_CHARS] + "\n[TRUNCATED]"
+
+        parts.extend([
+            "",
+            "DOM (HTML):",
+            html,
+        ])
+
+    if "screenshot" in evidence_inputs and page.screenshot_path:
+        parts.extend([
+            "",
+            "A full-page screenshot is attached as an image.",
+        ])
+
+    return parts
+
+
+@dataclass(frozen=True)
+class PromptRecipe:
+    name: str
+    description: str
+    system_prompt: str
+
+    @staticmethod
+    def build_user_prompt(
+        page: RenderedPage,
+        evidence_inputs: Iterable[str],
+        taxonomy_block: str = "",
+    ) -> str:
+        parts: list[str] = [
+            "Audit this page for accessibility violations from this taxonomy:"
+        ]
+
+        evidence_inputs = {
+            str(item).strip().lower()
+            for item in evidence_inputs
+        }
+
+        for section in section_order:
+            if section == "taxonomy":
+                parts.extend(["", taxonomy_block])
+
+            elif section == "schema":
+                parts.extend(["", OUTPUT_SCHEMA_HINT])
+
+            elif section == "task":
+                parts.extend([
+                    "",
+                    "Focus on violations directly supported by the inputs.",
+                ])
+            elif section == "evidence":
+                parts.extend(
+                    evidence_sections(page, evidence_inputs)
+                )
+
+        return "\n".join(parts)

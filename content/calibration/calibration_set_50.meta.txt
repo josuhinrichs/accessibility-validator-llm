@@ -1,0 +1,6 @@
+source_csv=Original_full_data_new.csv
+output_csv=content/calibration/calibration_set_50.csv
+sample_pages=50
+random_seed=42
+rows=305
+unique_pages=50

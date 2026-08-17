@@ -1,0 +1,1581 @@
+<!DOCTYPE html><html lang="en"><head><style>.hs-cta-wrapper p, .hs-cta-wrapper div { margin: 0; padding: 0; } a#cta_button_153358_8789c3ad-f309-4007-9192-9a7df6feaabf {
+    cursor: pointer;
+
+    white-space: normal;
+  }
+
+a#cta_button_153358_8789c3ad-f309-4007-9192-9a7df6feaabf:hover {
+}
+
+a#cta_button_153358_8789c3ad-f309-4007-9192-9a7df6feaabf:active, #cta_button_153358_8789c3ad-f309-4007-9192-9a7df6feaabf:active:hover {
+}
+
+</style>
+
+
+<!-- Google Tag Manager -->
+<script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=AW-1013003660&amp;cx=c&amp;gtm=45He5840v845463109za200&amp;tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~105087538~105087540~105103161~105103163"></script><script src="https://js.hubspot.com/web-interactives-embed.js" type="text/javascript" id="hubspot-web-interactives-loader" crossorigin="anonymous" data-loader="hs-scriptloader" data-hsjs-portal="153358" data-hsjs-env="prod" data-hsjs-hublet="na1"></script><script src="https://js.hs-banner.com/v2/153358/banner.js" type="text/javascript" id="cookieBanner-153358" data-cookieconsent="ignore" data-hs-ignore="true" data-loader="hs-scriptloader" data-hsjs-portal="153358" data-hsjs-env="prod" data-hsjs-hublet="na1"></script><script src="https://js.hs-analytics.net/analytics/1754414100000/153358.js" type="text/javascript" id="hs-analytics"></script><script src="https://js.hsadspixel.net/fb.js" type="text/javascript" id="hs-ads-pixel-153358" data-ads-portal-id="153358" data-ads-env="prod" data-loader="hs-scriptloader" data-hsjs-portal="153358" data-hsjs-env="prod" data-hsjs-hublet="na1"></script><script type="text/javascript" async="" src="https://script.crazyegg.com/pages/scripts/0114/8936.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-SCMHG8Y3PQ&amp;cx=c&amp;gtm=45He5840v845463109za200&amp;tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~105087538~105087540~105103161~105103163"></script><script type="text/javascript" async="" src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-W5FTZD5"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W5FTZD5');</script>
+<!-- End Google Tag Manager -->
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>ARIA meter nodes must have an accessible name | Axe Rules | Deque University | Deque Systems</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<base href="https://dequeuniversity.com/">
+
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/assets/images/icons/logos/apple-touch-icon.png">
+
+
+
+<link rel="stylesheet" type="text/css" href="/assets/css/ruleHelp.css" id="styles1">
+<link rel="stylesheet" type="text/css" href="/patterns-lib/deque-widgets.min.css" id="styles2">
+<link rel="stylesheet" type="text/css" href="/assets/js/highlight/styles/railscasts.css" id="styles3">
+<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome-all.min.css" id="styles4">
+<link rel="stylesheet" type="text/css" href="/assets/css/dqu2019.min.css?refresh=1" id="styles5">
+
+<link rel="stylesheet" type="text/css" href="/assets/css/axe.css" id="additionalCssInheritable1" class="pageSpecific">
+
+
+
+<style id="headStyles" class="pageSpecific">
+
+</style>
+
+
+
+<script src="/assets/js/jquery.min.js" id="scripts1" class="pageSpecific"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js" id="scripts2" class="pageSpecific"></script>
+<script src="/assets/js/dqu2019.min.js" id="scripts3" class="pageSpecific"></script>
+<script src="/assets/js/templates/shiftTab_focusAlignment.js" id="scripts4" class="pageSpecific"></script>
+<script src="/assets/js/highlight/highlight.js" id="additionalScriptsInheritable1" class="pageSpecific"></script>
+
+
+
+
+<script>
+// Apply focus properly when accessing internal links with keyboard in WebKit browsers.
+// $("a[href^='#']").not("a[href='#']").click(function() {
+//   $("#"+$(this).attr("href").slice(1)+"").focus();
+// });
+</script>
+
+<!--[if lt IE 9]>
+<script>
+  var e = ("abbr,article,aside,audio,bdi,canvas,datalist,details,dialog," +
+      "figcaption,figure,footer,header,keygen,mark,menu,meter,main,nav,output," +    
+	  "progress,rp,ruby,rt,section,source,summary,time,track,video,wbr").split(',');  
+     for (var i = 0; i < e.length; i++) {
+          document.createElement(e[i]);
+        }
+</script>
+<![endif]-->
+
+
+
+
+
+
+<style id="_goober"> .go2933276541{position:fixed;display:block;width:100%;height:0px;margin:0px;padding:0px;overflow:visible;transform-style:preserve-3d;background:transparent;backface-visibility:hidden;pointer-events:none;left:0px;z-index:9998;}.go2369186930{top:0px;z-index:9999;height:100%;width:100%;}.go1348078617{bottom:0px;}.go2417249464{position:fixed;z-index:9989;}.go3921366393{left:0;bottom:0;}.go3967842156{right:0;bottom:0;}.go613305155{left:0;top:0;}.go471583506{right:0;top:0;}.go3670563033{position:relative;overflow:hidden;display:none;}.go1041095097{display:block;}.go1632949049{position:absolute;pointer-events:none;width:101vw;height:101vh;background:rgba(0,0,0,0.7);opacity:0;z-index:-1;}.go2512015367{z-index:99998;opacity:0.8;visibility:visible;pointer-events:all;cursor:pointer;}.go1432718904{overflow:hidden;}.go812842568{display:block !important;position:static !important;box-sizing:border-box !important;background:transparent !important;border:none;min-height:0px !important;max-height:none !important;margin:0px;padding:0px !important;height:100% !important;width:1px !important;max-width:100% !important;min-width:100% !important;}.go3064412225{z-index:99999;visibility:hidden;position:absolute;inset:50vh auto auto 50%;left:50%;top:50%;transform:translate(-50%,-50%) translateY(100vh);pointer-events:none;max-height:95%;max-width:95%;}.go1656994552{pointer-events:auto !important;visibility:visible;transform:translate(-50%,-50%) translateY(0);transition:transform 0.75s linear(0,0.006,0.023 2.2%,0.096 4.8%,0.532 15.4%,0.72 21%,0.793,0.853 26.7%,0.902,0.941,0.968 36.2%,0.987 39.7%,1 43.7%,1.007 48.3%,1.009 55.3%,1.002 78.2%,1 );}.go456419034{transition:opacity 0.3s ease-in;}.go3128134379{pointer-events:auto !important;visibility:visible !important;max-height:95vh !important;transition:max-height 1s ease-in;}.go494047706{z-index:9999;width:100%;max-height:95%;position:fixed;visibility:hidden;}.go2481764524{z-index:9999;width:100%;max-height:95%;position:fixed;visibility:hidden;bottom:0px;}.go2685733372{visibility:hidden;}.go2985984737{visibility:visible !important;}.go3281949485{pointer-events:auto !important;visibility:visible !important;max-height:95vh !important;transform:none !important;}.go3508454897{z-index:9999;width:100%;max-height:95%;position:fixed;visibility:hidden;transition:transform 1s linear(0,0.006,0.022 2.3%,0.091 5.1%,0.18 7.6%,0.508 16.3%,0.607,0.691,0.762,0.822 28.4%,0.872,0.912 35.1%,0.944 38.9%,0.968 43%,0.985 47.6%,0.996 53.1%,1.001 58.4%,1.003 65.1%,1 );}.go988075951{z-index:9999;position:fixed;left:10px;top:10px;max-height:95vh !important;max-width:95%;visibility:hidden;}.go2699082514{z-index:9999;position:fixed;right:10px;top:10px;max-height:95vh !important;max-width:95%;visibility:hidden;}.go1595992025{z-index:9999;position:fixed;left:10px;bottom:10px;max-height:95vh !important;max-width:95%;visibility:hidden;}.go1222083472{z-index:9999;position:fixed;right:10px;bottom:10px;max-height:95vh !important;max-width:95%;visibility:hidden;}.go722322694{transition:none !important;}.go26732895{cursor:pointer;}.go2083580917{display:flex;justify-content:center;align-items:center;}</style><script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-1013003660"></script></head>
+<body><div id="hs-web-interactives-top-push-anchor" class="go3670563033"></div>
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5FTZD5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+   <!-- expiration locations = member-banner and isexpired =  -->
+  <div id="page" class="site">
+
+    <header id="masthead" class="site-header" style="padding-bottom: 32px;"><a class="skip-link sr-only sr-only-focusable" href="/#content">Skip to content</a>
+        <style>
+.cookie-alert
+{
+    position: fixed;
+    left: 0px; 
+    width: auto;
+    /* alternate bk colors: #eaeace */ 
+    background-color: white; bottom: 10px; z-index: 100;
+    border: 1px solid lightgray;
+    color: black;
+    padding: 10px 20px;
+    font-family: 'Noto Sans', 'Atkinson Hyperlegible', "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 33px;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+
+}
+.cookie-alert a {
+    color: blue;
+}
+#cookie-alert-title
+{
+    margin-top: 0px;
+    margin-bottom: 12.5px;
+    font-size: 24px;
+    line-height: 1.35 !important;
+    color: rgb(0, 51, 73);
+    font-family: arial;
+    font-weight: 300;
+
+}
+.cookie-alert p
+{
+    
+    font-family: arial !important;
+    font-size: 20px !important;
+    color: #1e1e1e !important;
+    font-weight: 300 !important;
+    line-height: 33px;
+}
+
+.cookie-alert p a
+{ font-size: inherit;
+}
+
+.cookie-alert-button {
+    
+    padding: 2px 6px; 
+    background: #0077c8;
+    border: 5px solid transparent;
+    color: #fff;
+    font-family: 'Noto Sans', 'Atkinson Hyperlegible', "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none !important;
+    position: relative;
+    line-height: 33px;
+}
+.cookie-alert-button:focus {
+    
+    outline: #d71ef7 solid 2px;
+    outline-offset: 2px;
+}
+
+@media screen and (max-width: 767px) {
+    .cookie-alert-button{
+        margin: 5px 0px !important;
+        width: 100%;
+    }
+    
+}
+</style>
+<div id="cookie-alert-1" class="cookie-alert">
+    <h2 id="cookie-alert-title" tabindex="-1">This website uses cookies</h2>
+    <div>
+        <p id="cookie-alert-text">By continuing to use our sites or services, regardless of your cookie preferences, you agree to our <a href="/terms" style="text-decoration: underline;" target="_blank">Terms of Use</a>. Deque University uses first and third-party technologies to enable us and third parties to collect information about you and your interactions with our sites and services in accordance with our <a href="https://www.deque.com/legal/?__hstc=213731083.08cf4a29b46660f0fe71ae3aa8e40744.1754414321176.1754414321176.1754414321176.1&amp;__hssc=213731083.1.1754414321176&amp;__hsfp=3658814885" style="text-decoration: underline;" target="_blank">Legal Policy</a>.</p>
+        <button class="cookie-alert-button" onclick="recordUserResponse(0, 1)">
+            Decline        </button>
+        <button id="cookie-alert-accept" class="cookie-alert-button" onclick="recordUserResponse(1, 1)" aria-describedby="cookie-alert-text">
+            Accept        </button>
+        
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    setTimeout(() => {
+        //document.getElementById("cookie-alert-accept").focus();
+        var elements = document.querySelectorAll("#cookie-alert-accept");
+              for(var i =0; i < elements.length; i++)
+                    elements[i].focus();
+    }, 1000);
+});
+
+
+function recordUserResponse(accept, instance)
+{
+    var param = {};
+    //var url = window.location.href;
+    var url = "/ajax/cookie-alert-process";
+    
+    param["action"] = "set_cookie";
+	param["accepted"] = accept;
+    $.post(url,param,	function(data) {
+            try 
+            {
+              var elements = document.querySelectorAll(".cookie-alert");
+              for(var i =0; i < elements.length; i++)
+                    elements[i].style.display = "none";
+              if(accept)  
+                loadJS("assets/js/googleAnalytics.js");
+			} // of try block
+            catch (e)
+            {   
+                console.log( "Error: "+ e.message );   
+            }
+		} ); // of post function
+  
+}
+
+function loadJS(src) 
+{
+    try 
+    {
+        var script = document.createElement('script');
+            script.onload = function () {
+                //do stuff with the script
+                ;        
+            };
+            script.src = src;
+
+            document.head.appendChild(script);
+	} // of try block
+    catch (e)
+    {   
+        console.log( "Error: "+ e.message );   
+    }
+}
+
+
+</script>    
+
+       
+        <div class="top-bar">
+        <div class="container">
+          <div class="site-branding">
+            <p class="site-title">
+              <a class="logo" href="https://dequeuniversity.com/" rel="home">
+                <img src="assets/images/logos/deque_university_wordmark_white.png" height="83" alt="Deque University logo">
+              </a>
+            </p>
+          </div>
+          <div class="pull-right">
+            <span style="padding-top: .5rem; display: inline-block;">
+        <span id="dqu-ui-component-1" class="component_LanguageSwitcher component_DropDownMenu">
+            <div class="component_DropDownMenu_preContent">
+                <span class="fas fa-globe language-globe"></span>&nbsp;&nbsp;            </div>
+            <span class="component_DropDownMenu_content">
+                <button aria-haspopup="menu" aria-expanded="false" aria-controls="dqu-ui-component-1_itemList" class="component_DropDownMenu_button"><span class="component_DropDownMenu_arrow fa fa-angle-down"></span><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">en</span><span class="component_LanguageSwitcher_langName">English</span></span></button>
+                <div id="dqu-ui-component-1_itemList" class="component_DropDownMenu_popup" hidden="">
+                    <div class="component_DropDownMenu_popupHeader">
+                                            </div>
+                    <div>
+                                                    <label for="dqu-ui-component-1_itemList-itemList" class="component_DropDownMenu_itemListLabel">Select a language</label>
+                                                    <ul id="dqu-ui-component-1_itemList-itemList" class="component_DropDownMenu_itemList" role="menu">
+                                        <li class="component_DropDownMenu_item" role="menuitem">
+                <a href="" onclick="UI_LanguageSwitcher_ChangeLanguage(this); return false;" data-value="de" data-selected="false" data-lang="de" data-index="0"><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">de</span><span class="component_LanguageSwitcher_langName">Deutsch</span></span><span class="component_DropDownMenu_selectedIndicator"><span class="fas fa-check" hidden=""></span></span></a>
+            </li>
+                    <li class="component_DropDownMenu_item" role="menuitem">
+                <a href="" onclick="UI_LanguageSwitcher_ChangeLanguage(this); return false;" data-value="en" data-selected="true" data-lang="en" data-index="1"><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">en</span><span class="component_LanguageSwitcher_langName">English</span></span><span class="component_DropDownMenu_selectedIndicator"><span class="fas fa-check"></span></span></a>
+            </li>
+                    <li class="component_DropDownMenu_item" role="menuitem">
+                <a href="" onclick="UI_LanguageSwitcher_ChangeLanguage(this); return false;" data-value="es" data-selected="false" data-lang="es" data-index="2"><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">es</span><span class="component_LanguageSwitcher_langName">Español</span></span><span class="component_DropDownMenu_selectedIndicator"><span class="fas fa-check" hidden=""></span></span></a>
+            </li>
+                    <li class="component_DropDownMenu_item" role="menuitem">
+                <a href="" onclick="UI_LanguageSwitcher_ChangeLanguage(this); return false;" data-value="fr" data-selected="false" data-lang="fr" data-index="3"><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">fr</span><span class="component_LanguageSwitcher_langName">Français</span></span><span class="component_DropDownMenu_selectedIndicator"><span class="fas fa-check" hidden=""></span></span></a>
+            </li>
+                    <li class="component_DropDownMenu_item" role="menuitem">
+                <a href="" onclick="UI_LanguageSwitcher_ChangeLanguage(this); return false;" data-value="it" data-selected="false" data-lang="it" data-index="4"><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">it</span><span class="component_LanguageSwitcher_langName">Italiano</span></span><span class="component_DropDownMenu_selectedIndicator"><span class="fas fa-check" hidden=""></span></span></a>
+            </li>
+                    <li class="component_DropDownMenu_item" role="menuitem">
+                <a href="" onclick="UI_LanguageSwitcher_ChangeLanguage(this); return false;" data-value="ja" data-selected="false" data-lang="ja" data-index="5"><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">ja</span><span class="component_LanguageSwitcher_langName">日本語</span></span><span class="component_DropDownMenu_selectedIndicator"><span class="fas fa-check" hidden=""></span></span></a>
+            </li>
+                    <li class="component_DropDownMenu_item" role="menuitem">
+                <a href="" onclick="UI_LanguageSwitcher_ChangeLanguage(this); return false;" data-value="nl" data-selected="false" data-lang="nl" data-index="6"><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">nl</span><span class="component_LanguageSwitcher_langName">Nederlands</span></span><span class="component_DropDownMenu_selectedIndicator"><span class="fas fa-check" hidden=""></span></span></a>
+            </li>
+                    <li class="component_DropDownMenu_item" role="menuitem">
+                <a href="" onclick="UI_LanguageSwitcher_ChangeLanguage(this); return false;" data-value="pt" data-selected="false" data-lang="pt" data-index="7"><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">pt</span><span class="component_LanguageSwitcher_langName">Português</span></span><span class="component_DropDownMenu_selectedIndicator"><span class="fas fa-check" hidden=""></span></span></a>
+            </li>
+                    <li class="component_DropDownMenu_item" role="menuitem">
+                <a href="" onclick="UI_LanguageSwitcher_ChangeLanguage(this); return false;" data-value="zh" data-selected="false" data-lang="zh" data-index="8"><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">zh</span><span class="component_LanguageSwitcher_langName">中国的</span></span><span class="component_DropDownMenu_selectedIndicator"><span class="fas fa-check" hidden=""></span></span></a>
+            </li>
+                                </ul>
+                    </div>
+                    <div class="component_DropDownMenu_popupFooter">
+                                            </div>
+                </div>
+            </span>
+        </span>
+                <style>
+            .component_DropDownMenu {
+                display: inline-flex;
+                flex-direction: row;
+                align-items: center;
+                height: 39px;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+
+            .component_DropDownMenu * {
+                box-sizing: border-box;
+            }
+
+            .component_DropDownMenu_content {
+                position: relative;
+                display: inline-block;
+            }
+
+            .component_DropDownMenu_button {
+                background-color: #ffffff;
+                color: #1e1e1e;
+                border: 3px solid transparent;
+                border-radius: 2px;
+                padding: 5px;
+                text-align: left;
+                box-shadow: none;
+                min-width: 200px;
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: 700;
+                position: relative;
+                transition: all ease-in-out 125ms;
+                z-index: 2;
+            }
+
+            .component_DropDownMenu_button:focus,
+            .component_DropDownMenu_button:hover {
+                background-color: transparent;
+                color: #ffffff;
+                border-color: #ffffff;
+            }
+
+            .component_DropDownMenu_button::before {
+                position: absolute;
+                content: '';
+                display: block;
+                left: 2px;
+                top: 2px;
+                bottom: 2px;
+                border-left: 2px solid #ffffff;
+                width: 4px;
+                border-top: 2px solid #ffffff;
+                border-bottom: 2px solid #ffffff;
+                border-radius: 2px 0 0 2px;
+                -ms-transform: all ease-in-out 125ms;
+                transform: all ease-in-out 125ms
+            }
+
+            .component_DropDownMenu_button::after {
+                position: absolute;
+                content: '';
+                display: block;
+                right: 2px;
+                top: 2px;
+                bottom: 2px;
+                border-right: 2px solid #ffffff;
+                width: 4px;
+                border-top: 2px solid #ffffff;
+                border-bottom: 2px solid #ffffff;
+                border-radius: 0 2px 2px 0;
+                -ms-transform: all ease-in-out 125ms;
+                transform: all ease-in-out 125ms
+            }
+
+            .component_DropDownMenu_arrow {
+                float: right;
+                text-align: left;
+                font-size: 20px;
+            }
+
+            .component_DropDownMenu_popup  {
+                position: absolute;
+                background-color: #ffffff;
+                overflow: auto;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                box-shadow: 0 0 30px rgba(0,0,0,0.1);
+                z-index: 999;
+            }
+
+            .component_DropDownMenu_itemListLabel {
+                padding: 8px;
+                font-weight: bold;
+                color: #000;
+                display: block;
+            }
+
+            .component_DropDownMenu_itemList {
+                margin: 0;
+                padding: 0;
+                max-height: 800px;
+                overflow-y: auto;
+                white-space: nowrap;
+            }
+
+            .component_DropDownMenu_itemList li {
+                list-style-type: none;
+            }
+
+            .component_DropDownMenu_item a {
+                display: grid;
+                grid-template-columns: 1fr 2em;
+                text-decoration: none;
+                color: black;
+                padding: 12px 16px;
+            }
+
+            .component_DropDownMenu_item a:hover,
+            .component_DropDownMenu_item a:focus {
+                background-color: #003349;
+                color: #ffffff;
+                outline-offset: 0px;
+            }
+
+            .component_DropDownMenu_selectedIndicator {
+                display: inline-block;
+                text-align: right;
+                padding-left: 1em;
+                padding-right: 1em;
+                width: 2em;
+            }
+
+            .component_DropDownMenu_selectedIndicator span[hidden] {
+                visibility: hidden;
+            }
+        </style>
+                <style>
+            .component_LanguageSwitcher {
+              color: #000;
+            }
+
+            .component_LanguageSwitcher .language-globe {
+                font-size: 1.5em;
+                color: white;
+            }
+
+            .component_LanguageSwitcher_langCode {
+                display: inline-block;
+                text-align: center;
+                width: 1.5rem;
+                /*height: 1.5rem;*/
+                border-radius: 5px;
+                background-color: lightgray;
+                color: black;
+                margin-right: 1em;
+            }
+
+            .component_LanguageSwitcher ul {
+                line-height: normal;
+            }
+
+            .component_LanguageSwitcher .component_DropDownMenu_PopupFooter {
+                border-top: 1px solid #ccc;
+                padding: 0.5em;
+            }
+        </style>
+                <script>
+            function UI_DropDownMenu_quickClose(e) {
+                $(e.target).closest('.component_DropDownMenu').each(function() {
+                    $(this).find('.component_DropDownMenu_button').each(function() {
+                        $(this).attr('aria-expanded', false);
+                    });
+                    $(this).find('.component_DropDownMenu_popup').each(function() {
+                        $(this).attr('hidden', '');
+                    });
+                });
+                $('body').off('click', UI_DropDownMenu_quickClose);
+            }
+
+            function UI_DropDownMenu_quickMsg(e) {
+                $('body').on('click', UI_DropDownMenu_quickClose);
+            }
+
+            function UI_DropDownMenu_eventMsg(e) {
+                $('body').off('click', UI_DropDownMenu_quickClose);
+                $(e.target).closest('.component_DropDownMenu').each(function() {
+                    $(this).find('.component_DropDownMenu_button').each(function() {
+                        $(this).attr('aria-expanded', true);
+                    });
+                    $(this).find('.component_DropDownMenu_popup').each(function() {
+                        $(this).removeAttr('hidden');
+                    });
+                });
+            }
+
+            function UI_DropDownMenu_selectItem(e) {
+                e.preventDefault();
+                UI_DropDownMenu_quickClose(e);
+                $(e.target).closest('.component_DropDownMenu_itemList').each(function() {
+                    $(this).find('.component_DropDownMenu_item a').each(function() {
+                        $(this).attr('data-selected', 'false');
+                        $(this).find('.component_DropDownMenu_selectedIndicator span').each(function() {
+                            $(this).attr('hidden', '');
+                        });
+                    });
+                    $(e.target).closest('.component_DropDownMenu_item').each(function() {
+                        $(this).find('a').each(function() {
+                            $(this).attr('data-selected', 'true');
+                            $(this).find('.component_DropDownMenu_selectedIndicator span').each(function() {
+                                $(this).removeAttr('hidden');
+                            });
+                            var selectedLabel = $(this).find('.component_DropDownMenu_itemLabel').first().html();
+                            $(this).closest('.component_DropDownMenu').each(function() {
+                                $(this).find('.component_DropDownMenu_button .component_DropDownMenu_itemLabel').each(function() {
+                                    $(this).html(selectedLabel);
+                                });
+                            });
+                        });
+                    });
+                 });
+            }
+
+            $(document).ready(function() {
+                var bodyElements = $('body *');
+                bodyElements.each(function() {
+                    var element = $(this);
+                    if (element.classList && (!element.classList.contains('component_DropDownMenu') && !element.classList.contains('component_DropDownMenu_button') && !element.classList.contains('component_DropDownMenu_arrow'))) {
+                        element.on('mouseover', UI_DropDownMenu_quickMsg);
+                    }
+                });
+
+                $('.component_DropDownMenu').each(function() {
+                    var dropdown = $(this);
+                    dropdown.on('mouseover', UI_DropDownMenu_eventMsg);
+                    dropdown.on('focus', UI_DropDownMenu_eventMsg);
+                    dropdown.on('blur', UI_DropDownMenu_quickClose);
+                    dropdown.on('mouseout', UI_DropDownMenu_quickClose);
+                    dropdown.find('.component_DropDownMenu_button').each(function() {
+                        var button = $(this);
+                        button.on('click', UI_DropDownMenu_eventMsg);
+                    });
+                });
+
+                $('.component_DropDownMenu_itemList').each(function() {
+                    var menuList = $(this);
+                    var lastElement = menuList.find('li:last-child a').each(function() {
+                        $(this).on('blur', UI_DropDownMenu_quickClose);
+                    });
+                });
+
+                $('.component_DropDownMenu_item a').each(function() {
+                    var item = $(this);
+                    item.on('click', UI_DropDownMenu_selectItem);
+                });
+            });
+        </script>
+                <script>
+            function UI_LanguageSwitcher_ChangeLanguage(e) {
+                var lang = e.getAttribute('data-lang');
+                var url = new URL(window.location.href);
+                url.searchParams.set('lang', lang);
+                window.location.href = url.toString();
+            }
+
+            function UI_LanguageSwitcher_GetMainButton(element) {
+                if (!element) return null;
+                const component = $(element).closest('.component_LanguageSwitcher').first();
+                if (!component.length) return null;
+                const button = component.find('.component_DropDownMenu_button').first();
+                if (!button.length) return null;
+                return button.get(0);
+            }
+        </script>
+                <div class="component_Popup_overlay" onclick="UI_Popup_Hide(document.getElementById('dqu-ui-component-11'));"></div>
+        <div id="dqu-ui-component-11" class="component_TranslationFeedbackPopup component_Popup" data-location="right-edge" hidden="">
+            <button class="close-button" onclick="UI_Popup_Hide(this.closest('.component_Popup'))">×</button>
+            <div class="component_Popup_content">
+                    <div>
+            <h2 tabindex="0">Translation Feedback</h2>
+            <p>Please provide your feedback on the translation.</p>
+            <form id="translationFeedbackForm" action="/submit_feedback.php" method="post" onsubmit="UI_TranslationFeedbackPopup_Hide(); return false;">
+              <label for="feedbackText">Your feedback:</label>
+              <textarea id="feedbackText" rows="4" cols="50" placeholder="Your feedback here..."></textarea>
+              <input type="hidden" name="lang" value="en">
+              <input type="submit" value="Submit Feedback" class="button">
+            </form>
+        </div>
+        <!--
+        <br>
+        <button onclick="UI_TranslationFeedbackPopup_Hide();">Close</button>
+        <select onchange="updatePopupLocation(this)">
+            <option value="right-edge">right-edge</option><option value="left-edge">left-edge</option><option value="top-edge">top-edge</option><option value="bottom-edge">bottom-edge</option><option value="center">center</option><option value="top-left">top-left</option><option value="top-right">top-right</option><option value="bottom-left">bottom-left</option><option value="bottom-right">bottom-right</option><option value="top">top</option><option value="bottom">bottom</option><option value="left">left</option><option value="right">right</option>        </select>
+        <script>
+            function updatePopupLocation(selectElement) {
+                const popup = selectElement.closest('.component_Popup');
+                if (popup) {
+                    popup.setAttribute('data-location', selectElement.value);
+                }
+            }
+        </script>
+          -->
+                    </div>
+        </div>
+                <style>
+            .component_Popup_overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 9998;
+                display: none;
+            }
+
+            .component_Popup {
+                position: fixed;
+                z-index: 9999;
+                background-color: #fff;
+                border: 1px solid #ccc;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                padding: 10px;
+                display: none;
+            }
+
+            .component_Popup .close-button {
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                background: none;
+                border: none;
+                font-size: 1.2em;
+                cursor: pointer;
+            }
+
+            .component_Popup[data-location="center"] {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .component_Popup[data-location="top-left"] {
+                left: 0;
+                top: 0;
+            }
+
+            .component_Popup[data-location="top-right"] {
+                right: 0;
+                top: 0;
+            }
+
+            .component_Popup[data-location="bottom-left"] {
+                left: 0;
+                bottom: 0;
+            }
+
+            .component_Popup[data-location="bottom-right"] {
+                right: 0;
+                bottom: 0;
+            }
+
+            .component_Popup[data-location="top"] {
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
+            }
+
+            .component_Popup[data-location="bottom"] {
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+            }
+
+            .component_Popup[data-location="left"] {
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .component_Popup[data-location="right"] {
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .component_Popup[data-location="top-edge"] {
+                right: 0;
+                top: 0;
+                width: 100%;
+            }
+
+            .component_Popup[data-location="bottom-edge"] {
+                right: 0;
+                bottom: 0;
+                width: 100%;
+            }
+
+            .component_Popup[data-location="left-edge"] {
+                left: 0;
+                top: 0;
+                height: 100%;
+            }
+
+            .component_Popup[data-location="right-edge"] {
+                right: 0;
+                top: 0;
+                height: 100%;
+            }
+        </style>
+                <script>
+            function UI_Popup_preventScroll(event) {
+                event.preventDefault();
+            }
+
+            let UI_Popup_Opener = null;
+            function UI_Popup_Show(popup, options = {}) {
+                if (!popup) return;
+
+                // Remember the opener element if provided.
+                UI_Popup_Opener = options['opener'] || null;
+
+                // Show the popup and overlay
+                const overlay = document.querySelector('.component_Popup_overlay');
+                if (overlay) overlay.style.display = 'block';
+
+                popup.style.display = 'block';
+
+                // Set the popup's focus
+                const focusableElements = popup.querySelectorAll('a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])');
+                if (focusableElements.length > 0) {
+                    if (focusableElements[0].tagName.toLowerCase() === 'button' && focusableElements[0].classList.contains('close-button')) {
+                        // If the first focusable element is the close button, skip it
+                        if (focusableElements.length > 1) {
+                            focusableElements[1].focus();
+                        }
+                    } else {
+                        // Focus the first focusable element
+                        focusableElements[0].focus();
+                    }
+                }
+
+                // Ensure only the popup is part of the accessibility tree
+                //TODO: This does not work.  It needs to be fixed.
+                popup.removeAttribute('aria-hidden');
+                const body = document.querySelector('body');
+                if (body) {
+                    body.setAttribute('aria-hidden', 'true');
+                }
+
+                // Restrict keyboard and mouse actions to the popup
+                document.addEventListener('keydown', function(event) {
+                    if (popup.style.display === 'block') {
+                        const focusableElements = popup.querySelectorAll('a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])');
+                        const firstElement = focusableElements[0];
+                        const lastElement = focusableElements[focusableElements.length - 1];
+
+                        if (event.key === 'Tab') {
+                            if (event.shiftKey) {
+                                if (document.activeElement === firstElement) {
+                                    event.preventDefault();
+                                    lastElement.focus();
+                                }
+                            } else {
+                                if (document.activeElement === lastElement) {
+                                    event.preventDefault();
+                                    firstElement.focus();
+                                }
+                            }
+                        } else if (event.key === 'Escape') {
+                            UI_Popup_Hide(popup);
+                        }
+                    }
+                });
+
+                document.addEventListener('click', function(event) {
+                    if (popup.style.display === 'block' && !(popup.contains(event.target) || overlay.contains(event.target))) {
+                        event.stopPropagation();
+                        event.preventDefault();
+                    }
+                }, true);
+
+                // Prevent scrolling of the page behind the dialog
+                document.body.style.overflow = 'hidden';
+
+                // Prevent scroll wheel from moving the page
+                document.addEventListener('wheel', UI_Popup_preventScroll, { passive: false });
+            }
+
+            function UI_Popup_Hide(popup) {
+                // Hide the popup and overlay
+                if (popup) {
+                    popup.style.display = 'none';
+                }
+
+                const overlay = document.querySelector('.component_Popup_overlay');
+                if (overlay) overlay.style.display = 'none';
+
+                // Restore focus to the opener if it exists
+                if (UI_Popup_Opener) {
+                    UI_Popup_Opener.focus();
+                    UI_Popup_Opener = null;
+                }
+
+                // Restore accessibility tree
+                popup.setAttribute('aria-hidden', 'true');
+                const body = document.querySelector('body');
+                if (body) {
+                    body.removeAttribute('aria-hidden');
+                }
+
+                // Remove keyboard and mouse restrictions
+                document.removeEventListener('keydown', function(event) {
+                    if (popup.style.display === 'block') {
+                        const focusableElements = popup.querySelectorAll('a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])');
+                        const firstElement = focusableElements[0];
+                        const lastElement = focusableElements[focusableElements.length - 1];
+
+                        if (event.key === 'Tab') {
+                            if (event.shiftKey) {
+                                if (document.activeElement === firstElement) {
+                                    event.preventDefault();
+                                    lastElement.focus();
+                                }
+                            } else {
+                                if (document.activeElement === lastElement) {
+                                    event.preventDefault();
+                                    firstElement.focus();
+                                }
+                            }
+                        } else if (event.key === 'Escape') {
+                            UI_Popup_Hide(popup);
+                        }
+                    }
+                });
+                
+                // Restore scroll behavior
+                document.body.style.overflow = '';
+                document.removeEventListener('wheel', UI_Popup_preventScroll);
+            }
+        </script>
+                <script>
+            function UI_TranslationFeedbackPopup_Show(options = {}) {
+                const popup = document.querySelector('.component_TranslationFeedbackPopup');
+                if (popup, options) {
+                    UI_Popup_Show(popup, options);
+                }
+            }
+
+            function UI_TranslationFeedbackPopup_Hide() {
+                const popup = document.querySelector('.component_TranslationFeedbackPopup');
+                if (popup) {
+                    UI_Popup_Hide(popup);
+                }
+            }
+        </script>
+                    </span>
+            <p class="empty-search"></p>
+            <div class="pull-right login">
+              <div id="inCourseLogin"><!--
+<form class="paypal" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIG1QYJKoZIhvcNAQcEoIIGxjCCBsICAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYBdMfklIWh/F3l9yBWvW8SDlUNFptSsisgvNx3rGnu7nQXrLCu+PgNhGVB7luNJuQZIymb76U1YrADwv4sw91ktnLyGcNrL2GZW/kCLefc3NQ72Tqb61i3HGDQ5MCwe27Y8sHdduiaukp/hao6h4qykub4+YFvK+rAabGwTEOJ9RDELMAkGBSsOAwIaBQAwUwYJKoZIhvcNAQcBMBQGCCqGSIb3DQMHBAhjkfkto/p7coAw7eyQs0eMGcpjiX1l2vaz6W+b01Wiiq/TfcEhxmHIgLYCKyRHqRMo05JKSOMLwIc+oIIDhzCCA4MwggLsoAMCAQICAQAwDQYJKoZIhvcNAQEFBQAwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMB4XDTA0MDIxMzEwMTMxNVoXDTM1MDIxMzEwMTMxNVowgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBR07d/ETMS1ycjtkpkvjXZe9k+6CieLuLsPumsJ7QC1odNz3sJiCbs2wC0nLE0uLGaEtXynIgRqIddYCHx88pb5HTXv4SZeuv0Rqq4+axW9PLAAATU8w04qqjaSXgbGLP3NmohqM6bV9kZZwZLR/klDaQGo1u9uDb9lr4Yn+rBQIDAQABo4HuMIHrMB0GA1UdDgQWBBSWn3y7xm8XvVk/UtcKG+wQ1mSUazCBuwYDVR0jBIGzMIGwgBSWn3y7xm8XvVk/UtcKG+wQ1mSUa6GBlKSBkTCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb22CAQAwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOBgQCBXzpWmoBa5e9fo6ujionW1hUhPkOBakTr3YCDjbYfvJEiv/2P+IobhOGJr85+XHhN0v4gUkEDI8r2/rNk1m0GA8HKddvTjyGw/XqXa+LSTlDYkqI8OwR8GEYj4efEtcRpRYBxV8KxAW93YDWzFGvruKnnLbDAF6VR5w/cCMn5hzGCAZowggGWAgEBMIGUMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbQIBADAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTQxMjEwMDAyMDI4WjAjBgkqhkiG9w0BCQQxFgQUiL/TBBZoCtNLrEabhRFZqd2oy3swDQYJKoZIhvcNAQEBBQAEgYABG4krszLUfapipde2iDX8pz2nMS8CIEMZezbqKC6mdggzwJ7919mi3UvkhW5ewjUkI84YuGWIOycvkr6o8FYSHUcnOsiZqGsw5JoPKUTjAJoL+Wp/w0HIvjkiJFR+eMxXvHzROEx/JrLcQ+Tf0fiCVWdjLSWdQZV/EalKVOxOJw==-----END PKCS7-----
+">
+            <input type="image" src="/assets/images/icons/cart36.png" width="24" height="24" name="submit" alt="View cart" id="submitCart">
+            <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+-->
+          <div class="loginForm">
+  <div>
+     <!--<a class="loginLink loginLink btn white sm dropshadow" href="">Login</a>-->
+    <!--button--><a id="ssoLoginButton" class="ssoLoginButton btn white dropshadow sm" href="ssologin/?context=web&amp;uri=https%3A%2F%2Fdequeuniversity.com%2Frules%2Faxe%2F4.10%2Faria-meter-name%3Fapplication%3DRuleDescription">Login</a>
+  </div>
+</div>
+
+              </div>
+            </div>
+          </div>
+                    
+        </div>
+      </div>
+      <div class="container nav-container">
+        <nav class="main-navigation" aria-label="Main Menu">
+          <p class="site-title"><a class="logo" href="https://dequeuniversity.com/" rel="home" tabindex="-1" aria-hidden="true"><span class="sr-only">Deque</span>
+          <!--img src="assets/images/logos/deque_university_wordmark_white.png" height="83" alt="Deque University logo"-->
+          <img src="assets/images/logos/Deque_DequeU_Logo_White.png" style="height: 50px; margin-top: -5px;" alt="Deque University logo">
+          </a></p>
+          <button id="toggle-menu" class="main-menu-toggle" aria-expanded="false" aria-controls="menu-primary-navigation"> <span class="fa fa-bars"></span>Menu</button>
+          <ul id="menu-primary-navigation" aria-hidden="false" aria-label="Main Menu" role="menubar">
+            <li id="menu-item-21099" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-21099 dropdown" role="none"><a role="menuitem" id="menubutton-21099" href="rules/axe/html#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="sub-menu-21099">Online Courses</a>
+              <ul role="menu" class=" sub-menu" tabindex="-1" aria-labelledby="menubutton-21099" id="sub-menu-21099" aria-hidden="true">
+                <li id="menu-item-ssologin" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-ssologin" role="none" data-parent-menu="menu-item-21099"><a role="menuitem" href="https://dequeuniversity.com/ssologin/?context=web&amp;uri=https%3A%2F%2Fdequeuniversity.com%2Fonline-courses%2F">Login to My Courses</a></li>
+                <li id="menu-item-300" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-300" role="none" data-parent-menu="menu-item-21099"><a role="menuitem" href="/online-courses/">View All Subscription Options</a></li>
+              </ul>
+            </li>
+            <li id="menu-item-21100" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-21100 dropdown" role="none"><a role="menuitem" id="menubutton-21100" href="rules/axe/html#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="sub-menu-21100">Instructor-Led Training</a>
+              <ul role="menu" class=" sub-menu" tabindex="-1" aria-labelledby="menubutton-21100" id="sub-menu-21100" aria-hidden="true">
+                <li id="menu-item-301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-301" role="none" data-parent-menu="menu-item-21100"><a role="menuitem" href="curriculum/instructor-led/">Accessibility Training</a></li>
+                <li id="menu-item-695" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-695" role="none" data-parent-menu="menu-item-21100"><a role="menuitem" href="curriculum/instructor-led/product-training">Deque Product Training</a></li>
+                <li id="menu-item-696" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-696" role="none" data-parent-menu="menu-item-21100"><a role="menuitem" href="https://www.deque.com/resources/type/webinars?__hstc=213731083.08cf4a29b46660f0fe71ae3aa8e40744.1754414321176.1754414321176.1754414321176.1&amp;__hssc=213731083.1.1754414321176&amp;__hsfp=3658814885">Public Webinars</a></li>
+              </ul>
+            </li>
+            <li id="menu-item-21102" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-21102 dropdown" role="none"><a role="menuitem" id="menubutton-21102" href="rules/axe/html#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="sub-menu-21102">Resources</a>
+              <ul role="menu" class=" sub-menu" tabindex="-1" aria-labelledby="menubutton-21102" id="sub-menu-21102" aria-hidden="true">
+                <li id="menu-item-198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198" role="none" data-parent-menu="menu-item-21102"><a role="menuitem" href="resources/">Resources Overview</a></li>
+                <li id="menu-item-19279" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19279" role="none" data-parent-menu="menu-item-21102"><a role="menuitem" href="checklists/web/">Web Accessibility Checklist</a></li>
+                <li id="menu-item-299" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-299" role="none" data-parent-menu="menu-item-21102"><a role="menuitem" href="screenreaders/">Screen Reader Reference Guides</a></li>
+                <li id="menu-item-34303" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34303" role="none" data-parent-menu="menu-item-21102"><a role="menuitem" href="class/iaap-certification-quick-guide/">IAAP Certification Quick Guide</a></li>
+                <li id="menu-item-816" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-816" role="none" data-parent-menu="menu-item-21102"><a role="menuitem" href="library/">ARIA JavaScript Pattern Library</a></li>
+                <li id="menu-item-21611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21611" role="none" data-parent-menu="menu-item-21102"><a role="menuitem" href="resources/disability-statistics">Disability Demographics</a></li>
+              </ul>
+            </li>
+            <li id="menu-item-22369" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-22369 dropdown" role="none"><a role="menuitem" id="menubutton-22369" href="rules/axe/html#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="sub-menu-22369">Support/Help</a>
+              <ul role="menu" class=" sub-menu" tabindex="-1" aria-labelledby="menubutton-22369" id="sub-menu-22369" aria-hidden="true">
+                <li id="menu-item-docs" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-docs" role="none" data-parent-menu="menu-item-22369"><a role="menuitem" href="https://docs.deque.com/deque-university/?__hstc=213731083.08cf4a29b46660f0fe71ae3aa8e40744.1754414321176.1754414321176.1754414321176.1&amp;__hssc=213731083.1.1754414321176&amp;__hsfp=3658814885">Support Docs/User Guide</a></li>
+                
+                <li id="menu-item-docs-other-products" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-docs" role="none" data-parent-menu="menu-item-22369"><a role="menuitem" href="https://docs.deque.com/?__hstc=213731083.08cf4a29b46660f0fe71ae3aa8e40744.1754414321176.1754414321176.1754414321176.1&amp;__hssc=213731083.1.1754414321176&amp;__hsfp=3658814885">Support for Other Products</a></li>                
+                <li id="menu-item-axe-rules" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-axe-rules" role="none" data-parent-menu="menu-item-22369"><a role="menuitem" href="/rules/axe/latest">Axe Rule Explanations</a></li>
+                <li id="menu-item-contact" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-contact" role="none" data-parent-menu="menu-item-22369"><a role="menuitem" href="/contact">Contact Us</a></li>
+              </ul>
+            </li>
+
+          </ul> </nav>
+      </div>
+    </header>
+ 
+    <div class="site-content">
+      <main id="content" tabindex="-1">
+        <div id="dataAttributes" data-page-id="89208" data-content-source-id="" data-type="document" data-content-type="text/html" data-uri="rules/axe/html" data-uri-full="https://dequeuniversity.com/rules/axe/html" data-class-key="modDocument" data-pagetitle="Axe HTML" data-longtitle="" data-parent="4614" data-isfolder="" data-template="19" data-alias="html" data-menutitle="" data-description="" data-hidemenu="" data-published="1" data-searchable="1" data-cacheable="1" data-createdby="21293" data-createdon="2022-08-10 04:00:26" data-editedby="14408" data-editedon="2024-11-26 13:06:58" data-deleted="" data-deletedby="0" data-deletedon="0" data-publishedby="21293" data-publishedon="2022-08-10 04:00:00" data-context-key="web" data-resource-groups="29,24,52"></div>
+
+        <div id="contentwrapper">
+
+          
+
+          <div id="h1Wrapper" tabindex="-1">
+            <span id="srLoadSummary" class="visually-hidden"></span>
+            <h1 id="id89208_h1" tabindex="-1" style="display: block;">ARIA meter nodes must have an accessible name</h1>
+
+          </div>
+          <div id="pageInnerContent">
+<link rel="stylesheet" id="rulehelp-css" href="assets/css/ruleHelp.css" type="text/css" media="all">
+<section class="page-section">
+	<div class="container">
+		<!-- begin variable content -->
+
+					<script>
+		window.document.title = 'ARIA meter nodes must have an accessible name' + ' | ' + window.document.title;
+	</script>
+	<div class="row">
+		<div class="col-md-12">
+						<div class="rule-info">
+				<div class="ruleId">
+					<span>Rule ID:</span>
+					<span class="ruleIdData">aria-meter-name</span>
+				</div>
+				<div class="ruleVersion">
+					<span>Ruleset:</span>
+
+					<span><a href="rules/axe/4.10"> axe-core 4.10</a></span>
+				</div>
+				<div class="ruleImpact">
+					<span class="first">User Impact:</span>
+					<span>Serious</span>
+					<span class="dot dot-serious"></span>
+				</div>
+				<div class="wcagSc">
+					<span><abbr title="Web Content Accessibility Guidelines">Guidelines</abbr>:</span>
+					<span>WCAG 2.1 (A), WCAG 2.0 (A), WCAG 2.2 (A), EN 301 549</span>
+				</div>
+			</div>
+			<!-- latestRuleMessage (removed) -->
+		</div>
+		<div class="col-md-3 aside">
+			<div class="metaCol">
+				<div class="left-break col-sm-6 col-md-6 col-lg-12">
+					<section class="page-section call-to-action-section m-card">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 left-break" id="deque-seller">
+					<div id="deque-seller-ex">
+
+						<!-- begin random -->
+
+						<div class="m-card-background-image m-card-bg-style-icon"> <span><img src="/a/deque-university/axe-rule-help/application/generic/images/DQ_DevToolsPro1.svg" alt=""></span>
+</div>
+<div class="m-card-body dark">
+    <h2>Build more accessible websites with axe DevTools Pro</h2>
+    <span class="m-dot-group"> 
+        <span class="m-dots"></span> 
+        <span class="m-dots"></span> 
+        <span class="m-dots"></span> 
+        <span class="m-dots"></span> 
+    </span>
+    <div>Find and fix more issues with Intelligent Guided Tests™ by answering a series of simple questions about your page content. Free trial. No credit card needed.
+    </div>
+    <div>
+        <p><a href="https://axe.deque.com/plans?utm_source=dequeuniversity&amp;utm_medium=referral&amp;utm_campaign=app_a11ywebsites&amp;__hstc=213731083.08cf4a29b46660f0fe71ae3aa8e40744.1754414321176.1754414321176.1754414321176.1&amp;__hssc=213731083.1.1754414321176&amp;__hsfp=3658814885" class="cta_button btn md primary">Get started for free!</a></p>
+    </div>
+</div>
+
+						<!-- end random -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+						<section class="m-card newsletter">
+		<div class="m-card-body">
+			<h2>Sign up for the axe newsletter</h2>
+			<p>Stay up to date on axe features, updates, and events.</p>
+			<p>
+				<span class="hs-cta-wrapper" id="hs-cta-wrapper-343ea302-b25f-4161-bbd2-beb2b4244a1b">
+					<span class="hs-cta-node hs-cta-343ea302-b25f-4161-bbd2-beb2b4244a1b" id="hs-cta-343ea302-b25f-4161-bbd2-beb2b4244a1b" style="visibility: visible;" data-hs-drop="true">
+						<a id="cta_button_153358_8789c3ad-f309-4007-9192-9a7df6feaabf" class="cta_button btn md primary" href="https://hubs.ly/H0gkTMZ0" style="" title="Newsletter Sign-up">Newsletter Sign-up</a>
+					</span>
+					<script src="https://js.hscta.net/cta/current.js"></script>
+					<script>
+						hbspt.cta.load(153358, '343ea302-b25f-4161-bbd2-beb2b4244a1b', {});
+					</script>
+				</span>
+			</p>
+		</div>
+	</section>
+				</div>
+				<div class="right-break col-sm-6 col-md-16 col-lg-12">
+					<section class="ruleInfo m-card">
+                    <h2 class="m-card-body">Compliance Data &amp; Impact</h2>
+                    <div class="m-card-body next-card">
+                      <div class="userImpact">
+                        <h3 class="first">User Impact</h3>
+                        <div class="userImpactGraphWrapper">
+                          <div class="userImpactGraphMarker Serious">Serious<br>▼</div>
+                          <div class="userImpactGraphOuter">
+                            <div class="clear"></div>
+                            <div class="userImpactGraph">
+                              <div class="userImpactGraphBar Serious"></div>
+                            </div>
+                            <div class="leastImpact">Minor</div>
+                            <div class="biggestImpact">Critical</div>
+                          </div>
+                          <div class="clear"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="m-card-body next-card">
+                      <div class="disabilityTypesAffected">
+                        <h3>Disabilities Affected</h3> 
+                        <div class="disabilityTypesAffectedData">
+          
+                          <ul><li><i class="far fa-eye-slash disabilityIcon" aria-hidden="true"></i>Blind </li><li><i class="fas fa-glasses disabilityIcon" aria-hidden="true"></i>Low Vision </li><li><i class="far fa-hand-paper disabilityIcon" aria-hidden="true"></i>Mobility </li></ul>
+          
+                        </div>
+                      </div>
+                      <div class="ruleTypeWcag2">
+                        <h3>Standard(s)</h3> 
+                        <div class="ruleTypeWcag2Data">
+          
+                          <ul><li>WCAG 2.1 (A)</li><li>WCAG 2.0 (A)</li><li>WCAG 2.2 (A)</li><li>EN 301 549</li></ul>
+          
+                        </div>
+                      </div>
+          
+                      <h3>WCAG Success Criteria [WCAG 2.1 (A)]</h3><ul><li>1.1.1: MUST: Non-text Content</li></ul><h3>WCAG Success Criteria [WCAG 2.0 (A)]</h3><ul><li>1.1.1: MUST: Non-text Content</li></ul><h3>WCAG Success Criteria [WCAG 2.2 (A)]</h3><ul><li>1.1.1: MUST: Non-text Content</li></ul><ul></ul>
+                      
+                    </div>
+                  </section>				</div>
+			</div>
+		</div>
+
+		<div class="col-md-8 content">
+			<section class="howToFix">
+                            <h2>How to Fix the Problem</h2>
+                            <div class="howToFixData">
+                              <div class="example">
+  <h3 class="good">Correct markup solutions</h3>
+  <p>
+    The <code>aria-meter-name</code> rule has three markup patterns that pass
+    test criteria:
+  </p>
+  <pre><code class="hljs applescript">&lt;<span class="hljs-keyword">div</span> role=<span class="hljs-string">"meter"</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"alb"</span> aria-labelledby=<span class="hljs-string">"labeldiv"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> role=<span class="hljs-string">"meter"</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"combo"</span> aria-label=<span class="hljs-string">"Aria Name"</span>&gt;Name&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> role=<span class="hljs-string">"meter"</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"title"</span> title=<span class="hljs-string">"Title"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+</div>
+<ol>
+  <li>
+    <p>
+      Ensure that each element with <code>role="meter"</code> has one of the
+      following characteristics:
+    </p>
+    <ul>
+      <li>Non-empty <code>aria-label</code> attribute.</li>
+      <li>
+        <code>aria-labelledby</code> pointing to element with text which is
+        discernible to screen reader users.
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<div class="example">
+  <h3 class="bad">Incorrect markup solutions</h3>
+  <p>
+    The <code>aria-meter-name</code> rule has four markup patterns that fail
+    testing criteria:
+  </p>
+  <pre><code class="hljs applescript">&lt;<span class="hljs-keyword">div</span> role=<span class="hljs-string">"meter"</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"empty"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> role=<span class="hljs-string">"meter"</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"alempty"</span> <mark>aria-label=<span class="hljs-string">""</span>&gt;</mark>&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> role=<span class="hljs-string">"meter"</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"albmissing"</span> <mark>aria-labelledby=<span class="hljs-string">"nonexistent"</span></mark>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> role=<span class="hljs-string">"meter"</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"albempty"</span> <mark>aria-labelledby=<span class="hljs-string">"emptydiv"</span></mark>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"emptydiv"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;</code></pre>
+</div>
+
+                            </div>
+                          </section><section class="whyImportant">
+                            <h2>Why it Matters</h2>
+                            <div class="howToFixData">
+                              <p>
+  Screen reader users are not able to discern the purpose of elements with
+  <code>role="meter"</code> that do not have an accessible name.
+</p>
+
+                            </div>
+                          </section><section class="description">
+                            <h2>Rule Description</h2>
+                            <div class="howToFixData">
+                              <p>
+  Aria meter elements must have discernible text that clearly describes the
+  destination, purpose, function, or action for screen reader users.
+</p>
+
+                            </div>
+                          </section><section class="algorithm">
+                            <h2>The Algorithm (in simple terms)</h2>
+                            <div class="howToFixData">
+                              <p>
+  Checks all elements with <code>role="meter"</code> to ensure that they have a
+  discernable, accessible name.
+</p>
+
+                            </div>
+                          </section>
+			<section class="relatedPages">
+				<h2>Resources</h2>
+				<div class="relatedDeque">
+					<div class="logo">
+						<a href="/"><span class="sr-only">Deque University</span><img src="https://dequeuniversity.com/assets/js/sandbox/images/deque_university_wordmark.png" height="83" alt="Deque University logo"></a>
+					</div>
+					<div class="links">
+						<h3>Deque University Course Pages (subscription required)</h3>
+						No related course information available.					</div>
+				</div>
+				<div class="relatedGitHub">
+					<div class="logo">
+						<a href="https://github.com/dequelabs/axe-core">
+							<span class="sr-only">Deque University</span>
+							<img src="https://dequeuniversity.com/assets/js/sandbox/images/GitHub-Logo.png" height="83" alt="Github logo">
+						</a>
+					</div>
+					<div class="links">
+						<h3><a href="https://github.com/dequelabs/axe-core">Contribute to axe-core on GitHub</a></h3>
+					</div>
+				</div>
+
+				
+				<p class="clear">Refer to the <a href="/rules/axe/4.10">complete list of axe 4.10 rules</a>.</p>
+				
+<section class="ruleHelpful " id="user_feedback_section">
+    <h2 id="feedback-form-heading">Was this information helpful?</h2>
+    <div class="deque-content space-bottom " id="yesFeedback">
+        <p id="form_message"></p>
+        <div class="deque-content deque-hidden " id="feedback-info">
+          <div>
+            <div style="color: green; width: 100%; float: left; margin-top: 10px; "> 
+              <svg class="checkmark_no_ani" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+              <circle class="checkmark_circle_no_ani" cx="26" cy="26" r="25" fill="none"></circle>
+              <path class="checkmark_no_ani" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+              <div style="margin-top: 12px; margin-left: 10px; display: inline-block; color: green; vertical-align: top; "> 
+                You have already given your feedback, thank you..</div>
+            </div>
+            <div>
+                <h3> Your response was as follows: </h3>
+                <div style=" margin-left: 20px;   ">
+                <span class="fa fa-check-circle" aria-hidden="true"></span>
+                <span><b> Was this information helpful?</b>  </span><br>
+                                <span class="fa fa-check-circle" aria-hidden="true"></span>
+                <span><b>Date/Time feedback was submitted: </b>   </span>
+                <br> <br>
+                </div>
+             </div>
+           </div>     
+             <p>
+                <button class="cta_button btn sm primary" onclick="showFeedbackForm()">
+                  Edit your response</button>
+			       </p>  
+         </div>
+    </div> 
+    
+    <p id="contact-label" aria-hidden="true" style="display: none">Customer Feeddback</p>
+    <div id="feedback-form" class="" role="group" aria-labelledby="feedback-form-heading">
+      <div>
+          <button class="deque-button deque-button-toggle deque-expander-summary" id="yesButton" aria-expanded="false" role="button" aria-pressed="false" onclick="yesButtonPressed()">
+          <span aria-hidden="true" class="pressed-on-icon"></span>Yes</button>
+      </div>
+     
+      <div class="form  "> 
+      <input type="checkbox" id="qa_script" name="qa_script" value="QA Script" hidden="">  
+          <button class="deque-button deque-button-toggle deque-expander-summary" id="noButton" aria-expanded="false" role="button" aria-pressed="false" onclick="noButtonPressed()">
+          <span aria-hidden="true" class="pressed-on-icon"></span>No</button>
+          <div class="deque-expander-content deque-hidden" id="noFeedback">
+          
+            <div>
+              <form name="form1" id="form111" action="javascript:saveFeedback()">
+                
+                <div class="form-wrap space-bottom ">
+                  <label for="feedback"><h3>Improvement feedback (see below)::</h3></label>
+                  <textarea id="feedback" data-validate="required" name="feedback"></textarea>
+                  
+                </div>
+                <input type="submit" value="Submit" name="submit" id="btnSubmit" class="cta_button btn sm primary">
+                              </form>
+            </div>
+          </div>
+      </div>
+    </div>
+</section>
+
+<script>
+
+  var feedbackData = undefined;
+  var baseURL = '/rules/rulefeedback'; 
+  var userId = 0;
+
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b ? b.pop() : '';
+}  
+function setFeedbackCookie(data)
+{
+  try{
+      var newFeedback = []; 
+      if (getCookieValue("feedback") != "" )
+        newFeedback  = JSON.parse(getCookieValue("feedback"));  
+      newFeedback.push(data); 
+      document.cookie = "feedback="+JSON.stringify(newFeedback);  
+      
+    } catch(e) {   console.log(e); }
+   
+}
+function getFeedbackCookie()
+{
+  try{
+      var feedback = JSON.parse(getCookieValue("feedback"));
+      for (var i=0; i < feedback.length; i++)
+      {
+          if ( feedback[i]["page_url"] == '/rules/axe/4.10/aria-meter-name')
+              return  feedback[i];
+      }
+      
+    } catch(e) {   ; }
+    return undefined;
+   
+}
+
+$( document ).ready(function() {
+  // Handler for .ready() called.
+    try{
+      var feedback = getFeedbackCookie();
+      var anonymous = feedback["page_url"] == '/rules/axe/4.10/aria-meter-name';
+      if ( (!feedbackData) && (anonymous ) && (userId == 0 ))
+         document.getElementById("user_feedback_section").style.display = "none";
+    } catch(e) {;}
+
+});
+
+    function feedbackChanged(ruleHelpful)
+    {
+        if ( !feedbackData )  return true;
+        feedback = feedbackData["feedback"];
+        if (feedback["rule_helpful"] == ruleHelpful &&  ruleHelpful == "Yes" )
+          return false;
+        if (feedback["rule_helpful"] == ruleHelpful &&  ruleHelpful == "No" )
+          if ( feedback["improvement"].trim() ==  document.getElementById("feedback").value.trim() )      
+             return false;
+        
+       return true; 
+    }
+
+    function yesButtonPressed()
+    {
+      clearMessage();
+        var param = {};
+        var checkMark = '<svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>';  
+        param["user_id"] = 0;
+        param["page_id"] = 89208;
+        param["page_url"] = '/rules/axe/4.10/aria-meter-name';
+        param["alias"] = 'html';
+        param["rule_helpful"] = "Yes";
+        param["qa_script"] = "0";
+        if( document.getElementById("qa_script").checked )
+            param["qa_script"] = "1";
+        
+        if (!feedbackChanged("Yes"))  
+         {
+          showMessage( "Your feedback has not changed !", "warning"); return;
+         } 
+        $.post(baseURL,param,	function(data) {
+              try 
+              {
+                  var response = JSON.parse(data);
+                  if (response.code == 0 )
+                  {
+	                  document.getElementById("yesButton").style.display = "none";
+                    document.getElementById("noButton").style.display = "none";
+                    showMessage( 'Thank you for your feedback.', "success");
+                    if(!feedbackData )
+                          setFeedbackCookie(param);  
+                  }
+                  else
+                    showMessage( response.msg, "error");  
+							}
+							catch (e)
+							{   showMessage( e.message, "error");   }
+						} 	  
+				);            
+    }
+    
+    function noButtonPressed()
+    {
+        clearMessage();
+        document.getElementById("yesButton").style.display = "none";
+        document.getElementById("noButton").style.display = "none";
+        document.getElementById("noFeedback").className = "deque-expander-content";
+        document.getElementById("feedback").focus();
+    }
+    
+    function saveFeedback()
+    {
+        clearMessage();
+        if ( document.getElementById("feedback").value.trim() === "")
+        {
+          showMessage("You have not entered your feedback for improvement.", "error");
+          setTimeout((function(){
+            document.getElementById("feedback").focus();
+          }), 4000);  
+          return;
+        }
+        var param = {};
+        param["page_id"] = 89208;
+        param["page_url"] = '/rules/axe/4.10/aria-meter-name';
+        param["alias"] = 'html';
+
+        param["rule_helpful"] = "No";
+        param["qa_script"] = 0;
+        if( document.getElementById("qa_script").checked )
+            param["qa_script"] = 1;
+            
+        if (!feedbackChanged("No"))  
+        {
+          showMessage( "Your feedback has not changed!", "warning"); return;
+        } 
+        param["improvement"] = document.getElementById("feedback").value;
+        
+        $.post(baseURL,param,	function(data) {
+          try 
+              {
+                  var response = JSON.parse(data);
+                  if (response.code == 0 )
+                  {
+	                  document.getElementById("noFeedback").className = "deque-hidden";
+                    showMessage( 'Thank you for your feedback.', "success");  
+                    if(!feedbackData )
+                      setFeedbackCookie(param);  
+                  }
+                  else
+                  showMessage( response.msg, "error");    
+							}
+							catch (e)
+							{   showMessage( e.message, "error");   }
+						} 	  
+				);            
+    }
+        
+    function showMessage(msg, type)
+    {
+
+      var warningIcon = "<span class='fas fa-exclamation-triangle icon'  title='Warning'></span>  ";
+      var errorIcon = "<span class='fas fa-exclamation-triangle icon'  title='Error'></span>  ";
+      var checkMarkAnimation = '<svg class="checkmark"  viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>';  
+      var checkMark = '<svg class="checkmark_no_ani" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark_circle_no_ani" cx="26" cy="26" r="25" fill="none"/><path class="checkmark_no_ani" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>';  
+      
+      if(type === "success" )
+      {   
+          document.getElementById("form_message").style.color = "green";
+          msg = '<div style="margin-top: 12px; margin-left: 10px; display: inline-block; color: green; vertical-align: top; "> '+msg+'</div>'; 
+          document.getElementById("form_message").innerHTML =  checkMarkAnimation + msg + "<br/>";
+          if (!!window.MSInputMethodContext && !!document.documentMode )
+               document.getElementById("form_message").innerHTML =  checkMark + msg + "<br/>";
+          else
+               document.getElementById("form_message").innerHTML =  checkMarkAnimation + msg + "<br/>";
+
+      } 
+      if(type === "warning" )
+      {
+          document.getElementById("form_message").style.color = "#916216";
+          document.getElementById("form_message").innerHTML = warningIcon + msg + "<br/>";
+      }
+      if(type === "error" )
+      {
+          document.getElementById("form_message").style.color = "#b40909";
+          document.getElementById("form_message").innerHTML = errorIcon + msg + "<br/>";
+      }
+      document.getElementById("form_message").tabIndex = -1;
+      document.getElementById("form_message").focus();
+    }
+
+    function clearMessage()
+    {
+      document.getElementById("form_message").innerHTML = "";
+
+    }
+
+
+    function showFeedbackForm()
+    {
+        document.getElementById("feedback-form").className = "";
+        document.getElementById("feedback-info").className = "deque-hidden";   
+        document.getElementById("yesButton").focus();
+        setTimeout((function (){
+          document.getElementById("yesButton").focus();
+          }), 5000); 
+        
+    }
+
+    function hideFeedbackForm()
+    {
+       
+      if( feedbackData )
+      {
+          document.getElementById("feedback-info").className = "";
+          showMessage("You have cancelled editing your earlier feedback.", "warning");
+      }    
+        document.getElementById("feedback-form").className = "deque-hidden"; 
+        document.getElementById("yesButton").style.display = "";
+        document.getElementById("noButton").style.display = "";
+        document.getElementById("noFeedback").className = "deque-hidden";        
+        setTimeout((function() {  clearMessage();  }), 4000); 
+    }
+
+</script>
+
+			</section>
+
+		</div>
+	</div>
+
+		<!-- end variable content -->
+	</div>
+</section>
+
+<script src="/patterns-lib/deque-widgets.min.js"></script>
+<script type="text/javascript" src="/patterns-lib/deque-widgets.min.js"></script>
+<!--<script type="text/javascript" src="/assets/js/patterns/form-validation/form-validation-summary.js"></script>-->
+
+<script>
+	hljs.initHighlightingOnLoad();
+	$('code.block').each(function(i, block) {
+		hljs.highlightBlock(block);
+	});
+</script>
+
+
+
+<!--
+<style>
+.site-footer a:focus {
+	outline-offset: 1.5px;
+	outline-color: #fff;
+}
+</style>
+-->
+
+</div>
+<!-- pageInnerContent -->
+</div>
+<!-- #contentwrapper -->
+</main>
+<!-- #content -->
+</div>
+</div>
+<!-- #container -->
+<footer id="footer" class="site-footer">
+        <div id="footer-content">
+                <section class="footer-links">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="col-md-12 col-xs-12">
+                                                <section id="nav_menu-2" class="widget widget_nav_menu">
+                                                        <section class="footer-info">
+                                                                <nav id="footer-nav-wrapper" aria-label="Footer Links">
+                                                                        <ul id="menu-footer-links" class="list-inline legal-links">
+                                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a style="text-decoration:underline;" href="/contact">Contact Us</a></li>
+                                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a style="text-decoration:underline;" href="https://www.deque.com/get-accessibility-help/?__hstc=213731083.08cf4a29b46660f0fe71ae3aa8e40744.1754414321176.1754414321176.1754414321176.1&amp;__hssc=213731083.1.1754414321176&amp;__hsfp=3658814885">Request a quote or demo</a></li>
+                                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a style="text-decoration:underline;" href="/accessibility-statement">Accessibility statement</a></li>
+                                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a style="text-decoration:underline;" href="https://accessibility.deque.com/hubfs/VPATs/DequeUniversity_VPAT_WCAG2.1AA.pdf?__hstc=213731083.08cf4a29b46660f0fe71ae3aa8e40744.1754414321176.1754414321176.1754414321176.1&amp;__hssc=213731083.1.1754414321176&amp;__hsfp=3658814885">VPAT</a></li>
+                                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a style="text-decoration:underline;" href="/sitemap">Site map</a></li>
+                                                                        </ul>
+                                                                </nav>
+                                                                <br>
+                                                                <p style="display:inline-block;border:1px solid #ffffff; border-radius:5px; padding:3px 6px 6px 6px;"></p>
+                                                                <p><br><a style="text-decoration:underline;font-size:100%" href="https://www.deque.com/axe/browser-extensions/?utm_source=dequeuniversity&amp;utm_medium=referral&amp;utm_campaign=DQU_Footer&amp;__hstc=213731083.08cf4a29b46660f0fe71ae3aa8e40744.1754414321176.1754414321176.1754414321176.1&amp;__hssc=213731083.1.1754414321176&amp;__hsfp=3658814885">Download free axe DevTools browser extension</a></p>
+                                                                <p><br>
+                                                                        <a class="logo" href="https://www.deque.com/?__hstc=213731083.08cf4a29b46660f0fe71ae3aa8e40744.1754414321176.1754414321176.1754414321176.1&amp;__hssc=213731083.1.1754414321176&amp;__hsfp=3658814885" rel="home">
+                                                                                <span class="sr-only">Main Deque Website</span>
+                                                                                <img src="https://dequeuniversity.com/assets/js/sandbox/images/deque-logo-white.png" height="83" alt="Deque logo"></a>
+                                                                </p>
+                                                                <p class="copyright">13800 Coppermine Rd., Herndon VA 20171 <a href="tel:1-703-225-0380">1-703-225-0380</a></p>
+
+                                                                <p class="copyright">© Copyright 2013-2025 Deque Systems. All rights reserved. <a href="/terms">Terms of Use</a> | <a href="https://www.deque.com/legal/?__hstc=213731083.08cf4a29b46660f0fe71ae3aa8e40744.1754414321176.1754414321176.1754414321176.1&amp;__hssc=213731083.1.1754414321176&amp;__hsfp=3658814885" target="blank">Legal</a></p>
+                                                        </section>
+                                                </section>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+        </div>
+        
+
+        <div aria-live="polite" id="polite" class="visually-hidden"></div>
+        <div aria-live="assertive" id="assertive" class="visually-hidden"></div>
+
+        <div class="pageSpecific">
+                <!--[if gt IE 8]><!-->
+<script>
+hljs.initHighlightingOnLoad();
+    $('code.block').each(function(i, block) {
+  hljs.highlightBlock(block);
+});
+</script>
+        </div>
+        
+        
+
+        <script src="/patterns-lib/deque-widgets.min.js"></script>
+        <script src="assets/js/highlight/highlight.js" id="additionalScriptsInheritable1" class="pageSpecific"></script>
+        
+        
+        <!--script src="assets/js/googleAnalytics.js"></script-->
+        <script src="assets/js/linkedin-insights.js"></script>
+        <noscript>
+                <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=1417225&fmt=gif">
+        </noscript>
+        
+</footer>
+
+
+
+
+
+<script id="hs-script-loader" text="" charset="" type="text/javascript" src="//js.hs-scripts.com/153358.js"></script>
+
+<div class="go2933276541 go2369186930" id="hs-web-interactives-top-anchor"><div id="hs-interactives-modal-overlay" class="go1632949049"></div></div>
+<div class="go2933276541 go1348078617" id="hs-web-interactives-bottom-anchor"></div>
+<div id="hs-web-interactives-floating-container">
+  <div id="hs-web-interactives-floating-top-left-anchor" class="go2417249464 go613305155">
+  </div>
+  <div id="hs-web-interactives-floating-top-right-anchor" class="go2417249464 go471583506">
+  </div>
+  <div id="hs-web-interactives-floating-bottom-left-anchor" class="go2417249464 go3921366393">
+  </div>
+  <div id="hs-web-interactives-floating-bottom-right-anchor" class="go2417249464 go3967842156">
+  </div>
+</div><iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe>
+</body></html>
