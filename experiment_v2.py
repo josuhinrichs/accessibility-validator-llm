@@ -80,7 +80,7 @@ def process_dataset(client: LLMClient, model: str, strategies: list[str], want_s
     Lê o dataset CSV para obter ground truth e mapeia para arquivos HTML locais.
     """
     HTML_DIR = Path("./content/workspace/FullPipeline/html_pages_async")
-    
+
     dataset_csv_path = Path(os.getenv("DATASET_CSV_PATH", CSV_PATH))
 
     if not dataset_csv_path.exists():
@@ -88,7 +88,7 @@ def process_dataset(client: LLMClient, model: str, strategies: list[str], want_s
         return
 
     logger.info("dataset_ingestion_started", path=str(dataset_csv_path))
-    
+
     try:
         df = pd.read_csv(dataset_csv_path)
     except Exception as e:
@@ -104,7 +104,7 @@ def process_dataset(client: LLMClient, model: str, strategies: list[str], want_s
         p.name.lower(): p
         for p in HTML_DIR.glob("*.html")
     }
-    
+
     with PageRenderer(want_screenshot=want_screenshot, want_ax_tree=want_ax_tree) as renderer:
         for html_filename, group in grouped:
             # Aggregate all WCAG violations for this specific HTML file
@@ -112,7 +112,7 @@ def process_dataset(client: LLMClient, model: str, strategies: list[str], want_s
             for _, row in group.iterrows():
                 wcag_raw = str(row.get('wcag_reference', '')) or ""
                 all_ground_truth.update(extract_wcag_codes(wcag_raw))
-            
+
             # Resolve o arquivo HTML local com múltiplas estratégias.
             # O CSV contém mistura de nomes antigos (.txt) e nomes normalizados (.html).
             first_row = group.iloc[0]
@@ -162,34 +162,34 @@ def process_dataset(client: LLMClient, model: str, strategies: list[str], want_s
                     tried=deduped_candidate_names,
                 )
                 continue
-            
+
             # Use the first ID or a combined ID for the item_id
             item_id = str(group.iloc[0]['id'])
             web_url_id = str(group.iloc[0]['web_URL_id'])
-            
+
             # Render once per file
             rendered = renderer.render(web_url_id=web_url_id, html_path=html_path, out_dir=MODELS_RESULTS_DIR)
-            
+
             if not all_ground_truth:
                 logger.debug("skipping_file_no_ground_truth", item_id=item_id)
                 continue
-    
+
             evidence_inputs = ["html"]
             if want_ax_tree:
                 evidence_inputs.append("axtree")
             if want_screenshot:
                 evidence_inputs.append("screenshot")
-    
+
             prompt = PromptRecipe.build_user_prompt(
                 page=rendered,
                 evidence_inputs=evidence_inputs
             )
-    
+
             image_paths = [rendered.screenshot_path] if rendered.screenshot_path else []
-    
+
             logger.info(
-                "item_ready_for_inference", 
-                item_id=item_id, 
+                "item_ready_for_inference",
+                item_id=item_id,
                 ground_truth=list(all_ground_truth),
                 image_count=len(image_paths)
             )
@@ -255,9 +255,12 @@ if __name__ == "__main__":
         num_ctx=selected_client.num_ctx,
         include_images=selected_client.include_images,
     )
-    
+
     MODELS_TO_TEST = [
-        "qwen2.5vl",
+        "gemma-3-27b-it",
+        "llama-4-scout-17b-16e-instruct",
+        "gemma-3-12b-it",
+        "deepseek-r1-distill-llama-70b",
     ]
 
     #STRATEGIES_TO_TEST = ["zero-shot", "few-shot", "chain-of-thought"]
@@ -265,7 +268,7 @@ if __name__ == "__main__":
     STRATEGIES_TO_TEST = ["zero-shot"]
 
     for model in MODELS_TO_TEST:
-        logger.info("model_run_started", model=model) 
+        logger.info("model_run_started", model=model)
         process_dataset(
             client=selected_client,
             model=model,

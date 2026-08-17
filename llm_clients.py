@@ -108,7 +108,7 @@ class LLMClient:
 lm_studio_client = LLMClient(
     api_key="lm-studio",
     base_url="http://10.102.20.26:1234/v1",
-    models=["qwen2.5vl"],
+    models=["llama-4-scout-17b-16e-instruct", "gemma-3-27b-it", "gemma-3-12b-it", "deepseek-r1-distill-llama-70b"],
     include_images=True,
     force_json=True,
 )
