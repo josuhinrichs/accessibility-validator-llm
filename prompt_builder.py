@@ -1,10 +1,10 @@
 from __future__ import annotations
 
+from collections.abc import Iterable
 from dataclasses import dataclass
 import json
-from typing import Iterable
 
-from render import PageRenderer, RenderedPage
+from render import RenderedPage
 
 
 SYSTEM_PROMPT_BASELINE = (
@@ -34,6 +34,9 @@ Report only names in the taxonomy. If none, return {"violations": []}.
 """
 
 
+MAX_AXTREE_CHARS = 120000
+MAX_HTML_CHARS = 120000
+
 section_order = ("taxonomy", "schema", "task", "evidence")
 
 
@@ -46,8 +49,8 @@ def evidence_sections(
     if "axtree" in evidence_inputs and page.ax_tree is not None:
         ax_tree_json = json.dumps(page.ax_tree)
 
-        if len(ax_tree_json) > 60000:
-            ax_tree_json = ax_tree_json[:60000] + "\n[TRUNCATED]"
+        if len(ax_tree_json) > MAX_AXTREE_CHARS:
+            ax_tree_json = ax_tree_json[:MAX_AXTREE_CHARS] + "\n[TRUNCATED]"
 
         parts.extend([
             "",
@@ -58,8 +61,8 @@ def evidence_sections(
     if "html" in evidence_inputs and page.html:
         html = page.html
 
-        if len(html) > 60000:
-            html = html[:60000] + "\n[TRUNCATED]"
+        if len(html) > MAX_HTML_CHARS:
+            html = html[:MAX_HTML_CHARS] + "\n[TRUNCATED]"
 
         parts.extend([
             "",
