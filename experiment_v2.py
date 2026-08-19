@@ -167,8 +167,19 @@ def process_dataset(client: LLMClient, model: str, strategies: list[str], want_s
             item_id = str(group.iloc[0]['id'])
             web_url_id = str(group.iloc[0]['web_URL_id'])
 
-            # Render once per file
-            rendered = renderer.render(web_url_id=web_url_id, html_path=html_path, out_dir=MODELS_RESULTS_DIR)
+            # Inside experiment_v2.py (likely in process_dataset loop)
+            try:
+                rendered = renderer.render(web_url_id=web_url_id, html_path=html_path, out_dir=MODELS_RESULTS_DIR)
+            except Exception as e:
+                # Log the failure for this specific file, but don't crash
+                logger.error("render_failed", item_id=web_url_id, error=str(e))
+                continue # Skip to the next file in the loop
+        
+            # Periodic garbage collection for memory management
+            if processed_count % 10 == 0:
+                import gc
+                gc.collect()
+
 
             if not all_ground_truth:
                 logger.debug("skipping_file_no_ground_truth", item_id=item_id)
@@ -184,6 +195,12 @@ def process_dataset(client: LLMClient, model: str, strategies: list[str], want_s
                 page=rendered,
                 evidence_inputs=evidence_inputs
             )
+
+            # Export first 10 prompts for debugging
+            if processed_count < 10:
+                prompt_debug_dir = Path("debug_prompts")
+                prompt_debug_dir.mkdir(exist_ok=True)
+                (prompt_debug_dir / f"prompt_{processed_count}.txt").write_text(prompt, encoding="utf-8")
 
             image_paths = [rendered.screenshot_path] if rendered.screenshot_path else []
 
@@ -256,11 +273,18 @@ if __name__ == "__main__":
         include_images=selected_client.include_images,
     )
 
+    # MODELS_TO_TEST = [
+    #     "deepseek-r1-distill-llama-70b",
+    #     "gemma-3-27b-it",
+    #     "gemma-3-12b-it",
+    #     "llama-4-scout-17b-16e-instruct",
+    # ]
+
     MODELS_TO_TEST = [
-        "deepseek-r1-distill-llama-70b",
-        "gemma-3-27b-it",
-        "gemma-3-12b-it",
-        "llama-4-scout-17b-16e-instruct",
+        "qwen3:4b",
+        "qwen2.5vl",
+        "qwen3:1.7b",
+        "qwen2.5-coder:7b-instruct",
     ]
 
     #STRATEGIES_TO_TEST = ["zero-shot", "few-shot", "chain-of-thought"]

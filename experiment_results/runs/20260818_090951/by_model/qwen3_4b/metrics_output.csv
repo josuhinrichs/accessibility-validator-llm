@@ -1,0 +1,649 @@
+item_id,model,strategy,duration_ms,tp,fp,fn,precision,recall,f1_score,ground_truth,predictions,raw_output,error,schema_valid,parse_failed,empty_response,prediction_source,mapped_rule_ids
+6018,qwen3:4b,zero-shot,50645,0,0,1,0.0,0.0,0.0,4.1.2,,"{
+  ""title"": ""aria-treeitem-name rule explanation"",
+  ""explanation"": ""The `aria-treeitem-name` rule ensures elements with `role=\""treeitem\""` have a discernible accessible name for screen reader users. Without this, users cannot understand the purpose, function, or destination of tree items in hierarchical lists."",
+  ""why_it_matters"": ""Screen reader users cannot identify tree items without an accessible name, leading to navigation confusion and accessibility barriers in tree-structured content."",
+  ""correct_examples"": [
+    ""Element with inner text: `<div role=\""treeitem\"">Name</div>`"",
+    ""Non-empty `aria-label`: `<div role=\""treeitem\"" aria-label=\""Name\""></div>`"",
+    ""`aria-labelledby` to existing element: `<div role=\""treeitem\"" aria-labelledby=\""labeldiv\""></div>`"",
+    ""`title` attribute: `<div role=\""treeitem\"" title=\""Title\""></div>`""
+  ],
+  ""incorrect_examples"": [
+    ""Empty tree item: `<div role=\""treeitem\""></div>`"",
+    ""Empty `aria-label`: `<div role=\""treeitem\"" aria-label=\""\""></div>`"",
+    ""Invalid `aria-labelledby`: `<div role=\""treeitem\"" aria-labelledby=\""nonexistent\""></div>`"",
+    ""Invalid `aria-labelledby` to empty element: `<div role=\""treeitem\"" aria-labelledby=\""emptydiv\""></div>`""
+  ],
+  ""how_to_fix"": ""Ensure every `role=\""treeitem\""` element has one of: 1) inner text, 2) non-empty `aria-label`, 3) `aria-labelledby` pointing to a valid element with discernible text, or 4) `title` attribute.""
+}",no_wcag_codes_extracted,False,False,False,json_no_codes,
+6021,qwen3:4b,zero-shot,158940,0,0,2,0.0,0.0,0.0,1.3.1|2.4.6,,"{
+  ""rule_description"": ""Table header elements should have visible text. Ensure that the table header can be used by screen reader users. If the element is not a header, marking it up with a `td` is more appropriate."",
+  ""how_to_fix_problem"": ""How to Fix the Problem\n\nCorrect markup solutions\nTable header elements (those marked with <code>&lt;th&gt;</code> or\n<code>role=\""rowheader\""</code> or\n<code>role=\""columnheader\""</code>) should\nhave visible text that describes its purpose.\n\n<pre><code class=\""hljs xml\"">&lt;table&gt;&lt;tr&gt;&lt;th&gt;Student Name&lt;/th&gt;&lt;/tr&gt;&lt;/table&gt;</code></pre>\n\nIncorrect markup solutions\n\n<pre><code class=\""hljs xml\"">&lt;table&gt;&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/table&gt;\n\n&lt;table&gt;&lt;tr&gt;&lt;th &gt;aria-label=\""Student Name\""&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/table&gt;</code></pre>""
+}",no_wcag_codes_extracted,False,False,False,json_no_codes,
+6016,qwen3:4b,zero-shot,252599,0,1,1,0.0,0.0,0.0,3.3.2,3.4.0,"{
+  ""html"": ""<div class=\""col-md-8 content\"">\n  <section class=\""howToFix\"">\n    <h2>How to Fix the Problem</h2>\n    <div class=\""howToFixData\"">\n      <p>Ensure that only one label is assigned to a form field.</p>\n      <div class=\""example\"">\n        <h3 class=\""good\"">Correct markup solutions</h3>\n        <p>\n          The <code>form-field-multiple-labels</code> rule contains five markup\n          patterns that pass analysis:\n        </p>\n        <pre><code class=\""hljs xml\"">\n          &lt;label for=\""pass1\""&gt;Label&lt;/label&gt;\n          &lt;input type=\""text\"" id=\""pass1\"" &gt;\n\n          &lt;textarea id=\""pass2\"" title=\""Label\""&gt;&lt;/textarea&gt;\n\n          &lt;label&gt;First Name:&lt;/label&gt;\n          &lt;input type=\""text\"" id=\""pass3\"" &gt;\n\n          &lt;label&gt;\n            Choose an option:\n            &lt;select id=\""pass4\""&gt;\n              &lt;option selected&gt;Chosen&lt;/option&gt;\n              &lt;option&gt;Not Selected&lt;/option&gt;\n            &lt;/select&gt;\n          &lt;/label&gt;\n\n          &lt;label&gt;Enter your comments:&lt;/label&gt;\n          &lt;textarea id=\""pass5\""&gt;&lt;/textarea&gt;\n        </code></pre>\n      </div>\n      <div class=\""note\"">\n        <h3>\n          Caution: Screen Reader and Browser Combinations Inconsistently Support\n          Multiple <code>form</code> Element Labels\n        </h3>\n        <p>\n          The following markup examples work across the following screen reader and\n          browser combinations documented here as of the axe-core 3.4.0 release. See\n          <a href=\""https://codepen.io/straker/pen/PvqONy\"">Multiple Labels on a Single Input</a>\n          for further information on screen reader and browser testing combinations.\n        </p>\n        <pre><code class=\""hljs xml\"">\n          &lt;label for=\""pass1\""&gt;Label&lt;/label&gt;\n          &lt;input type=\""text\"" id=\""pass1\"" &gt;\n\n          &lt;textarea id=\""pass2\"" title=\""Label\""&gt;&lt;/textarea&gt;\n\n          &lt;label&gt;First Name:&lt;/label&gt;\n          &lt;input type=\""text\"" id=\""pass3\"" &gt;\n\n          &lt;label&gt;\n            Choose an option:\n            &lt;select id=\""pass4\""&gt;\n              &lt;option selected&gt;Chosen&lt;/option&gt;\n              &lt;option&gt;Not Selected&lt;/option&gt;\n            &lt;/select&gt;\n          &lt;/label&gt;\n\n          &lt;label&gt;Enter your comments:&lt;/label&gt;\n          &lt;textarea id=\""pass5\""&gt;&lt;/textarea&gt;\n        </code></pre>\n        <p>\n          Confirm the existence of one visible label per form element. to achieve\n          correct functionality across most screen reader and browser combinations.\n          Using the <code>aria-hidden</code> attribute alone is not sufficient and you\n          need to hide additional labels using CSS.\n        </p>\n      </div>\n      <div class=\""example\"">\n        <h3 class=\""bad\"">Incorrect markup examples</h3>\n        <p>\n          The <code>form-field-multiple-labels</code> rule contains nine markup\n          patterns that fail analysis:\n        </p>\n        <pre class=\""html\""><code class=\""hljs xml\"">\n          &lt;label for=\""fail1\""&gt;Hi&lt;/label&gt;\n          &lt;label for=\""fail1\""&gt;Foo&lt;/label&gt;\n          &lt;input type=\""text\"" id=\""fail1\"" &gt;\n\n          &lt;label for=\""fail2\""&gt;label one&lt;/label&gt;\n          &lt;label for=\""fail2\""&gt;label two&lt;/label&gt;\n          &lt;input type=\""checkbox\"" id=\""fail2\"" &gt;\n\n          &lt;label for=\""fail3\"" id=\""l1\""&gt;label one&lt;/label&gt;\n          &lt;label for=\""fail3\""&gt;label two&lt;/label&gt;\n          &lt;input type=\""checkbox\"" id=\""fail3\"" aria-labelledby=\""l1\"" &gt;\n\n          &lt;label for=\""fail4\""&gt;First Name:&lt;/label&gt;\n          &lt;label&gt;First Name:\n            &lt;input type=\""text\"" id=\""fail4\"" &gt;\n          &lt;/label&gt;\n\n          &lt;label for=\""fail5\""&gt;Choose an option:&lt;/label&gt;\n          &lt;label&gt;Choose an option:\n            &lt;select id=\""fail5\""&gt;\n              &lt;option selected&gt;Chosen&lt;/option&gt;\n              &lt;option&gt;Not Selected&lt;/option&gt;\n            &lt;/select&gt;\n          &lt;/label&gt;\n\n          [TRUNCATED]\n        </code></pre>\n      </div>\n    </div>\n  </section>\n</div>""
+}",,False,False,False,json,
+6008,qwen3:4b,zero-shot,26818,0,0,2,0.0,0.0,0.0,4.1.2|2.4.4,,"{
+  ""violations"": [
+    {
+      ""rule_id"": ""4.10"",
+      ""description"": ""Each clickable <area> within an image map must have an alt, aria-label, or aria-labelledby attribute that describes the purpose of the link"",
+      ""evidence"": [
+        ""The page describes that image maps require proper accessibility text for each clickable area"",
+        ""The page states that server-side image maps (using ismap attribute) are not keyboard accessible and should be avoided"",
+        ""The page provides examples of both correct and incorrect implementations""
+      ],
+      ""impact"": ""Screen readers require text alternatives to understand the purpose of clickable areas in image maps""
+    }
+  ]
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+6019,qwen3:4b,zero-shot,65962,0,0,1,0.0,0.0,0.0,4.1.2,,"{
+  ""rule_description"": ""The `aria-braillelabel` attribute must only be used on elements with a non-empty accessible name (e.g., via `aria-label` or `aria-labelledby`). Similarly, the `aria-brailleroledescription` attribute must only be used on elements with a non-empty `aria-roledescription` attribute."",
+  ""algorithm"": ""For every element with `aria-braillelabel`, verify it has a non-empty accessible name. For every element with `aria-brailleroledescription`, verify it has a non-empty `aria-roledescription` attribute.""
+}",no_wcag_codes_extracted,False,False,False,json_no_codes,
+6020,qwen3:4b,zero-shot,33106,0,1,1,0.0,0.0,0.0,2.5.5,2.5.8,"{
+  ""rule"": ""2.5.8 Target Size (WCAG 2.2 AA)"",
+  ""description"": ""Touch targets must be at least 24px by 24px in size to ensure usability for users with motor impairments, large fingers, or one-handed operation."",
+  ""why_it_matters"": [
+    ""Users with motor impairments (e.g., tremors) require larger targets to avoid accidental taps"",
+    ""Users with large fingers need sufficient space to avoid mistaps"",
+    ""One-handed users require targets that don't interfere with other interactions"",
+    ""Users in environments with physical shaking (e.g., public transport) benefit from larger targets""
+  ],
+  ""how_to_fix"": [
+    ""Ensure interactive elements (buttons, links) have minimum 24px by 24px dimensions"",
+    ""Add sufficient spacing between interactive elements (minimum 48px between targets)"",
+    ""Use CSS `min-width` and `min-height` properties for interactive elements"",
+    ""For touch targets, ensure the visual size (including borders and padding) meets 24px minimum""
+  ],
+  ""examples"": [
+    ""Correct: `<button style=\""min-width: 24px; min-height: 24px;\"">Submit</button>`"",
+    ""Incorrect: `<button style=\""width: 16px; height: 16px;\"">Submit</button>`""
+  ],
+  ""algorithm"": ""For each interactive element, measure the bounding box (including borders and padding). If the smallest dimension (width or height) is less than 24px, the target is too small.""
+}",,False,False,False,json,
+6017,qwen3:4b,zero-shot,82450,0,0,1,0.0,0.0,0.0,4.1.2,,"{
+  ""title"": ""Fixing the 'aria-tooltip-name' Rule in axe"",
+  ""problem"": ""Elements with role=\""tooltip\"" must have an accessible name for screen reader users to understand their purpose"",
+  ""why_it_matters"": ""Screen reader users cannot discern the purpose of tooltips without an accessible name"",
+  ""how_to_fix"": [
+    ""Provide non-empty aria-label attribute"",
+    ""Use aria-labelledby pointing to discernible text"",
+    ""Include readable inner text"",
+    ""Use title attribute (less accessible, not recommended)""
+  ],
+  ""correct_examples"": [
+    ""<div role=\""tooltip\"" aria-label=\""Name\""></div>"",
+    ""<div role=\""tooltip\"" aria-labelledby=\""labeldiv\""></div>"",
+    ""<div role=\""tooltip\"">Name</div>"",
+    ""<div role=\""tooltip\"" title=\""Title\""></div>""
+  ],
+  ""incorrect_examples"": [
+    ""<div role=\""tooltip\""></div>"",
+    ""<div role=\""tooltip\"" aria-label=\""\""></div>"",
+    ""<div role=\""tooltip\"" aria-labelledby=\""nonexistent\""></div>"",
+    ""<div role=\""tooltip\"" aria-labelledby=\""emptydiv\""></div>""
+  ],
+  ""note"": ""The title attribute is a legacy solution that may not be read by all screen readers. Prefer aria-label or aria-labelledby for modern accessibility.""
+}",no_wcag_codes_extracted,False,False,False,json_no_codes,
+6022,qwen3:4b,zero-shot,128796,0,1,1,0.0,0.0,0.0,1.1.1,4.1.2,"{
+  ""violations"": [
+    {
+      ""rule"": ""aria-meter-name"",
+      ""description"": ""Elements with role=\""meter\"" must have a discernible name"",
+      ""evidence"": [
+        {
+          ""element"": ""div"",
+          ""id"": ""meter-example"",
+          ""attributes"": {
+            ""role"": ""meter"",
+            ""aria-label"": ""Progress: 50%""
+          }
+        },
+        {
+          ""element"": ""div"",
+          ""id"": ""meter-example-2"",
+          ""attributes"": {
+            ""role"": ""meter"",
+            ""aria-valuenow"": ""50""
+          }
+        }
+      ],
+      ""impact"": ""high"",
+      ""category"": ""aria""
+    }
+  ]
+}",,True,False,False,json,aria-meter-name
+706_0,qwen3:4b,zero-shot,27175,0,0,10,0.0,0.0,0.0,2.4.3|1.3.1|4.1.1|2.4.6|2.4.4|2.4.9|2.1.1|4.1.2|1.4.3|1.4.6,,"{
+  ""violations"": []
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+708_0,qwen3:4b,zero-shot,32901,0,0,10,0.0,0.0,0.0,2.4.3|1.3.1|4.1.1|2.4.6|2.4.4|2.4.9|2.1.1|4.1.2|1.4.3|1.4.6,,"{
+  ""violations"": [
+    {
+      ""type"": ""missing_alt_text"",
+      ""element"": ""img"",
+      ""description"": ""Image element with no alt text provided for accessibility"",
+      ""evidence"": ""The HTML contains an image element with src=\""https://example.com/icons/consent.png\"" but no alt attribute defined""
+    },
+    {
+      ""type"": ""missing_label"",
+      ""element"": ""input"",
+      ""description"": ""Input element lacks a label for accessibility"",
+      ""evidence"": ""The input element with id=\""consent-1\"" has no associated label element in the HTML structure""
+    },
+    {
+      ""type"": ""missing_label"",
+      ""element"": ""input"",
+      ""description"": ""Input element lacks a label for accessibility"",
+      ""evidence"": ""The input element with id=\""consent-2\"" has no associated label element in the HTML structure""
+    },
+    {
+      ""type"": ""missing_label"",
+      ""element"": ""input"",
+      ""description"": ""Input element lacks a label for accessibility"",
+      ""evidence"": ""The input element with id=\""consent-3\"" has no associated label element in the HTML structure""
+    },
+    {
+      ""type"": ""missing_label"",
+      ""element"": ""input"",
+      ""description"": ""Input element lacks a label for accessibility"",
+      ""evidence"": ""The input element with id=\""consent-4\"" has no associated label element in the HTML structure""
+    }
+  ]
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+709_0,qwen3:4b,zero-shot,29493,0,0,10,0.0,0.0,0.0,2.4.3|1.3.1|4.1.1|2.4.6|2.4.4|2.4.9|2.1.1|4.1.2|1.4.3|1.4.6,,"{
+  ""violations"": [
+    {
+      ""type"": ""missing_alt_text"",
+      ""element"": ""img"",
+      ""description"": ""Image element with no alt text provided"",
+      ""evidence"": ""The HTML contains an image element with src=\""https://iabtcf.com/assets/images/tcf-logo.png\"" but no alt attribute specified""
+    },
+    {
+      ""type"": ""missing_label"",
+      ""element"": ""input"",
+      ""description"": ""Input element without associated label"",
+      ""evidence"": ""The HTML contains an input element with type=\""checkbox\"" and id=\""consent_1\"" but no corresponding label element""
+    },
+    {
+      ""type"": ""missing_label"",
+      ""element"": ""input"",
+      ""description"": ""Input element without associated label"",
+      ""evidence"": ""The HTML contains an input element with type=\""checkbox\"" and id=\""consent_2\"" but no corresponding label element""
+    },
+    {
+      ""type"": ""missing_label"",
+      ""element"": ""input"",
+      ""description"": ""Input element without associated label"",
+      ""evidence"": ""The HTML contains an input element with type=\""checkbox\"" and id=\""consent_3\"" but no corresponding label element""
+    }
+  ]
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+716_0,qwen3:4b,zero-shot,31215,0,0,10,0.0,0.0,0.0,2.4.3|4.1.1|1.3.1|2.4.6|2.4.4|2.4.9|2.1.1|4.1.2|1.4.3|1.4.6,,"{
+  ""violations"": [
+    {
+      ""type"": ""missing_consent_management"",
+      ""evidence"": ""The page contains a consent management interface with 5 toggles (4-8) but no explicit consent status indicator beyond the toggle states (all 'Off'). The interface lacks a clear 'consent status' display that would indicate whether consent has been given or not.""
+    },
+    {
+      ""type"": ""incomplete_vendor_list"",
+      ""evidence"": ""Each consent category shows a vendor list with a truncated count (e.g., '115 vendors' shown but actual list is truncated with '...'). The page does not provide a complete vendor list for any category, violating the requirement for transparent vendor disclosure.""
+    },
+    {
+      ""type"": ""missing_consent_status_display"",
+      ""evidence"": ""The page lacks a visible 'consent status' indicator (e.g., 'Consent given', 'Consent not given', 'Consent pending') that would clearly communicate the user's current consent status to the user.""
+    }
+  ]
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+710_0,qwen3:4b,zero-shot,31380,0,0,10,0.0,0.0,0.0,2.4.3|1.3.1|4.1.1|2.4.6|2.4.4|2.4.9|2.1.1|4.1.2|1.4.3|1.4.6,,"{
+  ""violations"": [
+    {
+      ""type"": ""missing_alt_text"",
+      ""element"": ""img[alt=\""\""]"",
+      ""description"": ""Image element has no alt text""
+    },
+    {
+      ""type"": ""missing_label"",
+      ""element"": ""input[type=\""checkbox\""]"",
+      ""description"": ""Checkbox input lacks a label for accessibility""
+    },
+    {
+      ""type"": ""missing_label"",
+      ""element"": ""input[type=\""checkbox\""]"",
+      ""description"": ""Checkbox input lacks a label for accessibility""
+    },
+    {
+      ""type"": ""missing_label"",
+      ""element"": ""input[type=\""checkbox\""]"",
+      ""description"": ""Checkbox input lacks a label for accessibility""
+    },
+    {
+      ""type"": ""missing_label"",
+      ""element"": ""input[type=\""checkbox\""]"",
+      ""description"": ""Checkbox input lacks a label for accessibility""
+    }
+  ]
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+711_0,qwen3:4b,zero-shot,25785,0,0,10,0.0,0.0,0.0,2.4.3|4.1.1|1.3.1|2.4.6|2.4.4|2.4.9|2.1.1|4.1.2|1.4.3|1.4.6,,"{
+  ""violations"": []
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+707_0,qwen3:4b,zero-shot,26305,0,0,10,0.0,0.0,0.0,2.4.3|1.3.1|4.1.1|2.4.6|2.4.4|2.4.9|2.1.1|4.1.2|1.4.3|1.4.6,,"{
+  ""violations"": []
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+713_0,qwen3:4b,zero-shot,27313,0,0,10,0.0,0.0,0.0,2.4.3|4.1.1|1.3.1|2.4.6|2.4.4|2.4.9|2.1.1|4.1.2|1.4.3|1.4.6,,"{
+  ""violations"": []
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+714_0,qwen3:4b,zero-shot,24854,0,0,10,0.0,0.0,0.0,2.4.3|1.3.1|4.1.1|2.4.6|2.4.4|2.4.9|2.1.1|4.1.2|1.4.3|1.4.6,,"{
+  ""violations"": []
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+715_0,qwen3:4b,zero-shot,36950,0,0,10,0.0,0.0,0.0,2.4.3|1.3.1|4.1.1|2.4.6|2.4.4|2.4.9|2.1.1|4.1.2|1.4.3|1.4.6,,"{
+  ""violations"": [
+    {
+      ""type"": ""missing_alt_text"",
+      ""element"": ""img"",
+      ""attributes"": {
+        ""src"": ""https://example.com/consent-banner.png"",
+        ""alt"": """"
+      }
+    }
+  ]
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+712_0,qwen3:4b,zero-shot,25801,0,0,10,0.0,0.0,0.0,2.4.3|1.3.1|4.1.1|2.4.6|2.4.4|2.4.9|2.1.1|4.1.2|1.4.3|1.4.6,,"{
+  ""violations"": []
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+3871549955_0,qwen3:4b,zero-shot,25287,0,0,2,0.0,0.0,0.0,4.1.1|1.4.6,,"{
+  ""violations"": [
+    {
+      ""rule_id"": ""4.10"",
+      ""description"": ""Each clickable <area> within an image map must have an alt, aria-label, or aria-labelledby attribute that describes the purpose of the link"",
+      ""evidence"": [
+        ""The page describes that image maps require proper accessibility text for each clickable area"",
+        ""The page states that server-side image maps (using ismap attribute) are not keyboard accessible and should be avoided"",
+        ""The page provides examples of both correct and incorrect implementations""
+      ],
+      ""impact"": ""Screen readers require text alternatives to understand the purpose of clickable areas in image maps""
+    }
+  ]
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+4643564980_0,qwen3:4b,zero-shot,65533,0,0,2,0.0,0.0,0.0,4.1.1|1.4.6,,"{
+  ""rule_description"": ""The `aria-braillelabel` attribute must only be used on elements with a non-empty accessible name (e.g., via `aria-label` or `aria-labelledby`). Similarly, the `aria-brailleroledescription` attribute must only be used on elements with a non-empty `aria-roledescription` attribute."",
+  ""algorithm"": ""For every element with `aria-braillelabel`, verify it has a non-empty accessible name. For every element with `aria-brailleroledescription`, verify it has a non-empty `aria-roledescription` attribute.""
+}",no_wcag_codes_extracted,False,False,False,json_no_codes,
+853326546_0,qwen3:4b,zero-shot,129133,0,1,2,0.0,0.0,0.0,4.1.1|1.4.6,4.1.2,"{
+  ""violations"": [
+    {
+      ""rule"": ""aria-meter-name"",
+      ""description"": ""Elements with role=\""meter\"" must have a discernible name"",
+      ""evidence"": [
+        {
+          ""element"": ""div"",
+          ""id"": ""meter-example"",
+          ""attributes"": {
+            ""role"": ""meter"",
+            ""aria-label"": ""Progress: 50%""
+          }
+        },
+        {
+          ""element"": ""div"",
+          ""id"": ""meter-example-2"",
+          ""attributes"": {
+            ""role"": ""meter"",
+            ""aria-valuenow"": ""50""
+          }
+        }
+      ],
+      ""impact"": ""high"",
+      ""category"": ""aria""
+    }
+  ]
+}",,True,False,False,json,aria-meter-name
+7965215914_0,qwen3:4b,zero-shot,85358,0,0,2,0.0,0.0,0.0,4.1.1|1.4.6,,"{
+  ""title"": ""Fixing the 'aria-tooltip-name' Rule in axe"",
+  ""problem"": ""Elements with role=\""tooltip\"" must have an accessible name for screen reader users to understand their purpose"",
+  ""why_it_matters"": ""Screen reader users cannot discern the purpose of tooltips without an accessible name"",
+  ""how_to_fix"": [
+    ""Provide non-empty aria-label attribute"",
+    ""Use aria-labelledby pointing to discernible text"",
+    ""Include readable inner text"",
+    ""Use title attribute (less accessible, not recommended)""
+  ],
+  ""correct_examples"": [
+    ""<div role=\""tooltip\"" aria-label=\""Name\""></div>"",
+    ""<div role=\""tooltip\"" aria-labelledby=\""labeldiv\""></div>"",
+    ""<div role=\""tooltip\"">Name</div>"",
+    ""<div role=\""tooltip\"" title=\""Title\""></div>""
+  ],
+  ""incorrect_examples"": [
+    ""<div role=\""tooltip\""></div>"",
+    ""<div role=\""tooltip\"" aria-label=\""\""></div>"",
+    ""<div role=\""tooltip\"" aria-labelledby=\""nonexistent\""></div>"",
+    ""<div role=\""tooltip\"" aria-labelledby=\""emptydiv\""></div>""
+  ],
+  ""note"": ""The title attribute is a legacy solution that may not be read by all screen readers. Prefer aria-label or aria-labelledby for modern accessibility.""
+}",no_wcag_codes_extracted,False,False,False,json_no_codes,
+111849147_0,qwen3:4b,zero-shot,42555,0,1,2,0.0,0.0,0.0,4.1.1|1.4.6,4.1.2,"{
+  ""rule"": ""aria-treeitem-name"",
+  ""description"": ""Elements with role=\""treeitem\"" must have an accessible name"",
+  ""why_it_matters"": ""Screen reader users cannot understand the purpose of tree items without an accessible name"",
+  ""correct_solutions"": [
+    ""Use aria-label with non-empty text"",
+    ""Use aria-labelledby that points to an element with discernible text"",
+    ""Have inner text that is discernible to screen readers"",
+    ""Use title attribute (less preferred)""
+  ],
+  ""incorrect_solutions"": [
+    ""Empty tree items (no text, no aria-label, no aria-labelledby)"",
+    ""aria-label with empty string"",
+    ""aria-labelledby pointing to non-existent element"",
+    ""aria-labelledby pointing to element with no text""
+  ],
+  ""how_to_fix"": ""For each element with role=\""treeitem\"": ensure it has non-empty aria-label OR aria-labelledby pointing to discernible text OR inner text that is discernible to screen readers""
+}",,False,False,False,json,aria-treeitem-name
+2182179087_0,qwen3:4b,zero-shot,157711,0,0,2,0.0,0.0,0.0,4.1.1|1.4.6,,"{
+  ""rule_description"": ""Table header elements should have visible text. Ensure that the table header can be used by screen reader users. If the element is not a header, marking it up with a `td` is more appropriate."",
+  ""how_to_fix_problem"": ""How to Fix the Problem\n\nCorrect markup solutions\nTable header elements (those marked with <code>&lt;th&gt;</code> or\n<code>role=\""rowheader\""</code> or\n<code>role=\""columnheader\""</code>) should\nhave visible text that describes its purpose.\n\n<pre><code class=\""hljs xml\"">&lt;table&gt;&lt;tr&gt;&lt;th&gt;Student Name&lt;/th&gt;&lt;/tr&gt;&lt;/table&gt;</code></pre>\n\nIncorrect markup solutions\n\n<pre><code class=\""hljs xml\"">&lt;table&gt;&lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/table&gt;\n\n&lt;table&gt;&lt;tr&gt;&lt;th &gt;aria-label=\""Student Name\""&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/table&gt;</code></pre>""
+}",no_wcag_codes_extracted,False,False,False,json_no_codes,
+37517988_0,qwen3:4b,zero-shot,248676,0,1,4,0.0,0.0,0.0,2.4.3|2.1.1|4.1.1|1.4.6,3.4.0,"{
+  ""html"": ""<div class=\""col-md-8 content\"">\n  <section class=\""howToFix\"">\n    <h2>How to Fix the Problem</h2>\n    <div class=\""howToFixData\"">\n      <p>Ensure that only one label is assigned to a form field.</p>\n      <div class=\""example\"">\n        <h3 class=\""good\"">Correct markup solutions</h3>\n        <p>\n          The <code>form-field-multiple-labels</code> rule contains five markup\n          patterns that pass analysis:\n        </p>\n        <pre><code class=\""hljs xml\"">\n          &lt;label for=\""pass1\""&gt;Label&lt;/label&gt;\n          &lt;input type=\""text\"" id=\""pass1\"" &gt;\n\n          &lt;textarea id=\""pass2\"" title=\""Label\""&gt;&lt;/textarea&gt;\n\n          &lt;label&gt;First Name:&lt;/label&gt;\n          &lt;input type=\""text\"" id=\""pass3\"" &gt;\n\n          &lt;label&gt;\n            Choose an option:\n            &lt;select id=\""pass4\""&gt;\n              &lt;option selected&gt;Chosen&lt;/option&gt;\n              &lt;option&gt;Not Selected&lt;/option&gt;\n            &lt;/select&gt;\n          &lt;/label&gt;\n\n          &lt;label&gt;Enter your comments:&lt;/label&gt;\n          &lt;textarea id=\""pass5\""&gt;&lt;/textarea&gt;\n        </code></pre>\n      </div>\n      <div class=\""note\"">\n        <h3>\n          Caution: Screen Reader and Browser Combinations Inconsistently Support\n          Multiple <code>form</code> Element Labels\n        </h3>\n        <p>\n          The following markup examples work across the following screen reader and\n          browser combinations documented here as of the axe-core 3.4.0 release. See\n          <a href=\""https://codepen.io/straker/pen/PvqONy\"">Multiple Labels on a Single Input</a>\n          for further information on screen reader and browser testing combinations.\n        </p>\n        <pre><code class=\""hljs xml\"">\n          &lt;label for=\""pass1\""&gt;Label&lt;/label&gt;\n          &lt;input type=\""text\"" id=\""pass1\"" &gt;\n\n          &lt;textarea id=\""pass2\"" title=\""Label\""&gt;&lt;/textarea&gt;\n\n          &lt;label&gt;First Name:&lt;/label&gt;\n          &lt;input type=\""text\"" id=\""pass3\"" &gt;\n\n          &lt;label&gt;\n            Choose an option:\n            &lt;select id=\""pass4\""&gt;\n              &lt;option selected&gt;Chosen&lt;/option&gt;\n              &lt;option&gt;Not Selected&lt;/option&gt;\n            &lt;/select&gt;\n          &lt;/label&gt;\n\n          &lt;label&gt;Enter your comments:&lt;/label&gt;\n          &lt;textarea id=\""pass5\""&gt;&lt;/textarea&gt;\n        </code></pre>\n        <p>\n          Confirm the existence of one visible label per form element. to achieve\n          correct functionality across most screen reader and browser combinations.\n          Using the <code>aria-hidden</code> attribute alone is not sufficient and you\n          need to hide additional labels using CSS.\n        </p>\n      </div>\n      <div class=\""example\"">\n        <h3 class=\""bad\"">Incorrect markup examples</h3>\n        <p>\n          The <code>form-field-multiple-labels</code> rule contains nine markup\n          patterns that fail analysis:\n        </p>\n        <pre class=\""html\""><code class=\""hljs xml\"">\n          &lt;label for=\""fail1\""&gt;Hi&lt;/label&gt;\n          &lt;label for=\""fail1\""&gt;Foo&lt;/label&gt;\n          &lt;input type=\""text\"" id=\""fail1\"" &gt;\n\n          &lt;label for=\""fail2\""&gt;label one&lt;/label&gt;\n          &lt;label for=\""fail2\""&gt;label two&lt;/label&gt;\n          &lt;input type=\""checkbox\"" id=\""fail2\"" &gt;\n\n          &lt;label for=\""fail3\"" id=\""l1\""&gt;label one&lt;/label&gt;\n          &lt;label for=\""fail3\""&gt;label two&lt;/label&gt;\n          &lt;input type=\""checkbox\"" id=\""fail3\"" aria-labelledby=\""l1\"" &gt;\n\n          &lt;label for=\""fail4\""&gt;First Name:&lt;/label&gt;\n          &lt;label&gt;First Name:\n            &lt;input type=\""text\"" id=\""fail4\"" &gt;\n          &lt;/label&gt;\n\n          &lt;label for=\""fail5\""&gt;Choose an option:&lt;/label&gt;\n          &lt;label&gt;Choose an option:\n            &lt;select id=\""fail5\""&gt;\n              &lt;option selected&gt;Chosen&lt;/option&gt;\n              &lt;option&gt;Not Selected&lt;/option&gt;\n            &lt;/select&gt;\n          &lt;/label&gt;\n\n          [TRUNCATED]\n        </code></pre>\n      </div>\n    </div>\n  </section>\n</div>""
+}",,False,False,False,json,
+581517740_0,qwen3:4b,zero-shot,36923,0,1,2,0.0,0.0,0.0,4.1.1|1.4.6,2.5.8,"{
+  ""rule"": ""2.5.8 Target Size (WCAG 2.2 AA)"",
+  ""description"": ""Touch targets must be at least 24px by 24px in size to ensure usability for users with motor impairments, large fingers, or one-handed operation."",
+  ""why_it_matters"": [
+    ""Users with motor impairments (e.g., tremors) require larger targets to avoid accidental taps"",
+    ""Users with large fingers need sufficient space to avoid mistaps"",
+    ""One-handed users require targets that don't interfere with other interactions"",
+    ""Users in environments with physical shaking (e.g., public transport) benefit from larger targets""
+  ],
+  ""how_to_fix"": [
+    ""Ensure interactive elements (buttons, links) have minimum 24px by 24px dimensions"",
+    ""Add sufficient spacing between interactive elements (minimum 48px between targets)"",
+    ""Use CSS `min-width` and `min-height` properties for interactive elements"",
+    ""For touch targets, ensure the visual size (including borders and padding) meets 24px minimum""
+  ],
+  ""examples"": [
+    ""Correct: `<button style=\""min-width: 24px; min-height: 24px;\"">Submit</button>`"",
+    ""Incorrect: `<button style=\""width: 16px; height: 16px;\"">Submit</button>`""
+  ],
+  ""algorithm"": ""For each interactive element, measure the bounding box (including borders and padding). If the smallest dimension (width or height) is less than 24px, the target is too small.""
+}",,False,False,False,json,
+128813600_0,qwen3:4b,zero-shot,24408,0,0,6,0.0,0.0,0.0,2.4.9|4.1.2|1.3.1|1.1.1|1.4.6|2.4.4,,"{
+  ""violations"": []
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+1966382623_0,qwen3:4b,zero-shot,30238,0,0,10,0.0,0.0,0.0,2.4.1|2.4.3|1.3.1|1.1.1|4.1.1|2.4.6|2.4.4|2.4.9|2.1.1|1.4.6,,"{
+  ""violations"": [
+    {
+      ""type"": ""missing_alt_text"",
+      ""element"": ""img[alt=\""\""]"",
+      ""description"": ""Image element at index 10 (Trump story) has no alt text"",
+      ""evidence"": ""img[alt=\""\""]""
+    },
+    {
+      ""type"": ""missing_alt_text"",
+      ""element"": ""img[alt=\""\""]"",
+      ""description"": ""Image element at index 11 (Health story) has no alt text"",
+      ""evidence"": ""img[alt=\""\""]""
+    },
+    {
+      ""type"": ""missing_alt_text"",
+      ""element"": ""img[alt=\""\""]"",
+      ""description"": ""Image element at index 12 (Business story) has no alt text"",
+      ""evidence"": ""img[alt=\""\""]""
+    },
+    {
+      ""type"": ""missing_alt_text"",
+      ""element"": ""img[alt=\""\""]"",
+      ""description"": ""Image element at index 13 (Sports story) has no alt text"",
+      ""evidence"": ""img[alt=\""\""]""
+    },
+    {
+      ""type"": ""missing_alt_text"",
+      ""element"": ""img[alt=\""\""]"",
+      ""description"": ""Image element at index 14 (Health story) has no alt text"",
+      ""evidence"": ""img[alt=\""\""]""
+    }
+  ]
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+515_0,qwen3:4b,zero-shot,33317,0,0,8,0.0,0.0,0.0,2.4.9|2.1.1|1.4.6|2.4.3|4.1.2|1.3.1|1.4.3|2.4.4,,"{
+  ""violations"": [
+    {
+      ""type"": ""missing_alt_text"",
+      ""element"": ""video"",
+      ""reason"": ""The video element has no alt text attribute, which is required for accessibility when the video is not playable or for screen readers.""
+    },
+    {
+      ""type"": ""missing_label_for_controls"",
+      ""element"": ""input[type=\""range\""]"",
+      ""reason"": ""The volume control input lacks a label, making it difficult for screen readers to identify its purpose.""
+    },
+    {
+     ""type"": ""missing_label_for_ad_container"",
+      ""element"": ""div#ad-container"",
+      ""reason"": ""The ad container lacks a descriptive label, which is essential for users to understand its purpose and avoid confusion with the main video content.""
+    }
+  ]
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+516_0,qwen3:4b,zero-shot,30865,0,0,8,0.0,0.0,0.0,2.4.9|2.1.1|1.4.6|2.4.3|4.1.2|1.3.1|1.4.3|2.4.4,,"{
+  ""violations"": []
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+517_0,qwen3:4b,zero-shot,29110,0,0,8,0.0,0.0,0.0,2.4.9|2.1.1|1.4.6|2.4.3|4.1.2|1.3.1|1.4.3|2.4.4,,"{
+  ""analysis"": ""The provided HTML snippet represents a website footer and sidebar section from fitbottomedgirls.com. Key observations include: 1) Footer contains social media links (Pinterest, Twitter, YouTube, Spotify), main navigation (Fitness, Mamas, Eats, Zen), and legal links; 2) Copyright year is 2025 (future-dated); 3) Sidebar includes email signup form (ConvertKit integration), coaching promotion, and ad units; 4) Contains tracking pixels and iframes for analytics. The snippet ends with [TRUNCATED] indicating incomplete content.""
+}",no_wcag_codes_extracted,False,False,False,json_no_codes,
+5627013288_0,qwen3:4b,zero-shot,149602,0,0,8,0.0,0.0,0.0,1.3.1|4.1.1|2.4.6|2.4.4|2.4.9|4.1.2|1.4.3|1.4.6,,"{
+  ""text"": ""Sign in with Microsoft""
+}",no_wcag_codes_extracted,False,False,False,json_no_codes,
+8654682977_0,qwen3:4b,zero-shot,97027,0,0,6,0.0,0.0,0.0,1.3.1|4.1.2|4.1.1|1.1.1|1.4.6|2.4.6,,"{
+  ""title"": ""Webinar: Authoring Your Own OER with LibreTexts Conductor"",
+  ""description"": ""12 pm (PST) / 3 pm (EST)""
+}",no_wcag_codes_extracted,False,False,False,json_no_codes,
+4770170269_0,qwen3:4b,zero-shot,44670,0,0,11,0.0,0.0,0.0,3.1.1|4.1.1|1.1.1|1.3.1|2.4.6|2.4.4|2.4.9|1.4.4|4.1.2|1.4.3|1.4.6,,"{
+  ""title"": ""ICT Minister Attends Closing Ceremony of ‘AI Empower Egypt’ Round III"",
+  ""date"": ""05 August, 2025""
+}",no_wcag_codes_extracted,False,False,False,json_no_codes,
+548_0,qwen3:4b,zero-shot,66055,0,0,4,0.0,0.0,0.0,3.1.1|4.1.2|1.3.1|1.4.6,,"{
+  ""violations"": []
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+6666281102_0,qwen3:4b,zero-shot,28009,0,0,3,0.0,0.0,0.0,1.3.1|1.4.6|2.4.6,,"{
+  ""message"": ""The provided HTML snippet appears to be a list of MIT course listings with titles, codes, and descriptions. However, no specific accessibility violation was requested or identified in this input. To assist with web accessibility auditing, please provide:\n1. A complete HTML page URL or source\n2. Specific accessibility standards (e.g., WCAG 2.1)\n3. Targeted elements to audit\n\nCurrent input contains no actionable accessibility violations to report. I cannot invent elements or guess violations.""
+}",no_wcag_codes_extracted,False,False,False,json_no_codes,
+5424827103_0,qwen3:4b,zero-shot,69436,0,0,1,0.0,0.0,0.0,1.3.1,,"{
+  ""course_name"": ""Managing Happiness"",
+  ""school"": ""Harvard Business School, Harvard Kennedy School"",
+  ""duration"": ""6 weeks"",
+  ""price_certificate"": ""$219.00"",
+  ""language"": ""English"",
+  ""modality"": ""Online"",
+  ""category"": ""Business""
+}",no_wcag_codes_extracted,False,False,False,json_no_codes,
+1499175565_0,qwen3:4b,zero-shot,93222,0,0,2,0.0,0.0,0.0,3.1.1|1.3.1,,"{""violations"": []}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+8649911099_0,qwen3:4b,zero-shot,64246,0,0,3,0.0,0.0,0.0,1.3.1|1.4.3|1.4.6,,"{
+  ""homepage_hero"": {
+    ""title"": ""Explore your passion. Make an Impact."",
+    ""subtitle"": ""Unlock Your Full Potential"",
+    ""cta"": {
+      ""text"": ""Explore Catalog"",
+      ""href"": ""/courses""
+    }
+  },
+  ""newsletter"": {
+    ""title"": ""Sign up for our newsletter"",
+    ""subtitle"": ""Get updates about new offerings"",
+    ""cta"": {
+      ""text"": ""Sign Up"",
+      ""href"": ""/news/newsletter-sign""
+    }
+  }
+}",no_wcag_codes_extracted,False,False,False,json_no_codes,
+8773059234_0,qwen3:4b,zero-shot,26663,0,0,5,0.0,0.0,0.0,1.3.1|4.1.2|4.1.1|1.4.6|2.4.6,,"{
+  ""violations"": []
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+9995023032_0,qwen3:4b,zero-shot,45574,0,0,5,0.0,0.0,0.0,1.4.6|1.3.1|1.1.1|1.4.3|2.4.6,,"{
+  ""channel_name"": ""Unforgettable"",
+  ""description"": ""She never forgets, because Detective Carrie Wells has a photographic memory. She barely remembers the murder of her sister. Nevertheless, she won't give up finding her killer."",
+  ""live_stream_url"": ""/gsa/live-tv/650adb92a1217e00091a3eff""
+}",no_wcag_codes_extracted,False,False,False,json_no_codes,
+3231484510_0,qwen3:4b,zero-shot,218937,0,1,7,0.0,0.0,0.0,3.1.1|2.4.9|1.4.4|1.1.1|1.4.6|2.4.6|2.4.4,2.4.1,"{
+  ""violations"": [
+    {
+      ""wcag"": ""2.4.1"",
+      ""violation"": ""The dialog with id 'gs_lp_d' has role 'dialog' but is missing aria-labelledby attribute to specify the title (which is the h3 with id 'gs_lp_lbl')."",
+      ""html"": ""<div id=\""gs_lp_d\"" role=\""dialog\""><h3 id=\""gs_lp_lbl\"">Sprachen</h3>"",
+      ""target"": ""gs_lp_d"",
+      ""category"": ""semantic""
+    }
+  ]
+}",,True,False,False,json,
+5653019337_0,qwen3:4b,zero-shot,37872,0,0,7,0.0,0.0,0.0,1.3.1|2.4.9|1.4.6|4.1.2|4.1.1|1.4.3|2.4.4,,"{
+  ""violation"": ""No violations found"",
+  ""evidence"": ""The provided HTML snippet contains a list of programming tags with role=\""menuitem\"" and button elements. All elements have explicit roles and semantic structure. No missing labels, insufficient contrast, or other accessibility issues are present in the provided artifacts.""
+}",no_wcag_codes_extracted,False,False,False,json_no_codes,
+9817868776_0,qwen3:4b,zero-shot,12,0,0,0,0.0,0.0,0.0,1.3.1|1.4.3|1.4.6,,,max_input_tokens_exceeded:16592>15000,False,False,False,skipped_input_too_large,
+521_0,qwen3:4b,zero-shot,5,0,0,0,0.0,0.0,0.0,1.4.3|4.1.2|1.3.1|1.1.1|1.4.6|2.4.6,,,max_input_tokens_exceeded:17142>15000,False,False,False,skipped_input_too_large,
+520_0,qwen3:4b,zero-shot,7,0,0,0,0.0,0.0,0.0,1.4.6|4.1.2|1.3.1|1.1.1|1.4.3|2.4.6,,,max_input_tokens_exceeded:17146>15000,False,False,False,skipped_input_too_large,
+1746488226_0,qwen3:4b,zero-shot,125057,0,0,4,0.0,0.0,0.0,1.4.6|4.1.2|1.3.1|4.1.1,,"{""names"": [""Univision""]}",no_wcag_codes_extracted,False,False,False,json_no_codes,
+33_0,qwen3:4b,zero-shot,444374,0,0,4,0.0,0.0,0.0,4.1.2|2.4.9|1.4.6|2.4.4,,_Empty response,no_wcag_codes_extracted,False,True,False,none,
+2241802183_0,qwen3:4b,zero-shot,14,0,0,0,0.0,0.0,0.0,2.4.9|1.4.4|4.1.2|1.4.6|2.4.4,,,max_input_tokens_exceeded:15187>15000,False,False,False,skipped_input_too_large,
+193670859_0,qwen3:4b,zero-shot,5,0,0,0,0.0,0.0,0.0,1.4.6|4.1.1|1.3.1|1.1.1|2.4.6|2.4.4|2.4.9|4.1.2|1.4.3,,,max_input_tokens_exceeded:16066>15000,False,False,False,skipped_input_too_large,
+5263734580_0,qwen3:4b,zero-shot,42188,0,0,7,0.0,0.0,0.0,2.4.9|1.4.3|1.4.6|1.3.1|1.1.1|4.1.1|2.4.4,,"{
+  ""violations"": [
+    {
+      ""type"": ""missing_alt_text"",
+      ""element"": ""img[alt=\""\""]"",
+      ""description"": ""Image element has no alt text""
+    },
+    {
+      ""type"": ""missing_label"",
+      ""element"": ""input[name=\""email\""]"",
+      ""description"": ""Email input field lacks a label""
+    },
+    {
+      ""type"": ""missing_label"",
+      ""element"": ""input[name=\""password\""]"",
+      ""description"": ""Password input field lacks a label""
+    }
+  ]
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+331_0,qwen3:4b,zero-shot,194046,0,1,4,0.0,0.0,0.0,1.3.1|1.4.3|1.4.6|2.4.6,2.1.1,"{
+  ""wcagCode"": ""2.1.1"",
+  ""category"": ""keyboard"",
+  ""description"": ""Input element has tabindex='-1' which makes it non-focusable by keyboard"",
+  ""htmlElement"": ""input"",
+  ""htmlElementAttributes"": {
+    ""class"": ""field"",
+    ""name"": ""s"",
+    ""placeholder"": ""Search"",
+    ""tabindex"": ""-1"",
+    ""type"": ""text"",
+    ""value"": """"
+  },
+  ""severity"": ""critical""
+}",,False,False,False,json,
+318_0,qwen3:4b,zero-shot,12,0,0,0,0.0,0.0,0.0,1.4.6|1.3.1|2.4.6|2.4.4|2.4.9|4.1.2|1.4.3,,,max_input_tokens_exceeded:26570>15000,False,False,False,skipped_input_too_large,
+8325352647_0,qwen3:4b,zero-shot,96352,0,0,2,0.0,0.0,0.0,3.1.1|1.3.1,,"{""violations"": []}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+364_0,qwen3:4b,zero-shot,51066,0,0,9,0.0,0.0,0.0,1.3.1|4.1.1|1.1.1|2.4.6|2.4.4|2.4.9|1.4.4|4.1.2|1.4.6,,"{
+  ""violations"": [
+    {
+      ""type"": ""missing_alt_text"",
+      ""element"": ""img[alt=\""Cookie Consent Banner\""]"",
+      ""description"": ""Image element lacks alt text for accessibility""
+    },
+    {
+      ""type"": ""missing_label"",
+      ""element"": ""input[name=\""cookie-consent\""]"",
+      ""description"": ""Input element for cookie consent lacks a label for screen readers""
+    },
+    {
+      ""type"": ""missing_role"",
+      ""element"": ""div[aria-hidden=\""true\""]"",
+      ""description"": ""Hidden element lacks proper role attribute for accessibility""
+    }
+  ]
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+6901236114_0,qwen3:4b,zero-shot,69978,0,0,1,0.0,0.0,0.0,1.3.1,,"{""violations"": []}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+1344325832_0,qwen3:4b,zero-shot,30284,0,0,7,0.0,0.0,0.0,1.3.1|2.1.1|2.4.3|4.1.2|4.1.1|1.1.1|1.4.6,,"{
+  ""message"": ""The provided HTML snippet appears to be a truncated navigation menu from the ACS (American Chemical Society) website. The code shows a mega-menu structure with membership, communities, and discover chemistry sections. However, the snippet ends with [TRUNCATED] and contains incomplete URL references (e.g., 'https://www.acs.org/membership.ht'). No specific accessibility violations were found in the provided artifacts. To identify actual violations, please provide a complete, untruncated HTML page artifact with all elements and their attributes.""
+}",no_wcag_codes_extracted,False,False,False,json_no_codes,
+1115295724_0,qwen3:4b,zero-shot,28233,0,0,8,0.0,0.0,0.0,2.4.9|1.4.3|1.4.6|1.3.1|1.1.1|4.1.1|2.4.6|2.4.4,,"{
+  ""violations"": []
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+5117799549_0,qwen3:4b,zero-shot,12,0,0,0,0.0,0.0,0.0,1.4.4|1.4.6|4.1.2|1.3.1|1.4.3|2.4.6,,,max_input_tokens_exceeded:19584>15000,False,False,False,skipped_input_too_large,
+4925950366_0,qwen3:4b,zero-shot,466213,0,0,6,0.0,0.0,0.0,3.1.1|1.4.4|1.4.6|1.3.1|1.1.1|1.4.3,,"{
+  ""violations"": [
+    {
+      ""violation"": {
+        ""type"": ""missing_alt_text"",
+        ""description"": ""The QR code image does not have an alt attribute, which is required for accessibility."",
+        ""element"": ""img"",
+        ""attributes"": {
+          ""src"": ""data:image/png;base64,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"",
+          ""style"": ""display: block;""
+        }
+      }
+    }
+  ]
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+1902084907_0,qwen3:4b,zero-shot,35585,0,0,4,0.0,0.0,0.0,1.4.6|1.3.1|1.4.3|2.4.6,,"{
+  ""violations"": []
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+8791766791_0,qwen3:4b,zero-shot,5,0,0,0,0.0,0.0,0.0,1.4.6|4.1.2|1.3.1|1.4.3,,,max_input_tokens_exceeded:15699>15000,False,False,False,skipped_input_too_large,
+529912387_0,qwen3:4b,zero-shot,6,0,0,0,0.0,0.0,0.0,1.3.1|4.1.1,,,max_input_tokens_exceeded:20640>15000,False,False,False,skipped_input_too_large,
+301_0,qwen3:4b,zero-shot,32085,0,0,5,0.0,0.0,0.0,1.3.1|4.1.2|3.3.2|1.4.6|2.4.6,,"{
+  ""violations"": [
+    {
+      ""type"": ""missing_label"",
+      ""element"": ""nav-flyout-amazonfresh"",
+      ""description"": ""The 'Amazon Fresh' flyout menu lacks a descriptive label for screen readers""
+    },
+    {
+      ""type"": ""missing_label"",
+       ""element"": ""nav-flyout-groceries"",
+      ""description"": ""The 'Groceries' flyout menu lacks a descriptive label for screen readers""
+    },
+    {
+      ""type"": ""missing_label"",
+      ""element"": ""nav-flyout-health"",
+      ""description"": ""The 'Health' flyout menu lacks a descriptive label for screen readers""
+    },
+    {
+      ""type"": ""missing_label"",
+      ""element"": ""nav-flyout-pharmacy"",
+      ""description"": ""The 'Pharmacy' flyout menu lacks a descriptive label for screen readers""
+    }
+  ]
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+848513793_0,qwen3:4b,zero-shot,101617,0,0,6,0.0,0.0,0.0,1.4.3|4.1.2|4.1.1|1.3.1|1.1.1|1.4.6,,"{
+  ""regions"": [
+    {
+      ""text"": ""Northeast"",
+      ""url"": ""/regions/northeast.html""
+    },
+    {
+      ""text"": ""California"",
+      ""url"": ""/regions/california.html""
+    },
+    {
+      ""text"": ""Midwest"",
+      ""url"": ""/regions/midwest.html""
+    },
+    {
+      ""text"": ""Northwest"",
+      ""url"": ""/regions/northwest.html""
+    },
+    {
+      ""text"": ""South"",
+      ""url"": ""/regions/south.html""
+    },
+    {
+      ""text"": ""West"",
+      ""url"": ""/regions/west.html""
+    }
+  ]
+}",no_wcag_codes_extracted,False,False,False,json_no_codes,
+4970188583_0,qwen3:4b,zero-shot,37909,0,0,3,0.0,0.0,0.0,4.1.1|1.4.3|1.4.6,,"{
+  ""violations"": []
+}",no_wcag_codes_extracted,True,False,False,json_no_codes,
+8170624278_0,qwen3:4b,zero-shot,116468,0,0,7,0.0,0.0,0.0,1.3.1|2.4.9|1.4.6|4.1.2|4.1.1|1.4.3|2.4.4,,"{
+  ""title"": ""Trovato il colpevole che ha ucciso 6 miliardi di stelle marine"",
+  ""url"": ""/canale_scienza/notizie/natura/2025/08/05/trovato-il-colpevole-che-ha-ucciso-6-miliardi-di-stelle-marine_fb733f4a-9619-4ff3-8252-1ecc7f249b7e.html""
+}",no_wcag_codes_extracted,False,False,False,json_no_codes,

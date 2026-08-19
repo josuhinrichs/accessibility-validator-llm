@@ -20,6 +20,7 @@ as a rendering caveat and pass base_url if the saved page needs it.
 from __future__ import annotations
 
 import logging
+import os
 import time
 from dataclasses import dataclass
 from pathlib import Path
@@ -94,7 +95,7 @@ class PageRenderer:
     # Initializes the renderer with configuration options.
     def __init__(self, viewport: tuple[int, int] = (1280, 800), want_screenshot: bool = True,
                  want_ax_tree: bool = True, base_url: str | None = None,
-                 timeout_ms: int = 30_000, retries: int = 3):
+                 timeout_ms: int = 10_000, retries: int = 2):
 
         # Viewport configuration for the browser.
         self.viewport = {
@@ -117,6 +118,13 @@ class PageRenderer:
         self._page = None
         self._cdp = None
 
+        # Memory management: track processed files to reset browser
+        self.files_processed_count = 0
+
+    # Ensure all external network requests are blocked for performance and reliability
+    def setup_browser_interception(self, page: Page):
+        page.route("**/*", lambda route: route.abort() if not route.request.url.startswith("file://") else route.continue_())
+
     # Starts Playwright and initializes browser components.
     def start(self):
         logger.info("starting playwright")
@@ -125,6 +133,7 @@ class PageRenderer:
         self._context = self._browser.new_context(viewport=self.viewport,)
 
         self._page = self._context.new_page()
+        self.setup_browser_interception(self._page)
         self._page.set_default_timeout(self.timeout_ms)
         self._page.set_default_navigation_timeout(self.timeout_ms)
 
@@ -203,10 +212,21 @@ class PageRenderer:
         for attempt in range(1, self.retries + 1):
             try:
                 # Set the page content and wait for DOM to load.
-                self._page.set_content(
-                    html,
-                    wait_until="domcontentloaded",
-                )
+                # self._page.set_content(
+                #     html,
+                #     wait_until="domcontentloaded",
+                # )
+
+                file_path = os.path.abspath(html_path)
+                
+                # Management of memory/zombie DOMs
+                self.files_processed_count += 1
+                if self.files_processed_count > 50:
+                    logger.info("refreshing_browser_memory")
+                    self._page.goto("about:blank")
+                    self.files_processed_count = 0
+
+                self._page.goto(f"file://{file_path}", wait_until="domcontentloaded", timeout=self.timeout_ms)
 
                 # Capture screenshot if requested.
                 if self.want_screenshot:

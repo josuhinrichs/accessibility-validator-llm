@@ -22,21 +22,73 @@ SYSTEM_PROMPT_EVIDENCE_FIRST = (
 )
 
 
+# OUTPUT_SCHEMA_HINT = """
+# Return only a strict JSON object of this exact shape:
+# {"violations": [
+#   {"wcagCode": "<JUST the WCAG code(X.X.X)>", "violationName": "<taxonomy name>", "category": "semantic|layout",
+#    "html": "<offending element HTML>", "target": "<selector or null>",
+#    "description": "<why, citing what you observed>",
+#    "impact": "critical|serious|moderate|minor", "confidence": <0.0-1.0>}
+# ]}
+# Make sure to return a valid WCAG violation. If none, return {"violations": []}.
+# """
+
+
 OUTPUT_SCHEMA_HINT = """
-Return only a strict JSON object of this exact shape:
-{"violations": [
-  {"wcagCode": "<JUST the WCAG code>", "violationName": "<taxonomy name>", "category": "semantic|layout",
-   "html": "<offending element HTML>", "target": "<selector or null>",
-   "description": "<why, citing what you observed>",
-   "impact": "critical|serious|moderate|minor", "confidence": <0.0-1.0>}
-]}
-Report only names in the taxonomy. If none, return {"violations": []}.
+STRICT JSON OUTPUT RULES:
+1. Return ONLY the JSON object. 
+2. NO markdown, NO narrative, NO "Here is the audit".
+3. Use ONLY WCAG code format (e.g., "1.3.1").
+4. If no violations, return exactly: {"violations": []}
 """
+
+FEW_SHOT = """
+EXAMPLE OF EXPECTED OUTPUT:
+{"violations": [
+  {"wcagCode": "1.3.1", "violationName": "Missing Label", "category": "semantic",
+   "html": "<input type='text' />", "target": "input",
+   "description": "Form field lacks associated label.",
+   "impact": "serious", "confidence": 0.9}
+]}
+"""
+
+
+# OUTPUT_SCHEMA_HINT = """
+# Return only a strict JSON object of this exact shape:
+# {"violations": [
+#   {"wcagCode": "<JUST the WCAG code>", "violationName": "<taxonomy name>", "category": "semantic|layout",
+#    "html": "<offending element HTML>", "target": "<selector or null>",
+#    "description": "<why, citing what you observed>",
+#    "impact": "critical|serious|moderate|minor", "confidence": <0.0-1.0>}
+# ]}
+# Make sure to return a valid WCAG violation. Report only names in the taxonomy. If none, return {"violations": []}.
+# """
 
 MAX_AXTREE_CHARS = 120000
 MAX_HTML_CHARS = 40000
 
-section_order = ("taxonomy", "schema", "task", "evidence")
+#section_order = ("taxonomy", "schema", "task", "evidence")
+section_order = ("schema", "few_shot", "task", "evidence")
+
+from bs4 import BeautifulSoup
+
+
+def sanitize_html(html_content: str) -> str:
+    """
+    Strips out tags that are irrelevant for accessibility analysis 
+    to save context window space.
+    """
+    soup = BeautifulSoup(html_content, 'html.parser')
+    
+    # Remove tags that don't impact accessibility logic
+    for tag in soup(["script", "style"]):
+        tag.decompose()
+        
+    # Optional: If you find specific IDs or classes that are pure noise (e.g., tracking pixels),
+    # remove them here.
+    
+    return str(soup)
+
 
 def evidence_sections(
     page: RenderedPage,
@@ -57,7 +109,7 @@ def evidence_sections(
         ])
 
     if "html" in evidence_inputs and page.html:
-        html = page.html
+        html = sanitize_html(page.html)
 
         if len(html) > MAX_HTML_CHARS:
             html = html[:MAX_HTML_CHARS] + "\n[TRUNCATED]"
@@ -90,8 +142,12 @@ class PromptRecipe:
         taxonomy_block: str = "",
     ) -> str:
         parts: list[str] = [
-            "Audit this page for accessibility violations from this taxonomy:"
+            ""
         ]
+
+        # parts: list[str] = [
+        #     "Audit this page for accessibility violations from this taxonomy:"
+        # ]
 
         evidence_inputs = {
             str(item).strip().lower()
@@ -106,10 +162,13 @@ class PromptRecipe:
                 parts.extend(["", SYSTEM_PROMPT_BASELINE])
                 parts.extend(["", OUTPUT_SCHEMA_HINT])
 
+            elif section == "few_shot":
+                parts.extend(["", FEW_SHOT])
+
             elif section == "task":
                 parts.extend([
                     "",
-                    "Focus on violations directly supported by the inputs.",
+                    "Audit this page for accessibility violations:",
                 ])
             elif section == "evidence":
                 parts.extend(
