@@ -1,0 +1,601 @@
+
+
+You are a web accessibility auditor. You identify ONLY the semantic and layout WCAG accessibility violations considering meaning, context, or the match between what a sighted user sees and what assistive technology exposes.
+
+
+STRICT JSON OUTPUT RULES:
+1. Return ONLY the JSON object. 
+2. NO markdown, NO narrative, NO "Here is the audit".
+3. Use ONLY WCAG code format (e.g., "1.3.1").
+4. If no violations, return exactly: {"violations": []}
+
+
+
+EXAMPLE OF EXPECTED OUTPUT:
+{"violations": [
+  {"wcagCode": "1.3.1", "violationName": "Missing Label", "category": "semantic",
+   "html": "<input type='text' />", "target": "input",
+   "description": "Form field lacks associated label.",
+   "impact": "serious", "confidence": 0.9}
+]}
+
+
+Audit this page for accessibility violations:
+
+DOM (HTML):
+<!DOCTYPE html>
+<html lang="en"><head>
+<!-- Google Tag Manager -->
+
+<!-- End Google Tag Manager -->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>ARIA treeitem nodes should have an accessible name | Axe Rules | Deque University | Deque Systems</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<base href="https://dequeuniversity.com/"/>
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="/assets/images/icons/logos/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/assets/css/ruleHelp.css" id="styles1" rel="stylesheet" type="text/css"/>
+<link href="/patterns-lib/deque-widgets.min.css" id="styles2" rel="stylesheet" type="text/css"/>
+<link href="/assets/js/highlight/styles/railscasts.css" id="styles3" rel="stylesheet" type="text/css"/>
+<link href="/assets/css/fontawesome-all.min.css" id="styles4" rel="stylesheet" type="text/css"/>
+<link href="/assets/css/dqu2019.min.css?refresh=1" id="styles5" rel="stylesheet" type="text/css"/>
+<link class="pageSpecific" href="/assets/css/axe.css" id="additionalCssInheritable1" rel="stylesheet" type="text/css"/>
+
+
+
+
+
+
+
+<!--[if lt IE 9]>
+<script>
+  var e = ("abbr,article,aside,audio,bdi,canvas,datalist,details,dialog," +
+      "figcaption,figure,footer,header,keygen,mark,menu,meter,main,nav,output," +    
+	  "progress,rp,ruby,rt,section,source,summary,time,track,video,wbr").split(',');  
+     for (var i = 0; i < e.length; i++) {
+          document.createElement(e[i]);
+        }
+</script>
+<![endif]-->
+</head>
+<body><div class="go3670563033" id="hs-web-interactives-top-push-anchor"></div>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W5FTZD5" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- expiration locations = member-banner and isexpired =  -->
+<div class="site" id="page">
+<header class="site-header" id="masthead" style="padding-bottom: 32px;"><a class="skip-link sr-only sr-only-focusable" href="/#content">Skip to content</a>
+
+<div class="cookie-alert" id="cookie-alert-1">
+<h2 id="cookie-alert-title" tabindex="-1">This website uses cookies</h2>
+<div>
+<p id="cookie-alert-text">By continuing to use our sites or services, regardless of your cookie preferences, you agree to our <a href="/terms" style="text-decoration: underline;" target="_blank">Terms of Use</a>. Deque University uses first and third-party technologies to enable us and third parties to collect information about you and your interactions with our sites and services in accordance with our <a href="https://www.deque.com/legal/?__hstc=213731083.d140d36475a42f510985e512bb6226c2.1754414296389.1754414296389.1754414296389.1&amp;__hssc=213731083.1.1754414296389&amp;__hsfp=3658814885" style="text-decoration: underline;" target="_blank">Legal Policy</a>.</p>
+<button class="cookie-alert-button" onclick="recordUserResponse(0, 1)">
+            Decline        </button>
+<button aria-describedby="cookie-alert-text" class="cookie-alert-button" id="cookie-alert-accept" onclick="recordUserResponse(1, 1)">
+            Accept        </button>
+</div>
+</div>
+
+<div class="top-bar">
+<div class="container">
+<div class="site-branding">
+<p class="site-title">
+<a class="logo" href="https://dequeuniversity.com/" rel="home">
+<img alt="Deque University logo" height="83" src="assets/images/logos/deque_university_wordmark_white.png"/>
+</a>
+</p>
+</div>
+<div class="pull-right">
+<span style="padding-top: .5rem; display: inline-block;">
+<span class="component_LanguageSwitcher component_DropDownMenu" id="dqu-ui-component-1">
+<div class="component_DropDownMenu_preContent">
+<span class="fas fa-globe language-globe"></span>              </div>
+<span class="component_DropDownMenu_content">
+<button aria-controls="dqu-ui-component-1_itemList" aria-expanded="false" aria-haspopup="menu" class="component_DropDownMenu_button"><span class="component_DropDownMenu_arrow fa fa-angle-down"></span><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">en</span><span class="component_LanguageSwitcher_langName">English</span></span></button>
+<div class="component_DropDownMenu_popup" hidden="" id="dqu-ui-component-1_itemList">
+<div class="component_DropDownMenu_popupHeader">
+</div>
+<div>
+<label class="component_DropDownMenu_itemListLabel" for="dqu-ui-component-1_itemList-itemList">Select a language</label>
+<ul class="component_DropDownMenu_itemList" id="dqu-ui-component-1_itemList-itemList" role="menu">
+<li class="component_DropDownMenu_item" role="menuitem">
+<a data-index="0" data-lang="de" data-selected="false" data-value="de" href="" onclick="UI_LanguageSwitcher_ChangeLanguage(this); return false;"><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">de</span><span class="component_LanguageSwitcher_langName">Deutsch</span></span><span class="component_DropDownMenu_selectedIndicator"><span class="fas fa-check" hidden=""></span></span></a>
+</li>
+<li class="component_DropDownMenu_item" role="menuitem">
+<a data-index="1" data-lang="en" data-selected="true" data-value="en" href="" onclick="UI_LanguageSwitcher_ChangeLanguage(this); return false;"><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">en</span><span class="component_LanguageSwitcher_langName">English</span></span><span class="component_DropDownMenu_selectedIndicator"><span class="fas fa-check"></span></span></a>
+</li>
+<li class="component_DropDownMenu_item" role="menuitem">
+<a data-index="2" data-lang="es" data-selected="false" data-value="es" href="" onclick="UI_LanguageSwitcher_ChangeLanguage(this); return false;"><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">es</span><span class="component_LanguageSwitcher_langName">Español</span></span><span class="component_DropDownMenu_selectedIndicator"><span class="fas fa-check" hidden=""></span></span></a>
+</li>
+<li class="component_DropDownMenu_item" role="menuitem">
+<a data-index="3" data-lang="fr" data-selected="false" data-value="fr" href="" onclick="UI_LanguageSwitcher_ChangeLanguage(this); return false;"><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">fr</span><span class="component_LanguageSwitcher_langName">Français</span></span><span class="component_DropDownMenu_selectedIndicator"><span class="fas fa-check" hidden=""></span></span></a>
+</li>
+<li class="component_DropDownMenu_item" role="menuitem">
+<a data-index="4" data-lang="it" data-selected="false" data-value="it" href="" onclick="UI_LanguageSwitcher_ChangeLanguage(this); return false;"><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">it</span><span class="component_LanguageSwitcher_langName">Italiano</span></span><span class="component_DropDownMenu_selectedIndicator"><span class="fas fa-check" hidden=""></span></span></a>
+</li>
+<li class="component_DropDownMenu_item" role="menuitem">
+<a data-index="5" data-lang="ja" data-selected="false" data-value="ja" href="" onclick="UI_LanguageSwitcher_ChangeLanguage(this); return false;"><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">ja</span><span class="component_LanguageSwitcher_langName">日本語</span></span><span class="component_DropDownMenu_selectedIndicator"><span class="fas fa-check" hidden=""></span></span></a>
+</li>
+<li class="component_DropDownMenu_item" role="menuitem">
+<a data-index="6" data-lang="nl" data-selected="false" data-value="nl" href="" onclick="UI_LanguageSwitcher_ChangeLanguage(this); return false;"><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">nl</span><span class="component_LanguageSwitcher_langName">Nederlands</span></span><span class="component_DropDownMenu_selectedIndicator"><span class="fas fa-check" hidden=""></span></span></a>
+</li>
+<li class="component_DropDownMenu_item" role="menuitem">
+<a data-index="7" data-lang="pt" data-selected="false" data-value="pt" href="" onclick="UI_LanguageSwitcher_ChangeLanguage(this); return false;"><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">pt</span><span class="component_LanguageSwitcher_langName">Português</span></span><span class="component_DropDownMenu_selectedIndicator"><span class="fas fa-check" hidden=""></span></span></a>
+</li>
+<li class="component_DropDownMenu_item" role="menuitem">
+<a data-index="8" data-lang="zh" data-selected="false" data-value="zh" href="" onclick="UI_LanguageSwitcher_ChangeLanguage(this); return false;"><span class="component_DropDownMenu_itemLabel"><span class="component_LanguageSwitcher_langCode">zh</span><span class="component_LanguageSwitcher_langName">中国的</span></span><span class="component_DropDownMenu_selectedIndicator"><span class="fas fa-check" hidden=""></span></span></a>
+</li>
+</ul>
+</div>
+<div class="component_DropDownMenu_popupFooter">
+</div>
+</div>
+</span>
+</span>
+
+
+
+
+<div class="component_Popup_overlay" onclick="UI_Popup_Hide(document.getElementById('dqu-ui-component-11'));"></div>
+<div class="component_TranslationFeedbackPopup component_Popup" data-location="right-edge" hidden="" id="dqu-ui-component-11">
+<button class="close-button" onclick="UI_Popup_Hide(this.closest('.component_Popup'))">×</button>
+<div class="component_Popup_content">
+<div>
+<h2 tabindex="0">Translation Feedback</h2>
+<p>Please provide your feedback on the translation.</p>
+<form action="/submit_feedback.php" id="translationFeedbackForm" method="post" onsubmit="UI_TranslationFeedbackPopup_Hide(); return false;">
+<label for="feedbackText">Your feedback:</label>
+<textarea cols="50" id="feedbackText" placeholder="Your feedback here..." rows="4"></textarea>
+<input name="lang" type="hidden" value="en"/>
+<input class="button" type="submit" value="Submit Feedback"/>
+</form>
+</div>
+<!--
+        <br>
+        <button onclick="UI_TranslationFeedbackPopup_Hide();">Close</button>
+        <select onchange="updatePopupLocation(this)">
+            <option value="right-edge">right-edge</option><option value="left-edge">left-edge</option><option value="top-edge">top-edge</option><option value="bottom-edge">bottom-edge</option><option value="center">center</option><option value="top-left">top-left</option><option value="top-right">top-right</option><option value="bottom-left">bottom-left</option><option value="bottom-right">bottom-right</option><option value="top">top</option><option value="bottom">bottom</option><option value="left">left</option><option value="right">right</option>        </select>
+        <script>
+            function updatePopupLocation(selectElement) {
+                const popup = selectElement.closest('.component_Popup');
+                if (popup) {
+                    popup.setAttribute('data-location', selectElement.value);
+                }
+            }
+        </script>
+          -->
+</div>
+</div>
+
+
+
+</span>
+<p class="empty-search"></p>
+<div class="pull-right login">
+<div id="inCourseLogin"><!--
+<form class="paypal" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+            <input type="image" src="/assets/images/icons/cart36.png" width="24" height="24" name="submit" alt="View cart" id="submitCart">
+            <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+-->
+<div class="loginForm">
+<div>
+<!--<a class="loginLink loginLink btn white sm dropshadow" href="">Login</a>-->
+<!--button--><a class="ssoLoginButton btn white dropshadow sm" href="ssologin/?context=web&amp;uri=https%3A%2F%2Fdequeuniversity.com%2Frules%2Faxe%2F4.10%2Faria-treeitem-name%3Fapplication%3DRuleDescription" id="ssoLoginButton">Login</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container nav-container">
+<nav aria-label="Main Menu" class="main-navigation">
+<p class="site-title"><a aria-hidden="true" class="logo" href="https://dequeuniversity.com/" rel="home" tabindex="-1"><span class="sr-only">Deque</span>
+<!--img src="assets/images/logos/deque_university_wordmark_white.png" height="83" alt="Deque University logo"-->
+<img alt="Deque University logo" src="assets/images/logos/Deque_DequeU_Logo_White.png" style="height: 50px; margin-top: -5px;"/>
+</a></p>
+<button aria-controls="menu-primary-navigation" aria-expanded="false" class="main-menu-toggle" id="toggle-menu"> <span class="fa fa-bars"></span>Menu</button>
+<ul aria-hidden="false" aria-label="Main Menu" id="menu-primary-navigation" role="menubar">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-21099 dropdown" id="menu-item-21099" role="none"><a aria-controls="sub-menu-21099" aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" href="rules/axe/html#" id="menubutton-21099" role="menuitem">Online Courses</a>
+<ul aria-hidden="true" aria-labelledby="menubutton-21099" class="sub-menu" id="sub-menu-21099" role="menu" tabindex="-1">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-ssologin" data-parent-menu="menu-item-21099" id="menu-item-ssologin" role="none"><a href="https://dequeuniversity.com/ssologin/?context=web&amp;uri=https%3A%2F%2Fdequeuniversity.com%2Fonline-courses%2F" role="menuitem">Login to My Courses</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-300" data-parent-menu="menu-item-21099" id="menu-item-300" role="none"><a href="/online-courses/" role="menuitem">View All Subscription Options</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-21100 dropdown" id="menu-item-21100" role="none"><a aria-controls="sub-menu-21100" aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" href="rules/axe/html#" id="menubutton-21100" role="menuitem">Instructor-Led Training</a>
+<ul aria-hidden="true" aria-labelledby="menubutton-21100" class="sub-menu" id="sub-menu-21100" role="menu" tabindex="-1">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-301" data-parent-menu="menu-item-21100" id="menu-item-301" role="none"><a href="curriculum/instructor-led/" role="menuitem">Accessibility Training</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-695" data-parent-menu="menu-item-21100" id="menu-item-695" role="none"><a href="curriculum/instructor-led/product-training" role="menuitem">Deque Product Training</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-696" data-parent-menu="menu-item-21100" id="menu-item-696" role="none"><a href="https://www.deque.com/resources/type/webinars?__hstc=213731083.d140d36475a42f510985e512bb6226c2.1754414296389.1754414296389.1754414296389.1&amp;__hssc=213731083.1.1754414296389&amp;__hsfp=3658814885" role="menuitem">Public Webinars</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-21102 dropdown" id="menu-item-21102" role="none"><a aria-controls="sub-menu-21102" aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" href="rules/axe/html#" id="menubutton-21102" role="menuitem">Resources</a>
+<ul aria-hidden="true" aria-labelledby="menubutton-21102" class="sub-menu" id="sub-menu-21102" role="menu" tabindex="-1">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-198" data-parent-menu="menu-item-21102" id="menu-item-198" role="none"><a href="resources/" role="menuitem">Resources Overview</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19279" data-parent-menu="menu-item-21102" id="menu-item-19279" role="none"><a href="checklists/web/" role="menuitem">Web Accessibility Checklist</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-299" data-parent-menu="menu-item-21102" id="menu-item-299" role="none"><a href="screenreaders/" role="menuitem">Screen Reader Reference Guides</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34303" data-parent-menu="menu-item-21102" id="menu-item-34303" role="none"><a href="class/iaap-certification-quick-guide/" role="menuitem">IAAP Certification Quick Guide</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-816" data-parent-menu="menu-item-21102" id="menu-item-816" role="none"><a href="library/" role="menuitem">ARIA JavaScript Pattern Library</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21611" data-parent-menu="menu-item-21102" id="menu-item-21611" role="none"><a href="resources/disability-statistics" role="menuitem">Disability Demographics</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-22369 dropdown" id="menu-item-22369" role="none"><a aria-controls="sub-menu-22369" aria-expanded="false" aria-haspopup="true" class="dropdown-toggle" href="rules/axe/html#" id="menubutton-22369" role="menuitem">Support/Help</a>
+<ul aria-hidden="true" aria-labelledby="menubutton-22369" class="sub-menu" id="sub-menu-22369" role="menu" tabindex="-1">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-docs" data-parent-menu="menu-item-22369" id="menu-item-docs" role="none"><a href="https://docs.deque.com/deque-university/?__hstc=213731083.d140d36475a42f510985e512bb6226c2.1754414296389.1754414296389.1754414296389.1&amp;__hssc=213731083.1.1754414296389&amp;__hsfp=3658814885" role="menuitem">Support Docs/User Guide</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-docs" data-parent-menu="menu-item-22369" id="menu-item-docs-other-products" role="none"><a href="https://docs.deque.com/?__hstc=213731083.d140d36475a42f510985e512bb6226c2.1754414296389.1754414296389.1754414296389.1&amp;__hssc=213731083.1.1754414296389&amp;__hsfp=3658814885" role="menuitem">Support for Other Products</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-axe-rules" data-parent-menu="menu-item-22369" id="menu-item-axe-rules" role="none"><a href="/rules/axe/latest" role="menuitem">Axe Rule Explanations</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-contact" data-parent-menu="menu-item-22369" id="menu-item-contact" role="none"><a href="/contact" role="menuitem">Contact Us</a></li>
+</ul>
+</li>
+</ul> </nav>
+</div>
+</header>
+<div class="site-content">
+<main id="content" tabindex="-1">
+<div data-alias="html" data-cacheable="1" data-class-key="modDocument" data-content-source-id="" data-content-type="text/html" data-context-key="web" data-createdby="21293" data-createdon="2022-08-10 04:00:26" data-deleted="" data-deletedby="0" data-deletedon="0" data-description="" data-editedby="14408" data-editedon="2024-11-26 13:06:58" data-hidemenu="" data-isfolder="" data-longtitle="" data-menutitle="" data-page-id="89208" data-pagetitle="Axe HTML" data-parent="4614" data-published="1" data-publishedby="21293" data-publishedon="2022-08-10 04:00:00" data-resource-groups="29,24,52" data-searchable="1" data-template="19" data-type="document" data-uri="rules/axe/html" data-uri-full="https://dequeuniversity.com/rules/axe/html" id="dataAttributes"></div>
+<div id="contentwrapper">
+<div id="h1Wrapper" tabindex="-1">
+<span class="visually-hidden" id="srLoadSummary"></span>
+<h1 id="id89208_h1" style="display: block;" tabindex="-1">ARIA treeitem nodes should have an accessible name</h1>
+</div>
+<div id="pageInnerContent">
+<link href="assets/css/ruleHelp.css" id="rulehelp-css" media="all" rel="stylesheet" type="text/css"/>
+<section class="page-section">
+<div class="container">
+<!-- begin variable content -->
+
+<div class="row">
+<div class="col-md-12">
+<div class="rule-info">
+<div class="ruleId">
+<span>Rule ID:</span>
+<span class="ruleIdData">aria-treeitem-name</span>
+</div>
+<div class="ruleVersion">
+<span>Ruleset:</span>
+<span><a href="rules/axe/4.10"> axe-core 4.10</a></span>
+</div>
+<div class="ruleImpact">
+<span class="first">User Impact:</span>
+<span>Serious</span>
+<span class="dot dot-serious"></span>
+</div>
+<div class="wcagSc">
+<span><abbr title="Web Content Accessibility Guidelines">Guidelines</abbr>:</span>
+<span>Deque Best Practice</span>
+</div>
+</div>
+<!-- latestRuleMessage (removed) -->
+</div>
+<div class="col-md-3 aside">
+<div class="metaCol">
+<div class="left-break col-sm-6 col-md-6 col-lg-12">
+<section class="page-section call-to-action-section m-card">
+<div class="container">
+<div class="row">
+<div class="col-md-12 left-break" id="deque-seller">
+<div id="deque-seller-ex">
+<!-- begin random -->
+<div class="m-card-background-image m-card-bg-style-icon"> <span><img alt="" src="/a/deque-university/axe-rule-help/application/generic/images/DQ_DevToolsPro1.svg"/></span>
+</div>
+<div class="m-card-body dark">
+<h2>Build more accessible websites with axe DevTools Pro</h2>
+<span class="m-dot-group">
+<span class="m-dots"></span>
+<span class="m-dots"></span>
+<span class="m-dots"></span>
+<span class="m-dots"></span>
+</span>
+<div>Find and fix more issues with Intelligent Guided Tests™ by answering a series of simple questions about your page content. Free trial. No credit card needed.
+    </div>
+<div>
+<p><a class="cta_button btn md primary" href="https://axe.deque.com/plans?utm_source=dequeuniversity&amp;utm_medium=referral&amp;utm_campaign=app_a11ywebsites&amp;__hstc=213731083.d140d36475a42f510985e512bb6226c2.1754414296389.1754414296389.1754414296389.1&amp;__hssc=213731083.1.1754414296389&amp;__hsfp=3658814885">Get started for free!</a></p>
+</div>
+</div>
+<!-- end random -->
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="m-card newsletter">
+<div class="m-card-body">
+<h2>Sign up for the axe newsletter</h2>
+<p>Stay up to date on axe features, updates, and events.</p>
+<p>
+<span class="hs-cta-wrapper" id="hs-cta-wrapper-343ea302-b25f-4161-bbd2-beb2b4244a1b">
+<span class="hs-cta-node hs-cta-343ea302-b25f-4161-bbd2-beb2b4244a1b" data-hs-drop="true" id="hs-cta-343ea302-b25f-4161-bbd2-beb2b4244a1b" style="visibility: visible;">
+<a class="cta_button btn md primary" href="https://hubs.ly/H0gkTMZ0" id="cta_button_153358_8789c3ad-f309-4007-9192-9a7df6feaabf" style="" title="Newsletter Sign-up">Newsletter Sign-up</a>
+</span>
+
+
+</span>
+</p>
+</div>
+</section>
+</div>
+<div class="right-break col-sm-6 col-md-16 col-lg-12">
+<section class="ruleInfo m-card">
+<h2 class="m-card-body">Compliance Data &amp; Impact</h2>
+<div class="m-card-body next-card">
+<div class="userImpact">
+<h3 class="first">User Impact</h3>
+<div class="userImpactGraphWrapper">
+<div class="userImpactGraphMarker Serious">Serious<br/>▼</div>
+<div class="userImpactGraphOuter">
+<div class="clear"></div>
+<div class="userImpactGraph">
+<div class="userImpactGraphBar Serious"></div>
+</div>
+<div class="leastImpact">Minor</div>
+<div class="biggestImpact">Critical</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<div class="m-card-body next-card">
+<div class="disabilityTypesAffected">
+<h3>Disabilities Affected</h3>
+<div class="disabilityTypesAffectedData">
+<ul><li><i aria-hidden="true" class="far fa-eye-slash disabilityIcon"></i>Blind </li><li><i aria-hidden="true" class="fas fa-glasses disabilityIcon"></i>Low Vision </li><li><i aria-hidden="true" class="far fa-hand-paper disabilityIcon"></i>Mobility </li></ul>
+</div>
+</div>
+<div class="ruleTypeWcag2">
+<h3>Standard(s)</h3>
+<div class="ruleTypeWcag2Data">
+<ul><li>Deque Best Practice</li></ul>
+</div>
+</div>
+<ul></ul>
+</div>
+</section> </div>
+</div>
+</div>
+<div class="col-md-8 content">
+<section class="howToFix">
+<h2>How to Fix the Problem</h2>
+<div class="howToFixData">
+<div class="example">
+<h3 class="good">Correct markup solutions</h3>
+<p>
+    The <code>aria-treeitem-name</code> rule has four markup patterns that pass
+    test criteria:
+  </p>
+<pre><code class="hljs applescript">&lt;<span class="hljs-keyword">div</span> role=<span class="hljs-string">"treeitem"</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"al"</span> aria-label=<span class="hljs-string">"Name"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> role=<span class="hljs-string">"treeitem"</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"alb"</span> aria-labelledby=<span class="hljs-string">"labeldiv"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> role=<span class="hljs-string">"treeitem"</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"combo"</span> aria-label=<span class="hljs-string">"Aria Name"</span>&gt;Name&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> role=<span class="hljs-string">"treeitem"</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"title"</span> title=<span class="hljs-string">"Title"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+</code></pre>
+</div>
+<ol>
+<li>
+<p>
+      Ensure that each element with <code>role="treeitem"</code> has one of the
+      following characteristics:
+    </p>
+<ul>
+<li>Inner text that is discernible to screen reader users.</li>
+<li>Non-empty <code>aria-label</code> attribute.</li>
+<li>
+<code>aria-labelledby</code> pointing to element with text which is
+        discernible to screen reader users.
+      </li>
+</ul>
+</li>
+</ol>
+<div class="example">
+<h3 class="bad">Incorrect markup solutions</h3>
+<p>
+    The <code>aria-treeitem-name</code> rule has four markup patterns that fail
+    testing criteria:
+  </p>
+<pre><code class="hljs applescript">&lt;<span class="hljs-keyword">div</span> role=<span class="hljs-string">"treeitem"</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"empty"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> role=<span class="hljs-string">"treeitem"</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"alempty"</span> <mark>aria-label=<span class="hljs-string">""</span>&gt;</mark>&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> role=<span class="hljs-string">"treeitem"</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"albmissing"</span> <mark>aria-labelledby=<span class="hljs-string">"nonexistent"</span></mark>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+
+&lt;<span class="hljs-keyword">div</span> role=<span class="hljs-string">"treeitem"</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"albempty"</span> <mark>aria-labelledby=<span class="hljs-string">"emptydiv"</span></mark>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-built_in">id</span>=<span class="hljs-string">"emptydiv"</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;</code></pre>
+</div>
+</div>
+</section><section class="whyImportant">
+<h2>Why it Matters</h2>
+<div class="howToFixData">
+<p>
+  Screen reader users are not able to discern the purpose of elements with
+  <code>role="treeitem"</code> that do not have an accessible name.
+</p>
+</div>
+</section><section class="description">
+<h2>Rule Description</h2>
+<div class="howToFixData">
+<p>
+  Aria treeitem elements must have discernible text that clearly describes the
+  destination, purpose, function, or action for screen reader users.
+</p>
+</div>
+</section><section class="algorithm">
+<h2>The Algorithm (in simple terms)</h2>
+<div class="howToFixData">
+<p>
+  Checks all elements with <code>role="treeitem"</code> to ensure that they have
+  a discernable, accessible name.
+</p>
+</div>
+</section>
+<section class="relatedPages">
+<h2>Resources</h2>
+<div class="relatedDeque">
+<div class="logo">
+<a href="/"><span class="sr-only">Deque University</span><img alt="Deque University logo" height="83" src="https://dequeuniversity.com/assets/js/sandbox/images/deque_university_wordmark.png"/></a>
+</div>
+<div class="links">
+<h3>Deque University Course Pages (subscription required)</h3>
+						No related course information available.					</div>
+</div>
+<div class="relatedGitHub">
+<div class="logo">
+<a href="https://github.com/dequelabs/axe-core">
+<span class="sr-only">Deque University</span>
+<img alt="Github logo" height="83" src="https://dequeuniversity.com/assets/js/sandbox/images/GitHub-Logo.png"/>
+</a>
+</div>
+<div class="links">
+<h3><a href="https://github.com/dequelabs/axe-core">Contribute to axe-core on GitHub</a></h3>
+</div>
+</div>
+<p class="clear">Refer to the <a href="/rules/axe/4.10">complete list of axe 4.10 rules</a>.</p>
+<section class="ruleHelpful" id="user_feedback_section">
+<h2 id="feedback-form-heading">Was this information helpful?</h2>
+<div class="deque-content space-bottom" id="yesFeedback">
+<p id="form_message"></p>
+<div class="deque-content deque-hidden" id="feedback-info">
+<div>
+<div style="color: green; width: 100%; float: left; margin-top: 10px; ">
+<svg class="checkmark_no_ani" viewbox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+<circle class="checkmark_circle_no_ani" cx="26" cy="26" fill="none" r="25"></circle>
+<path class="checkmark_no_ani" d="M14.1 27.2l7.1 7.2 16.7-16.8" fill="none"></path></svg>
+<div style="margin-top: 12px; margin-left: 10px; display: inline-block; color: green; vertical-align: top; "> 
+                You have already given your feedback, thank you..</div>
+</div>
+<div>
+<h3> Your response was as follows: </h3>
+<div style=" margin-left: 20px;   ">
+<span aria-hidden="true" class="fa fa-check-circle"></span>
+<span><b> Was this information helpful?</b> </span><br/>
+<span aria-hidden="true" class="fa fa-check-circle"></span>
+<span><b>Date/Time feedback was submitted: </b> </span>
+<br/> <br/>
+</div>
+</div>
+</div>
+<p>
+<button class="cta_button btn sm primary" onclick="showFeedbackForm()">
+                  Edit your response</button>
+</p>
+</div>
+</div>
+<p aria-hidden="true" id="contact-label" style="display: none">Customer Feeddback</p>
+<div aria-labelledby="feedback-form-heading" class="" id="feedback-form" role="group">
+<div>
+<button aria-expanded="false" aria-pressed="false" class="deque-button deque-button-toggle deque-expander-summary" id="yesButton" onclick="yesButtonPressed()" role="button">
+<span aria-hidden="true" class="pressed-on-icon"></span>Yes</button>
+</div>
+<div class="form">
+<input hidden="" id="qa_script" name="qa_script" type="checkbox" value="QA Script"/>
+<button aria-expanded="false" aria-pressed="false" class="deque-button deque-button-toggle deque-expander-summary" id="noButton" onclick="noButtonPressed()" role="button">
+<span aria-hidden="true" class="pressed-on-icon"></span>No</button>
+<div class="deque-expander-content deque-hidden" id="noFeedback">
+<div>
+<form action="javascript:saveFeedback()" id="form111" name="form1">
+<div class="form-wrap space-bottom">
+<label for="feedback"><h3>Improvement feedback (see below)::</h3></label>
+<textarea data-validate="required" id="feedback" name="feedback"></textarea>
+</div>
+<input class="cta_button btn sm primary" id="btnSubmit" name="submit" type="submit" value="Submit"/>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+</section>
+</div>
+</div>
+<!-- end variable content -->
+</div>
+</section>
+
+
+<!--<script type="text/javascript" src="/assets/js/patterns/form-validation/form-validation-summary.js"></script>-->
+
+<!--
+<style>
+.site-footer a:focus {
+	outline-offset: 1.5px;
+	outline-color: #fff;
+}
+</style>
+-->
+</div>
+<!-- pageInnerContent -->
+</div>
+<!-- #contentwrapper -->
+</main>
+<!-- #content -->
+</div>
+</div>
+
+<!-- #container -->
+<footer class="site-footer" id="footer">
+<div id="footer-content">
+<section class="footer-links">
+<div class="container">
+<div class="row">
+<div class="col-md-12 col-xs-12">
+<section class="widget widget_nav_menu" id="nav_menu-2">
+<section class="footer-info">
+<nav aria-label="Footer Links" id="footer-nav-wrapper">
+<ul class="list-inline legal-links" id="menu-footer-links">
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact" style="text-decoration:underline;">Contact Us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.deque.com/get-accessibility-help/?__hstc=213731083.d140d36475a42f510985e512bb6226c2.1754414296389.1754414296389.1754414296389.1&amp;__hssc=213731083.1.1754414296389&amp;__hsfp=3658814885" style="text-decoration:underline;">Request a quote or demo</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/accessibility-statement" style="text-decoration:underline;">Accessibility statement</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://accessibility.deque.com/hubfs/VPATs/DequeUniversity_VPAT_WCAG2.1AA.pdf?__hstc=213731083.d140d36475a42f510985e512bb6226c2.1754414296389.1754414296389.1754414296389.1&amp;__hssc=213731083.1.1754414296389&amp;__hsfp=3658814885" style="text-decoration:underline;">VPAT</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/sitemap" style="text-decoration:underline;">Site map</a></li>
+</ul>
+</nav>
+<br/>
+<p style="display:inline-block;border:1px solid #ffffff; border-radius:5px; padding:3px 6px 6px 6px;"></p>
+<p><br/><a href="https://www.deque.com/axe/browser-extensions/?utm_source=dequeuniversity&amp;utm_medium=referral&amp;utm_campaign=DQU_Footer&amp;__hstc=213731083.d140d36475a42f510985e512bb6226c2.1754414296389.1754414296389.1754414296389.1&amp;__hssc=213731083.1.1754414296389&amp;__hsfp=3658814885" style="text-decoration:underline;font-size:100%">Download free axe DevTools browser extension</a></p>
+<p><br/>
+<a class="logo" href="https://www.deque.com/?__hstc=213731083.d140d36475a42f510985e512bb6226c2.1754414296389.1754414296389.1754414296389.1&amp;__hssc=213731083.1.1754414296389&amp;__hsfp=3658814885" rel="home">
+<span class="sr-only">Main Deque Website</span>
+<img alt="Deque logo" height="83" src="https://dequeuniversity.com/assets/js/sandbox/images/deque-logo-white.png"/></a>
+</p>
+<p class="copyright">13800 Coppermine Rd., Herndon VA 20171 <a href="tel:1-703-225-0380">1-703-225-0380</a></p>
+<p class="copyright">© Copyright 2013-2025 Deque Systems. All rights reserved. <a href="/terms">Terms of Use</a> | <a href="https://www.deque.com/legal/?__hstc=213731083.d140d36475a42f510985e512bb6226c2.1754414296389.1754414296389.1754414296389.1&amp;__hssc=213731083.1.1754414296389&amp;__hsfp=3658814885" target="blank">Legal</a></p>
+</section>
+</section>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div aria-live="polite" class="visually-hidden" id="polite"></div>
+<div aria-live="assertive" class="visually-hidden" id="assertive"></div>
+<div class="pageSpecific">
+<!--[if gt IE 8]><!-->
+
+</div>
+
+
+<!--script src="assets/js/googleAnalytics.js"></script-->
+
+<noscript>
+<img alt="" height="1" src="https://px.ads.linkedin.com/collect/?pid=1417225&amp;fmt=gif" style="display:none;" width="1"/>
+</noscript>
+</footer>
+<div class="go2933276541 go2369186930" id="hs-web-interactives-top-anchor"><div class="go1632949049" id="hs-interactives-modal-overlay"></div></div>
+<div class="go2933276541 go1348078617" id="hs-web-interactives-bottom-anchor"></div>
+<div id="hs-web-interactives-floating-container">
+<div class="go2417249464 go613305155" id="hs-web-interactives-floating-top-left-anchor">
+</div>
+<div class="go2417249464 go471583506" id="hs-web-interactives-floating-top-right-anchor">
+</div>
+<div class="go2417249464 go3921366393" id="hs-web-interactives-floating-bottom-left-anchor">
+</div>
+<div class="go2417249464 go3967842156" id="hs-web-interactives-floating-bottom-right-anchor">
+</div>
+</div><iframe height="0" style="display: none; visibility: hidden;" width="0"></iframe>
+</body></html>

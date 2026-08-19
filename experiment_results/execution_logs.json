@@ -4306,3 +4306,12 @@ render failed for 9883619995 (2/3): Page.set_content: Timeout 30000ms exceeded.
 Call log:
   - setting frame content, waiting until "commit"
 ; retrying in 2.0s
+{"event": "Iniciando o experimento...\n", "level": "info", "logger": "__main__", "timestamp": "2026-08-19T00:32:18.910734Z"}
+{"provider": "ollama", "base_url": "http://localhost:11434/v1", "force_json": true, "num_ctx": 32768, "include_images": true, "event": "llm_provider_selected", "level": "info", "logger": "__main__", "timestamp": "2026-08-19T00:32:18.911163Z"}
+{"model": "qwen3:4b", "event": "model_run_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-19T00:32:18.911221Z"}
+{"path": "Original_full_data_new.csv", "event": "dataset_ingestion_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-19T00:32:18.911345Z"}
+starting playwright
+{"csv_name": "1105435317.txt", "html_file_name": "1105435317.txt", "web_url": "https://www.w3.org/WAI/content-assets/wcag-act-rules/testcases/d0f69e/6bb6ca5dcdbd1fef063561f61de88740db24bd5d.html", "tried": ["1105435317.txt", "1105435317.html", "www_w3_org_WAI_content-assets_wcag-act-rules_testcases_d0f69e_6bb6ca5dcdbd1fef063561f61de88740db24bd5d_html.html", "www_w3_org_WAI_content_assets_wcag_act_rules_testcases_d0f69e_6bb6ca5dcdbd1fef063561f61de88740db24bd5d_html.html"], "event": "html_file_not_found", "level": "warning", "logger": "__main__", "timestamp": "2026-08-19T00:32:21.669548Z"}
+{"item_id": "6018", "ground_truth": ["4.1.2"], "image_count": 0, "event": "item_ready_for_inference", "level": "info", "logger": "__main__", "timestamp": "2026-08-19T00:32:21.819193Z"}
+{"item_id": "6018", "model": "qwen3:4b", "strategy": "zero-shot", "event": "inference_started", "level": "info", "logger": "__main__", "timestamp": "2026-08-19T00:32:21.819639Z"}
+{"item_id": "6018", "model": "qwen3:4b", "strategy": "zero-shot", "prompt_chars": 39286, "prompt_truncated_marker_present": false, "has_dom_section": true, "has_axtree_section": false, "has_schema_hint": false, "image_count": 0, "image_paths": [], "estimated_user_tokens": 12053, "estimated_system_tokens": 38, "estimated_total_input_tokens": 12091, "max_input_tokens": 15000, "event": "inference_payload_summary", "level": "info", "logger": "__main__", "timestamp": "2026-08-19T00:32:22.393399Z"}

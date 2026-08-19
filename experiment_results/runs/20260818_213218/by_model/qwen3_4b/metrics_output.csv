@@ -1,0 +1,2 @@
+item_id,model,strategy,duration_ms,tp,fp,fn,precision,recall,f1_score,ground_truth,predictions,raw_output,error,schema_valid,parse_failed,empty_response,prediction_source,mapped_rule_ids
+6018,qwen3:4b,zero-shot,0,0,0,0,0.0,0.0,0.0,4.1.2,,,,False,False,False,none,
