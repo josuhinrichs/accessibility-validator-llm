@@ -1,0 +1,2 @@
+model,strategy,tp,fp,fn,precision,recall,f1_score
+gemma-3-12b-it,zero-shot,47,38,1382,0.5529411764705883,0.032890132960111965,0.06208718626155878

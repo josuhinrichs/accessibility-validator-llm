@@ -1,0 +1,2 @@
+model,strategy,tp,fp,fn,precision,recall,f1_score
+llama-4-scout-17b-16e-instruct,zero-shot,364,210,1640,0.6341463414634146,0.18163672654690619,0.28238944918541503

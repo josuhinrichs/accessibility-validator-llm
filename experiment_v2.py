@@ -273,19 +273,19 @@ if __name__ == "__main__":
         include_images=selected_client.include_images,
     )
 
-    # MODELS_TO_TEST = [
-    #     "deepseek-r1-distill-llama-70b",
-    #     "gemma-3-27b-it",
-    #     "gemma-3-12b-it",
-    #     "llama-4-scout-17b-16e-instruct",
-    # ]
-
     MODELS_TO_TEST = [
-        "qwen3:4b",
-        "qwen2.5vl",
-        "qwen3:1.7b",
-        "qwen2.5-coder:7b-instruct",
+        "deepseek-r1-distill-llama-70b",
+        "gemma-3-27b-it",
+        "gemma-3-12b-it",
+        "llama-4-scout-17b-16e-instruct",
     ]
+
+    # MODELS_TO_TEST = [
+    #     "qwen3:4b",
+    #     "qwen2.5vl",
+    #     "qwen3:1.7b",
+    #     "qwen2.5-coder:7b-instruct",
+    # ]
 
     #STRATEGIES_TO_TEST = ["zero-shot", "few-shot", "chain-of-thought"]
 
@@ -298,7 +298,7 @@ if __name__ == "__main__":
             model=model,
             strategies=STRATEGIES_TO_TEST,
             want_screenshot=False,
-            want_ax_tree=False
+            want_ax_tree=True,
         )
 
         model_results_csv = MODELS_RESULTS_DIR / sanitize_model_name(model) / "metrics_output.csv"

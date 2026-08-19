@@ -1,0 +1,5 @@
+model,strategy,tp,fp,fn,precision,recall,f1_score,source_file
+llama-4-scout-17b-16e-instruct,zero-shot,364,210,1640,0.6341463414634146,0.1816367265469061,0.282389449185415,experiment_results/runs/20260819_070830/by_model/llama-4-scout-17b-16e-instruct/final_metrics.csv
+gemma-3-27b-it,zero-shot,199,174,1981,0.5335120643431636,0.0912844036697247,0.1558950254602428,experiment_results/runs/20260819_070830/by_model/gemma-3-27b-it/final_metrics.csv
+deepseek-r1-distill-llama-70b,zero-shot,0,0,0,0.0,0.0,0.0,experiment_results/runs/20260819_070830/by_model/deepseek-r1-distill-llama-70b/final_metrics.csv
+gemma-3-12b-it,zero-shot,47,38,1382,0.5529411764705883,0.0328901329601119,0.0620871862615587,experiment_results/runs/20260819_070830/by_model/gemma-3-12b-it/final_metrics.csv

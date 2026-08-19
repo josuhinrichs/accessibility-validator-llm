@@ -1,0 +1,2 @@
+model,strategy,tp,fp,fn,precision,recall,f1_score
+deepseek-r1-distill-llama-70b,zero-shot,434,514,1703,0.4578059071729958,0.20308844174075807,0.2813614262560778
